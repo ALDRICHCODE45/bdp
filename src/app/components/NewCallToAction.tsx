@@ -35,7 +35,7 @@ export default function NewCallToAction() {
           </div>
 
           {/* Contact Methods */}
-          <div className="pt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="pt-12 grid grid-cols-1 md:grid-cols-2 gap-2">
             <div className="space-y-2">
               <div className="w-12 h-12 mx-auto flex items-center justify-center border border-gray-300">
                 <svg
