@@ -28,7 +28,7 @@ export default function HeroSection() {
           preload="metadata"
           className="w-full h-full object-cover opacity-40"
         >
-          <source src="/video.mp4" type="video/mp4" />
+          <source src="/video1.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60" />
       </div>
