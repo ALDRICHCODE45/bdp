@@ -8,10 +8,9 @@ export default function NewCallToAction() {
           <p className="text-sm text-gray-500 font-light tracking-[0.3em] uppercase">
             ¿Necesitas Asesoría Legal?
           </p>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 leading-tight">
-            Solucionamos tu{" "}
-            <span className="font-normal">problema</span>
+            Solucionamos tu <span className="font-normal">problema</span>
           </h2>
 
           <p className="max-w-2xl mx-auto text-base md:text-lg text-gray-600 font-light leading-relaxed">
@@ -31,34 +30,12 @@ export default function NewCallToAction() {
               href="tel:+525512345678"
               className="w-full sm:w-auto px-8 py-4 border border-gray-900 text-gray-900 text-sm font-light uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-colors"
             >
-              Llámanos: (55) 1234.5678
+              Llámanos: (55) 55255593
             </a>
           </div>
 
           {/* Contact Methods */}
-          <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="space-y-2">
-              <div className="w-12 h-12 mx-auto flex items-center justify-center border border-gray-300">
-                <svg
-                  className="w-6 h-6 text-gray-700"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-              </div>
-              <h3 className="text-sm font-light text-gray-900 uppercase tracking-wider">
-                Email
-              </h3>
-              <p className="text-sm text-gray-600 font-light">
-                info@bdp.com.mx
-              </p>
-            </div>
-
+          <div className="pt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-2">
               <div className="w-12 h-12 mx-auto flex items-center justify-center border border-gray-300">
                 <svg
@@ -76,9 +53,7 @@ export default function NewCallToAction() {
               <h3 className="text-sm font-light text-gray-900 uppercase tracking-wider">
                 Teléfono
               </h3>
-              <p className="text-sm text-gray-600 font-light">
-                (55) 1234.5678
-              </p>
+              <p className="text-sm text-gray-600 font-light">(55) 55255593</p>
             </div>
 
             <div className="space-y-2">
@@ -100,7 +75,9 @@ export default function NewCallToAction() {
                 Oficina
               </h3>
               <p className="text-sm text-gray-600 font-light">
-                Ciudad de México
+                Prado Sur 245
+                <br />
+                Lomas de Chapultepec, CDMX
               </p>
             </div>
           </div>
@@ -109,4 +86,3 @@ export default function NewCallToAction() {
     </section>
   );
 }
-

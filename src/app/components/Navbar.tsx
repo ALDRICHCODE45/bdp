@@ -20,7 +20,6 @@ export default function Navbar() {
     { href: "#inicio", label: "Inicio" },
     { href: "#servicios", label: "Áreas de Práctica" },
     { href: "#industrias", label: "Industrias" },
-    { href: "#equipo", label: "Equipo" },
     { href: "#contacto", label: "Contacto" },
   ];
 

@@ -6,44 +6,75 @@ import Image from "next/image";
 export default function NewFooter() {
   return (
     <footer id="contacto" className="bg-gray-900 text-white">
+      {/* Prominent Address Section */}
+      <div className="border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+          <div className="text-center space-y-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-4">
+              <svg
+                className="w-8 h-8 text-white"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-light text-white mb-4">
+                Visítanos
+              </h3>
+              <p className="text-lg md:text-xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
+                Prado Sur 245
+                <br />
+                Lomas - Virreyes, Lomas de Chapultepec
+                <br />
+                Miguel Hidalgo, 11000
+                <br />
+                Ciudad de México, CDMX
+              </p>
+            </div>
+            <div className="pt-4">
+              <a
+                href="https://maps.google.com/?q=Prado+Sur+245+Lomas+de+Chapultepec+Ciudad+de+Mexico"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-white text-gray-900 text-sm font-light hover:bg-gray-100 transition-colors rounded-lg"
+              >
+                Ver en Google Maps
+                <svg
+                  className="w-4 h-4 ml-2"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Logo & Description */}
-          <div className="lg:col-span-1">
+          <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="relative w-10 h-10">
-                <Image
-                  src="/logo.png"
-                  alt="BDP Logo"
-                  fill
-                  className="object-contain brightness-0 invert"
-                />
-              </div>
               <span className="text-2xl font-light tracking-tight">BDP</span>
             </div>
             <p className="text-sm text-gray-400 font-light leading-relaxed">
               Firma especializada en litigio y consultoría multidisciplinaria.
               Soluciones inteligentes, resultados seguros.
             </p>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-sm font-light tracking-[0.2em] uppercase mb-6">
-              Dirección
-            </h3>
-            <div className="space-y-4 text-sm text-gray-400 font-light">
-              <p className="leading-relaxed">
-                Av. Principal 123
-                <br />
-                Colonia Centro
-                <br />
-                Ciudad de México, CDMX
-                <br />
-                CP. 01000
-              </p>
-            </div>
           </div>
 
           {/* Contact Details */}
@@ -53,7 +84,7 @@ export default function NewFooter() {
             </h3>
             <div className="space-y-4 text-sm text-gray-400 font-light">
               <div>
-                <p className="text-white mb-1">Correo</p>
+                <p className="text-white mb-1">Correo Electrónico</p>
                 <a
                   href="mailto:info@bdp.com.mx"
                   className="hover:text-white transition-colors"
@@ -62,9 +93,20 @@ export default function NewFooter() {
                 </a>
               </div>
               <div>
-                <p className="text-white mb-1">Teléfonos</p>
+                <p className="text-white mb-1">Teléfono</p>
                 <a
                   href="tel:+525512345678"
+                  className="hover:text-white transition-colors"
+                >
+                  (55) 1234.5678
+                </a>
+              </div>
+              <div>
+                <p className="text-white mb-1">WhatsApp</p>
+                <a
+                  href="https://wa.me/525512345678"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
                   (55) 1234.5678
@@ -76,7 +118,7 @@ export default function NewFooter() {
           {/* Quick Links */}
           <div>
             <h3 className="text-sm font-light tracking-[0.2em] uppercase mb-6">
-              Enlaces
+              Enlaces Rápidos
             </h3>
             <ul className="space-y-3 text-sm text-gray-400 font-light">
               <li>
@@ -105,18 +147,18 @@ export default function NewFooter() {
               </li>
               <li>
                 <Link
-                  href="#equipo"
-                  className="hover:text-white transition-colors"
-                >
-                  Equipo
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="#contacto"
                   className="hover:text-white transition-colors"
                 >
                   Contacto
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-white transition-colors"
+                >
+                  Todos los Servicios
                 </Link>
               </li>
             </ul>
@@ -150,4 +192,3 @@ export default function NewFooter() {
     </footer>
   );
 }
-
