@@ -101,17 +101,6 @@ export default function NewFooter() {
                   55-55255593
                 </a>
               </div>
-              <div>
-                <p className="text-white mb-1">WhatsApp</p>
-                <a
-                  href="https://wa.me/525555255593"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  55-55255593
-                </a>
-              </div>
             </div>
           </div>
 
