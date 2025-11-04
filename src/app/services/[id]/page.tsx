@@ -1,6 +1,5 @@
-import CallToAction from "@/app/components/CallToAction";
-import Footer from "@/app/components/Footer";
-import { Navbar } from "@/app/components/Navbar";
+import NewCallToAction from "@/app/components/NewCallToAction";
+import NewFooter from "@/app/components/NewFooter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { content } from "@/services/content";
@@ -27,9 +26,7 @@ export default async function Page({
 
   return (
     <>
-      <Navbar />
-
-      <section className="relative min-h-screen flex pt-44 md:pt-5 items-center justify-center hero-gradient overflow-hidden">
+      <section className="relative min-h-screen flex pt-44 md:pt-24 items-center justify-center hero-gradient overflow-hidden">
         {/* Background Pattern */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -201,8 +198,8 @@ export default async function Page({
         </div>
       </section>
       <div className="pt-[100px]">
-        <CallToAction />
-        <Footer />
+        <NewCallToAction />
+        <NewFooter />
       </div>
     </>
   );

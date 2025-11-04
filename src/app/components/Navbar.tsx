@@ -1,99 +1,159 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Facebook, Instagram, Menu } from "lucide-react";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-// Función para scroll suave personalizado
-const smoothScrollTo = (elementId: string) => {
-  const element = document.getElementById(elementId);
-  if (element) {
-    const offsetTop = element.offsetTop - 100; // 100px de offset para el navbar fijo
-    window.scrollTo({
-      top: offsetTop,
-      behavior: "smooth",
-    });
-  }
-};
+export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-export const Navbar = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { href: "#inicio", label: "Inicio" },
+    { href: "#servicios", label: "Áreas de Práctica" },
+    { href: "#industrias", label: "Industrias" },
+    { href: "#equipo", label: "Equipo" },
+    { href: "#contacto", label: "Contacto" },
+  ];
+
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 mt-4 mx-auto max-w-7xl px-4">
-      <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-3xl px-6 py-3">
-        <div className="flex h-14 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="flex flex-col items-center justify-center">
-              <span
-                className="font-light text-2xl text-white"
-                style={{
-                  WebkitTextStroke: "1px",
-                  letterSpacing: "0.05em",
-                }}
-              >
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-white/95 backdrop-blur-sm shadow-sm"
+            : "bg-white/90 backdrop-blur-sm"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link
+              href="/"
+              className="flex items-center space-x-2 relative z-50"
+            >
+              <div className="relative w-12 h-12">
+                <Image
+                  src="/logo.png"
+                  alt="BDP Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-2xl font-light tracking-tight text-gray-900">
                 BDP
               </span>
-              <span className="font-light text-sm text-gray-300 mt-1 tracking-wide">
-                litigio · consultoría
-              </span>
-            </div>
-          </Link>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => smoothScrollTo("acerca")}
-              className="text-white hover:text-white transition-colors duration-200 relative group cursor-pointer"
-            >
-              Acerca
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-200 group-hover:w-full"></span>
-            </button>
-
-            <Link href="/services">
-              <button className="text-white hover:text-white transition-colors duration-200 relative group cursor-pointer">
-                Servicios
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-200 group-hover:w-full"></span>
-              </button>
             </Link>
 
-            <button
-              onClick={() => smoothScrollTo("contacto")}
-              className="text-white hover:text-white transition-colors duration-200 relative group cursor-pointer"
-            >
-              Contacto
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-200 group-hover:w-full"></span>
-            </button>
-          </nav>
-
-          {/* Social Links & CTA */}
-          <div className="flex items-center space-x-4">
-            <div className="hidden sm:flex items-center space-x-2">
-              <Button
-                size="sm"
-                variant="ghost"
-                className="text-white hover:text-white hover:bg-white/10 h-8 w-8 p-0 cursor-pointer"
-              >
-                <Instagram className="h-4 w-4" />
-              </Button>
-              <Button
-                size="sm"
-                variant="ghost"
-                className="text-white hover:text-white hover:bg-white/10 h-8 w-8 p-0 cursor-pointer"
-              >
-                <Facebook className="h-4 w-4" />
-              </Button>
+            {/* Navigation Links - Desktop */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-light text-gray-700 hover:text-gray-900 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
 
-            {/* Mobile menu button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className="md:hidden text-white/70 hover:text-white hover:bg-white/10 h-8 w-8 p-0"
+            {/* CTA Button - Desktop */}
+            <div className="hidden md:block">
+              <Link
+                href="#contacto"
+                className="px-6 py-2.5 bg-gray-900 text-white text-sm font-light hover:bg-gray-800 transition-colors"
+              >
+                Contáctanos
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-gray-900 relative z-50"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
             >
-              <Menu className="h-4 w-4" />
-            </Button>
+              {isMobileMenuOpen ? (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              ) : (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              )}
+            </button>
           </div>
         </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed inset-0 bg-white z-40 md:hidden transition-all duration-300 ${
+          isMobileMenuOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible pointer-events-none"
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center h-full space-y-8 px-6">
+          {navLinks.map((link, index) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={handleLinkClick}
+              className="text-2xl font-light text-gray-900 hover:text-gray-600 transition-colors"
+              style={{
+                animation: isMobileMenuOpen
+                  ? `fadeInUp 0.4s ease-out ${index * 0.1}s both`
+                  : "none",
+              }}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="#contacto"
+            onClick={handleLinkClick}
+            className="mt-8 px-8 py-4 bg-gray-900 text-white text-sm font-light hover:bg-gray-800 transition-colors"
+            style={{
+              animation: isMobileMenuOpen
+                ? `fadeInUp 0.4s ease-out ${navLinks.length * 0.1}s both`
+                : "none",
+            }}
+          >
+            Contáctanos
+          </Link>
+        </div>
       </div>
-    </header>
+    </>
   );
-};
+}

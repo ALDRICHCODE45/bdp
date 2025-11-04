@@ -1,6 +1,6 @@
 "use client";
 
-import Footer from "../components/Footer";
+import NewFooter from "../components/NewFooter";
 import AnimatedContent from "@/components/AnimatedContent";
 import SpotlightCard from "@/components/SpotlightCard";
 import { content } from "@/services/content";
@@ -15,8 +15,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Navbar } from "../components/Navbar";
-import CallToAction from "../components/CallToAction";
+import NewCallToAction from "../components/NewCallToAction";
 
 // Icon mapping for each service
 const serviceIcons = {
@@ -30,8 +29,7 @@ const serviceIcons = {
 
 export default function ServicesPage() {
   return (
-    <main>
-      <Navbar />
+    <main className="pt-20">
       {/* Hero Section */}
       <AnimatedContent
         distance={100}
@@ -140,10 +138,10 @@ export default function ServicesPage() {
         scale={1}
         threshold={0.1}
       >
-        <CallToAction />
+        <NewCallToAction />
       </AnimatedContent>
 
-      <Footer />
+      <NewFooter />
     </main>
   );
 }

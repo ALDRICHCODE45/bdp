@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const members = [
   {
     name: "Roberto Gil Zuarth",
@@ -65,13 +67,15 @@ export default function TeamSection() {
           <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {members.map((member, index) => (
               <div key={index} className="group overflow-hidden cursor-pointer">
-                <img
-                  className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
-                  src={member.avatar}
-                  alt="team member"
-                  width="826"
-                  height="1239"
-                />
+                <div className="relative h-96 w-full overflow-hidden rounded-md transition-all duration-500 group-hover:h-[22.5rem] group-hover:rounded-xl">
+                  <Image
+                    className="object-cover object-top grayscale transition-all duration-500 hover:grayscale-0"
+                    src={member.avatar}
+                    alt="team member"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
                 <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
                   <div className="flex justify-between">
                     <h3 className="text-base text-white/60 font-medium transition-all duration-500 group-hover:tracking-wider">

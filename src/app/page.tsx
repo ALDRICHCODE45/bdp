@@ -1,21 +1,23 @@
-import { BDPHeader } from "./components/Header";
-import { LogoSection } from "./components/LogoSection";
-import ContentSection from "./components/ContentSection";
-import TeamSection from "./components/TeamSection";
-import Footer from "./components/Footer";
-import CallToAction from "./components/CallToAction";
-import { TestimonialSection } from "./components/TestimonialsSection";
+import HeroSection from "./components/HeroSection";
+import WhyChooseUs from "./components/WhyChooseUs";
+import ServicesSection from "./components/ServicesSection";
+import IndustriasSection from "./components/IndustriasSection";
+import ValuesSection from "./components/ValuesSection";
+import NewTeamSection from "./components/NewTeamSection";
+import NewCallToAction from "./components/NewCallToAction";
+import NewFooter from "./components/NewFooter";
 
 export default function Home() {
   return (
-    <main className="">
-      <BDPHeader />
-      <LogoSection />
-      <ContentSection />
-      <TestimonialSection />
-      <TeamSection />
-      <CallToAction />
-      <Footer />
+    <main>
+      <HeroSection />
+      <WhyChooseUs />
+      <ServicesSection />
+      <IndustriasSection />
+      <ValuesSection />
+      <NewTeamSection />
+      <NewCallToAction />
+      <NewFooter />
     </main>
   );
 }

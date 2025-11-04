@@ -1,7 +1,7 @@
 "use client";
 
 import BlurText from "@/components/BlurText";
-import { Navbar } from "./Navbar";
+import Navbar from "./Navbar";
 import { ArrowRight, Scale, Users, Shield } from "lucide-react";
 import CountUp from "@/components/CountUp";
 import Link from "next/link";
