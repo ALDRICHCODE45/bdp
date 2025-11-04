@@ -148,5 +148,5 @@ El archivo `next.config.ts` está configurado para permitir imágenes de:
 ## 👥 Contacto
 
 - **Email**: info@bdp.com.mx
-- **Teléfono**: (55) 1234.5678
+- **Teléfono**: 55-55255593
 - **Dirección**: Ciudad de México, CDMX

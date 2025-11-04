@@ -27,10 +27,10 @@ export default function NewCallToAction() {
               Contáctanos
             </a>
             <a
-              href="tel:+525512345678"
+              href="tel:+525555255593"
               className="w-full sm:w-auto px-8 py-4 border border-gray-900 text-gray-900 text-sm font-light uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-colors"
             >
-              Llámanos: (55) 1234.5678
+              Llámanos: 55-55255593
             </a>
           </div>
 
@@ -79,10 +79,10 @@ export default function NewCallToAction() {
                 Teléfono
               </h3>
               <a
-                href="tel:+525512345678"
+                href="tel:+525555255593"
                 className="text-sm text-gray-600 font-light hover:text-gray-900 transition-colors"
               >
-                (55) 1234.5678
+                55-55255593
               </a>
             </div>
 
@@ -104,12 +104,12 @@ export default function NewCallToAction() {
                 WhatsApp
               </h3>
               <a
-                href="https://wa.me/525512345678"
+                href="https://wa.me/525555255593"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-gray-600 font-light hover:text-gray-900 transition-colors"
               >
-                (55) 1234.5678
+                55-55255593
               </a>
             </div>
           </div>

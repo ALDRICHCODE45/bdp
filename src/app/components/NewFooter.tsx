@@ -95,21 +95,21 @@ export default function NewFooter() {
               <div>
                 <p className="text-white mb-1">Teléfono</p>
                 <a
-                  href="tel:+525512345678"
+                  href="tel:+525555255593"
                   className="hover:text-white transition-colors"
                 >
-                  (55) 1234.5678
+                  55-55255593
                 </a>
               </div>
               <div>
                 <p className="text-white mb-1">WhatsApp</p>
                 <a
-                  href="https://wa.me/525512345678"
+                  href="https://wa.me/525555255593"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  (55) 1234.5678
+                  55-55255593
                 </a>
               </div>
             </div>
