@@ -18,22 +18,19 @@ export default function HeroSection() {
       style={{ minHeight: "100dvh" }}
     >
       {/* Video Background */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <video
           ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          preload="auto"
-          className="w-full h-full object-cover"
+          preload="metadata"
+          className="w-full h-full object-cover opacity-40"
         >
-          <source
-            src="https://cdn.pixabay.com/video/2022/09/04/130221-746993638_large.mp4"
-            type="video/mp4"
-          />
+          <source src="/video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60" />
       </div>
 
       {/* Content */}
