@@ -30,12 +30,37 @@ export default function NewCallToAction() {
               href="tel:+525512345678"
               className="w-full sm:w-auto px-8 py-4 border border-gray-900 text-gray-900 text-sm font-light uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-colors"
             >
-              Llámanos: (55) 55255593
+              Llámanos: (55) 1234.5678
             </a>
           </div>
 
           {/* Contact Methods */}
-          <div className="pt-12 grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-2">
+              <div className="w-12 h-12 mx-auto flex items-center justify-center border border-gray-300">
+                <svg
+                  className="w-6 h-6 text-gray-700"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 className="text-sm font-light text-gray-900 uppercase tracking-wider">
+                Email
+              </h3>
+              <a
+                href="mailto:info@bdp.com.mx"
+                className="text-sm text-gray-600 font-light hover:text-gray-900 transition-colors"
+              >
+                info@bdp.com.mx
+              </a>
+            </div>
+
             <div className="space-y-2">
               <div className="w-12 h-12 mx-auto flex items-center justify-center border border-gray-300">
                 <svg
@@ -53,7 +78,12 @@ export default function NewCallToAction() {
               <h3 className="text-sm font-light text-gray-900 uppercase tracking-wider">
                 Teléfono
               </h3>
-              <p className="text-sm text-gray-600 font-light">(55) 55255593</p>
+              <a
+                href="tel:+525512345678"
+                className="text-sm text-gray-600 font-light hover:text-gray-900 transition-colors"
+              >
+                (55) 1234.5678
+              </a>
             </div>
 
             <div className="space-y-2">
@@ -67,18 +97,20 @@ export default function NewCallToAction() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                 </svg>
               </div>
               <h3 className="text-sm font-light text-gray-900 uppercase tracking-wider">
-                Oficina
+                WhatsApp
               </h3>
-              <p className="text-sm text-gray-600 font-light">
-                Prado Sur 245
-                <br />
-                Lomas de Chapultepec, CDMX
-              </p>
+              <a
+                href="https://wa.me/525512345678"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-600 font-light hover:text-gray-900 transition-colors"
+              >
+                (55) 1234.5678
+              </a>
             </div>
           </div>
         </div>
