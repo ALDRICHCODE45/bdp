@@ -44,14 +44,6 @@ export default function Navbar() {
               href="/"
               className="flex items-center space-x-2 relative z-50"
             >
-              <div className="relative w-12 h-12">
-                <Image
-                  src="/logo.png"
-                  alt="BDP Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
               <span className="text-2xl font-light tracking-tight text-gray-900">
                 BDP
               </span>

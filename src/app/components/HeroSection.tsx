@@ -33,44 +33,34 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 text-center">
-        <div className="space-y-8">
-          <div className="space-y-4">
-            <p className="text-sm md:text-base text-gray-300 font-light tracking-[0.3em] uppercase">
-              Soluciones siempre
-            </p>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-tight">
-              Soluciones
-              <br />
-              <span className="font-normal">inteligentes</span>
-            </h1>
-          </div>
+        <div className="space-y-10">
+          {/* Main Title */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-white leading-tight max-w-5xl mx-auto">
+            Soluciones Inteligentes para
+            <br />
+            Resultados Seguros
+          </h1>
 
-          <div className="space-y-4 pt-12">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-white leading-tight">
-              Resultados
-              <br />
-              <span className="font-normal">seguros</span>
-            </h2>
-            <p className="text-sm md:text-base text-gray-300 font-light tracking-[0.3em] uppercase">
-              Soluciones seguras
-            </p>
-          </div>
+          {/* Subtitle */}
+          <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-300 font-light leading-relaxed">
+            Firma especializada en litigio y consultoría multidisciplinaria, con
+            visión de negocio y profundo conocimiento del marco jurídico para la
+            resolución de situaciones complejas.
+          </p>
 
-          <div className="pt-12">
-            <p className="max-w-3xl mx-auto text-base md:text-lg text-gray-200 font-light leading-relaxed">
-              Somos una firma que se destaca por la resolución de situaciones
-              complejas, preventivas o correctivas, con visión de negocio, a
-              través de un profundo conocimiento del marco jurídico y de una
-              adecuada interacción con grupos de interés.
-            </p>
-          </div>
-
-          <div className="pt-8">
+          {/* CTA Buttons */}
+          <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#servicios"
-              className="inline-block px-8 py-4 bg-white text-gray-900 text-sm font-light uppercase tracking-wider hover:bg-gray-100 transition-colors"
+              className="px-8 py-4 bg-white text-gray-900 text-sm font-normal rounded-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Descubre nuestros servicios
+            </a>
+            <a
+              href="#contacto"
+              className="px-8 py-4 bg-transparent border-2 border-white/30 text-white text-sm font-normal rounded-lg hover:bg-white/10 hover:border-white/50 transition-colors"
+            >
+              Agenda una consulta
             </a>
           </div>
         </div>
