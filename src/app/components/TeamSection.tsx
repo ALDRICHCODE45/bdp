@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const teamMembers = [
   {
@@ -101,59 +100,14 @@ const teamMembers = [
 ];
 
 export default function TeamSection() {
-  const { ref, isIntersecting } = useIntersectionObserver({
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  });
   const [expandedMember, setExpandedMember] = useState<number | null>(null);
-  // Inicializar isMobile basándose en el tamaño de la ventana si está disponible
-  const [isMobile, setIsMobile] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth < 768;
-    }
-    return false;
-  });
-
-  // Detectar cambios de tamaño de ventana
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    // Verificar nuevamente después de un breve delay para asegurar detección correcta
-    const timeout = setTimeout(checkMobile, 100);
-    
-    window.addEventListener("resize", checkMobile);
-    return () => {
-      clearTimeout(timeout);
-      window.removeEventListener("resize", checkMobile);
-    };
-  }, []);
 
   const toggleMember = (id: number) => {
     setExpandedMember(expandedMember === id ? null : id);
   };
 
-  // En móviles, mostrar contenido inmediatamente sin depender del observer
-  // También usar un timeout como fallback para asegurar visibilidad
-  const [forceShow, setForceShow] = useState(false);
-  
-  useEffect(() => {
-    // Fallback: después de 1 segundo, mostrar contenido si aún no se ha mostrado
-    const timer = setTimeout(() => {
-      if (!isIntersecting && !isMobile) {
-        setForceShow(true);
-      }
-    }, 1000);
-    
-    return () => clearTimeout(timer);
-  }, [isIntersecting, isMobile]);
-  
-  const shouldShow = isMobile ? true : (isIntersecting || forceShow);
-
   return (
     <section
-      ref={ref}
       id="equipo"
       className="relative min-h-[100vh] sm:min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 flex items-start sm:items-center overflow-hidden"
     >
@@ -188,14 +142,7 @@ export default function TeamSection() {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* Header */}
-        <div
-          className={`text-center mb-12 sm:mb-16 md:mb-20 transition-all ease-out ${
-            shouldShow
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-12"
-          }`}
-          style={{ transitionDuration: "1600ms" }}
-        >
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <p className="text-xs font-light tracking-[0.2em] sm:tracking-[0.3em] uppercase text-white/70 mb-3 sm:mb-4">
             Nuestro Equipo
           </p>
@@ -218,10 +165,6 @@ export default function TeamSection() {
                 expandedMember === member.id
                   ? "lg:col-span-2 lg:row-span-2 border-white/30 bg-white/5"
                   : ""
-              } ${
-                shouldShow
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
               }`}
               style={{
                 transitionDelay: `${200 + index * 50}ms`,
