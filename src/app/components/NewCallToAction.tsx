@@ -14,9 +14,7 @@ export default function NewCallToAction() {
           </h2>
 
           <p className="max-w-2xl mx-auto text-base md:text-lg text-gray-600 font-light leading-relaxed">
-            Contáctanos hoy para una consulta inicial. Nuestro equipo de
-            expertos está listo para analizar tu caso y ofrecerte soluciones
-            estratégicas.
+            Contáctanos hoy para una consulta inicial. Nuestro equipo de profesionales legales con amplia experiencia en Derecho Público está listo para analizar tu caso y ofrecerte soluciones integrales orientadas a la resolución de problemas.
           </p>
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">

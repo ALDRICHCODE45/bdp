@@ -2,24 +2,24 @@
 
 const values = [
   {
-    title: "Excelencia",
+    title: "Calidad Profesional",
     description:
-      "Nos comprometemos con los más altos estándares de calidad en cada servicio que brindamos. Nuestra dedicación a la excelencia se refleja en resultados tangibles para nuestros clientes.",
+      "Para asegurar la más alta calidad profesional y optimizar las soluciones ofrecidas a nuestros clientes, hemos establecido alianzas estratégicas con Firmas de Abogados nacionales y extranjeras.",
   },
   {
-    title: "Integridad",
+    title: "Integridad y Compliance",
     description:
-      "Actuamos con honestidad y transparencia en todas nuestras interacciones. La ética profesional es el fundamento de nuestra práctica y reputación.",
+      "Hemos desarrollado un nuevo enfoque en la práctica de la integridad y el buen gobierno corporativo, ofreciendo soluciones de due diligence preventivas y resilientes.",
   },
   {
-    title: "Innovación",
+    title: "Disciplinas Innovadoras",
     description:
-      "Buscamos constantemente soluciones creativas y estratégicas. Aplicamos pensamiento innovador para resolver los desafíos legales más complejos.",
+      "BDP innova mediante técnicas esenciales para el desarrollo humano sostenible, como el federalismo y el municipalismo, aplicados a áreas como el Derecho Energético, Ambiental, del Agua y Agrario.",
   },
   {
-    title: "Compromiso",
+    title: "Valor Añadido",
     description:
-      "Nos dedicamos plenamente a los intereses de nuestros clientes. Cada caso recibe nuestra atención personalizada y enfoque estratégico.",
+      "Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes a través de soluciones integrales y personalizadas.",
   },
 ];
 
@@ -52,8 +52,7 @@ export default function ValuesSection() {
             Nuestros <span className="font-normal">Valores</span>
           </h2>
           <p className="max-w-3xl mx-auto text-base text-gray-300 font-light leading-relaxed">
-            Los principios que guían nuestra práctica profesional y definen
-            nuestra identidad como firma.
+            Los principios fundamentales que guían nuestra práctica profesional y definen nuestro compromiso con la excelencia, la integridad y la innovación en el derecho público.
           </p>
         </div>
 

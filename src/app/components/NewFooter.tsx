@@ -72,8 +72,7 @@ export default function NewFooter() {
               <span className="text-2xl font-light tracking-tight">BDP</span>
             </div>
             <p className="text-sm text-gray-400 font-light leading-relaxed">
-              Firma especializada en litigio y consultoría multidisciplinaria.
-              Soluciones inteligentes, resultados seguros.
+              Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público. Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes.
             </p>
           </div>
 

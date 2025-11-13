@@ -4,15 +4,10 @@ const industries = [
   "Energía",
   "Infraestructura",
   "Gobierno y Sector Público",
-  "Tecnología",
-  "Telecomunicaciones",
-  "Inmobiliario",
+  "Finanzas",
   "Minería",
-  "Manufactura",
-  "Servicios Financieros",
-  "Healthcare",
-  "Retail",
-  "Educación",
+  "Agroindustria",
+  "Inmobiliario",
 ];
 
 export default function IndustriasSection() {
@@ -28,13 +23,12 @@ export default function IndustriasSection() {
             Experiencia <span className="font-normal">Multisectorial</span>
           </h2>
           <p className="max-w-3xl mx-auto text-base text-gray-600 font-light leading-relaxed">
-            La trayectoria de la firma se ve fortalecida con el liderazgo de
-            nuestros clientes que participan en las siguientes industrias.
+            Ofrecemos servicios especializados a sectores estratégicos, aplicando programas de cumplimiento integrales y asesoría legal altamente especializada.
           </p>
         </div>
 
         {/* Industries Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {industries.map((industry, index) => (
             <div
               key={index}
@@ -56,31 +50,47 @@ export default function IndustriasSection() {
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="text-center">
-            <div className="text-5xl md:text-6xl font-light text-gray-900 mb-2">
-              20+
-            </div>
-            <p className="text-sm text-gray-600 font-light tracking-wider uppercase">
-              Años de Experiencia
+        {/* Projects Section */}
+        <div className="mt-24">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-4">
+              Proyectos Clave Liderados
+            </h3>
+            <p className="max-w-3xl mx-auto text-base text-gray-600 font-light leading-relaxed">
+              Los socios y asociados de BDP han liderado proyectos clave que han impactado significativamente el marco jurídico y regulatorio de México.
             </p>
           </div>
-          <div className="text-center">
-            <div className="text-5xl md:text-6xl font-light text-gray-900 mb-2">
-              500+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 bg-white border border-gray-200">
+              <p className="text-sm text-gray-700 font-light">
+                La regulación del cannabis en México
+              </p>
             </div>
-            <p className="text-sm text-gray-600 font-light tracking-wider uppercase">
-              Casos Exitosos
-            </p>
-          </div>
-          <div className="text-center">
-            <div className="text-5xl md:text-6xl font-light text-gray-900 mb-2">
-              95%
+            <div className="p-6 bg-white border border-gray-200">
+              <p className="text-sm text-gray-700 font-light">
+                El modelo para el federalismo energético sostenible
+              </p>
             </div>
-            <p className="text-sm text-gray-600 font-light tracking-wider uppercase">
-              Tasa de Éxito
-            </p>
+            <div className="p-6 bg-white border border-gray-200">
+              <p className="text-sm text-gray-700 font-light">
+                Desarrollo de inversión público-privada en infraestructura
+              </p>
+            </div>
+            <div className="p-6 bg-white border border-gray-200">
+              <p className="text-sm text-gray-700 font-light">
+                La transición al nuevo sistema de justicia penal
+              </p>
+            </div>
+            <div className="p-6 bg-white border border-gray-200">
+              <p className="text-sm text-gray-700 font-light">
+                La recuperación de activos públicos
+              </p>
+            </div>
+            <div className="p-6 bg-white border border-gray-200">
+              <p className="text-sm text-gray-700 font-light">
+                El programa para el control de importaciones de armas
+              </p>
+            </div>
           </div>
         </div>
       </div>

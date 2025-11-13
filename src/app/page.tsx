@@ -11,12 +11,14 @@ export const metadata: Metadata = {
   title:
     "BDP | Despacho de Abogados en CDMX - Litigio y Consultoría Multidisciplinaria",
   description:
-    "Firma especializada en litigio constitucional, derecho administrativo, energía y compliance. Soluciones inteligentes y resultados seguros en Ciudad de México. Ubicados en Lomas de Chapultepec.",
+    "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público, particularmente en las ramas constitucional, administrativa, regulatoria y electoral. Ubicados en Lomas de Chapultepec, Ciudad de México.",
   keywords: [
     "abogados Ciudad de México",
     "despacho jurídico CDMX",
     "litigio constitucional México",
     "derecho administrativo",
+    "derecho regulatorio",
+    "derecho electoral",
     "abogados energía México",
     "compliance México",
     "anticorrupción",
@@ -27,6 +29,10 @@ export const metadata: Metadata = {
     "juicio de amparo",
     "derecho público",
     "abogados especialistas México",
+    "asociaciones público-privadas",
+    "federalismo energético",
+    "derecho inmobiliario",
+    "políticas públicas",
   ],
   authors: [{ name: "BDP Abogados" }],
   creator: "BDP",
@@ -44,7 +50,7 @@ export const metadata: Metadata = {
     title:
       "BDP | Despacho de Abogados - Soluciones Inteligentes para Resultados Seguros",
     description:
-      "Firma especializada en litigio constitucional, derecho administrativo, energía y compliance. Expertos en derecho público con sede en Ciudad de México.",
+      "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público. Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes.",
     url: "https://bdp.com.mx",
     siteName: "BDP Abogados",
     locale: "es_MX",
@@ -62,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BDP | Despacho de Abogados en CDMX",
     description:
-      "Firma especializada en litigio constitucional, derecho administrativo, energía y compliance.",
+      "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público, particularmente en las ramas constitucional, administrativa, regulatoria y electoral.",
     images: ["/twitter-image.jpg"],
   },
   robots: {

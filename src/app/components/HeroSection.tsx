@@ -45,9 +45,7 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 font-light leading-relaxed px-4">
-            Firma especializada en litigio y consultoría multidisciplinaria, con
-            visión de negocio y profundo conocimiento del marco jurídico para la
-            resolución de situaciones complejas.
+            Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público, particularmente en las ramas constitucional, administrativa, regulatoria y electoral. Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes.
           </p>
 
           {/* CTA Buttons */}

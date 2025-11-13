@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "BDP | Litigio y Consultoría Multidisciplinaria",
   description:
-    "Firma de abogados especializada en litigio constitucional, derecho administrativo, energía y compliance. Soluciones inteligentes y resultados seguros.",
+    "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público, particularmente en las ramas constitucional, administrativa, regulatoria y electoral.",
 };
 
 export default function RootLayout({

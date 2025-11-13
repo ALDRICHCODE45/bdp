@@ -17,9 +17,9 @@ const features = [
         <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
       </svg>
     ),
-    title: "Experiencia Comprobada",
+    title: "Reconocimiento en Litigio Estratégico",
     description:
-      "Más de dos décadas asesorando a empresas líderes y entidades gubernamentales en casos de alto impacto.",
+      "El equipo de BDP ha sido reconocido entre las Firmas líderes en litigio estratégico, posicionándonos como un referente en el campo del derecho público.",
   },
   {
     icon: (
@@ -35,9 +35,9 @@ const features = [
         <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
       </svg>
     ),
-    title: "Resultados Rápidos",
+    title: "Proyectos Clave Liderados",
     description:
-      "Estrategias efectivas que minimizan tiempos de resolución sin comprometer la calidad del servicio.",
+      "Hemos liderado proyectos clave como la regulación del cannabis, el federalismo energético sostenible, y el desarrollo de inversión público-privada en infraestructura.",
   },
   {
     icon: (
@@ -53,9 +53,9 @@ const features = [
         <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
       </svg>
     ),
-    title: "Equipo Multidisciplinario",
+    title: "Enfoque Multidisciplinario",
     description:
-      "Profesionales especializados en diversas áreas del derecho trabajando de forma integrada.",
+      "La naturaleza de nuestros litigios requiere habilidades sólidas en diseño de estrategias integrales, políticas públicas aplicadas, gestión de crisis y riesgo reputacional.",
   },
   {
     icon: (
@@ -71,9 +71,9 @@ const features = [
         <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
       </svg>
     ),
-    title: "Enfoque en Negocios",
+    title: "Enfoque en Resolución de Problemas",
     description:
-      "Soluciones legales alineadas con los objetivos comerciales y estratégicos de nuestros clientes.",
+      "Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes a través de soluciones integrales y personalizadas.",
   },
 ];
 
@@ -95,9 +95,9 @@ export default function WhyChooseUs() {
             </div>
             {/* Overlay Card */}
             <div className="absolute bottom-8 left-8 right-8 bg-white p-8 shadow-lg">
-              <p className="text-4xl font-light text-gray-900 mb-2">95%</p>
+              <p className="text-4xl font-light text-gray-900 mb-2">Primera</p>
               <p className="text-sm text-gray-600 font-light">
-                De nuestros clientes nos recomiendan
+                Firma boutique en México en integrar litigio, derecho regulatorio y consultoría en políticas públicas
               </p>
             </div>
           </div>
@@ -113,10 +113,7 @@ export default function WhyChooseUs() {
               para tu caso
             </h2>
             <p className="text-base text-gray-600 font-light leading-relaxed mb-12">
-              Somos un despacho que se destaca por la resolución de situaciones
-              complejas, preventivas o correctivas, con visión de negocio, a
-              través de un profundo conocimiento del marco jurídico y de una
-              adecuada interacción con grupos de interés.
+              BDP cuenta con un equipo de profesionales legales con amplia experiencia en la práctica de Derecho Público y disciplinas relacionadas. Contamos con alianzas estratégicas con Firmas de Abogados nacionales y extranjeras, y colaboramos activamente con organizaciones de la sociedad civil en litigios estratégicos y proyectos pro-bono.
             </p>
 
             {/* Features */}
