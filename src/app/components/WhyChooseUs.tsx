@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const features = [
   {
@@ -78,15 +79,27 @@ const features = [
 ];
 
 export default function WhyChooseUs() {
+  const { ref, isIntersecting } = useIntersectionObserver();
+
   return (
-    <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
+    <section
+      ref={ref}
+      className="relative py-24 bg-slate-900 text-white overflow-hidden"
+    >
       {/* Subtle blurred gradient effects */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Image */}
-          <div className="relative">
+          <div
+            className={`relative transition-all ease-out ${
+              isIntersecting
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-12"
+            }`}
+            style={{ transitionDuration: "1600ms" }}
+          >
             <div className="relative h-[600px] overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800"
@@ -106,7 +119,14 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Right Column - Content */}
-          <div>
+          <div
+            className={`transition-all ease-out delay-200 ${
+              isIntersecting
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-12"
+            }`}
+            style={{ transitionDuration: "1600ms" }}
+          >
             <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase mb-4">
               Por Qué Elegirnos
             </p>
@@ -122,7 +142,18 @@ export default function WhyChooseUs() {
             {/* Features */}
             <div className="space-y-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4">
+                <div
+                  key={index}
+                  className={`flex items-start space-x-4 transition-all ease-out ${
+                    isIntersecting
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                  }`}
+                  style={{
+                    transitionDelay: `${300 + index * 100}ms`,
+                    transitionDuration: "1200ms",
+                  }}
+                >
                   <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center border border-white/10 text-white bg-white/3 hover:bg-white/5 transition-colors">
                     {feature.icon}
                   </div>

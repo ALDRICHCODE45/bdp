@@ -1,5 +1,7 @@
 "use client";
 
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+
 const industries = [
   "Energía",
   "Infraestructura",
@@ -11,14 +13,27 @@ const industries = [
 ];
 
 export default function IndustriasSection() {
+  const { ref, isIntersecting } = useIntersectionObserver();
+
   return (
-    <section id="industrias" className="relative py-24 bg-slate-900 text-white overflow-hidden">
+    <section
+      ref={ref}
+      id="industrias"
+      className="relative py-24 bg-slate-900 text-white overflow-hidden"
+    >
       {/* Subtle blurred gradient effects */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-500/4 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-indigo-500/4 rounded-full blur-3xl" />
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div
+          className={`text-center mb-20 transition-all ease-out ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-12"
+          }`}
+          style={{ transitionDuration: "1600ms" }}
+        >
           <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase mb-4">
             Industrias
           </p>
@@ -35,7 +50,15 @@ export default function IndustriasSection() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="group relative h-40 bg-white/3 hover:bg-white/5 transition-all duration-300 flex items-center justify-center p-6 border border-white/8 hover:border-white/15 cursor-pointer overflow-hidden"
+              className={`group relative h-40 bg-white/3 hover:bg-white/5 transition-all duration-300 flex items-center justify-center p-6 border border-white/8 hover:border-white/15 cursor-pointer overflow-hidden ${
+                isIntersecting
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
+              style={{
+                transitionDelay: `${200 + index * 50}ms`,
+                transitionDuration: "1200ms",
+              }}
             >
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
@@ -54,7 +77,14 @@ export default function IndustriasSection() {
         </div>
 
         {/* Projects Section */}
-        <div className="mt-24">
+        <div
+          className={`mt-24 transition-all ease-out delay-300 ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-12"
+          }`}
+          style={{ transitionDuration: "1600ms" }}
+        >
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-light text-white mb-4">
               Proyectos Clave Liderados

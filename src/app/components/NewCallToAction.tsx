@@ -1,13 +1,27 @@
 "use client";
 
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+
 export default function NewCallToAction() {
+  const { ref, isIntersecting } = useIntersectionObserver();
+
   return (
-    <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
+    <section
+      ref={ref}
+      className="relative py-24 bg-slate-900 text-white overflow-hidden"
+    >
       {/* Subtle blurred gradient effects */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center">
-        <div className="space-y-8">
+        <div
+          className={`space-y-8 transition-all ease-out ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-12"
+          }`}
+          style={{ transitionDuration: "1600ms" }}
+        >
           <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase">
             ¿Necesitas Asesoría Legal?
           </p>
@@ -36,11 +50,18 @@ export default function NewCallToAction() {
           </div>
 
           {/* Contact Methods */}
-          <div className="pt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          <div
+            className={`pt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto transition-all ease-out delay-300 ${
+              isIntersecting
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-12"
+            }`}
+            style={{ transitionDuration: "1600ms" }}
+          >
             <div className="space-y-3">
-              <div className="w-16 h-16 mx-auto flex items-center justify-center border border-gray-300">
+              <div className="w-16 h-16 mx-auto flex items-center justify-center border border-white/10 bg-white/3">
                 <svg
-                  className="w-8 h-8 text-gray-700"
+                  className="w-8 h-8 text-white"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"

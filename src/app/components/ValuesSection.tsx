@@ -1,5 +1,7 @@
 "use client";
 
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+
 const values = [
   {
     title: "Calidad Profesional",
@@ -24,8 +26,13 @@ const values = [
 ];
 
 export default function ValuesSection() {
+  const { ref, isIntersecting } = useIntersectionObserver();
+
   return (
-    <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
+    <section
+      ref={ref}
+      className="relative py-24 bg-slate-900 text-white overflow-hidden"
+    >
       {/* Subtle blurred gradient effects */}
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
@@ -48,7 +55,14 @@ export default function ValuesSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div
+          className={`text-center mb-20 transition-all ease-out ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-12"
+          }`}
+          style={{ transitionDuration: "1600ms" }}
+        >
           <p className="text-sm text-gray-400 font-light tracking-[0.3em] uppercase mb-4">
             Nuestra Cultura
           </p>
@@ -65,7 +79,15 @@ export default function ValuesSection() {
           {values.map((value, index) => (
             <div
               key={index}
-              className="group p-8 bg-white/3 hover:bg-white/5 transition-all duration-300 border-l-2 border-white/10 hover:border-white/20"
+              className={`group p-8 bg-white/3 hover:bg-white/5 transition-all duration-300 border-l-2 border-white/10 hover:border-white/20 ${
+                isIntersecting
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
+              style={{
+                transitionDelay: `${200 + index * 100}ms`,
+                transitionDuration: "1200ms",
+              }}
             >
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-white/30 group-hover:border-white transition-colors">

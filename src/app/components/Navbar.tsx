@@ -7,6 +7,7 @@ import Image from "next/image";
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +15,14 @@ export default function Navbar() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Navbar appears after HeroSection animation (1200ms + 200ms delay)
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1400);
+    return () => clearTimeout(timer);
   }, []);
 
   const navLinks = [
@@ -34,7 +43,15 @@ export default function Navbar() {
           isScrolled
             ? "bg-white shadow-md"
             : "bg-white/95 backdrop-blur-sm"
+        } ${
+          isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-full"
         }`}
+        style={{
+          transitionDuration: "800ms",
+          transitionTimingFunction: "ease-out",
+        }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
