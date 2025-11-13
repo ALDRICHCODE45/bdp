@@ -112,7 +112,7 @@ export default function TeamSection() {
     <section
       ref={ref}
       id="equipo"
-      className="relative min-h-screen py-24 flex items-center overflow-hidden"
+      className="relative min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 flex items-center overflow-hidden"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 w-full h-full">
@@ -143,23 +143,23 @@ export default function TeamSection() {
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* Header */}
         <div
-          className={`text-center mb-20 transition-all ease-out ${
+          className={`text-center mb-12 sm:mb-16 md:mb-20 transition-all ease-out ${
             isIntersecting
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-12"
           }`}
           style={{ transitionDuration: "1600ms" }}
         >
-          <p className="text-xs font-light tracking-[0.3em] uppercase text-white/70 mb-4">
+          <p className="text-xs font-light tracking-[0.2em] sm:tracking-[0.3em] uppercase text-white/70 mb-3 sm:mb-4">
             Nuestro Equipo
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 sm:mb-6 px-2">
             Profesionales <span className="font-normal">Expertos</span>
           </h2>
-          <p className="max-w-3xl mx-auto text-base text-white/80 font-light leading-relaxed">
+          <p className="max-w-3xl mx-auto text-sm sm:text-base text-white/80 font-light leading-relaxed px-4 sm:px-0">
             Un equipo multidisciplinario de profesionales legales con amplia
             experiencia en la práctica de Derecho Público y disciplinas
             relacionadas.
@@ -167,7 +167,7 @@ export default function TeamSection() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {teamMembers.map((member, index) => (
             <div
               key={member.id}
@@ -187,36 +187,41 @@ export default function TeamSection() {
               onClick={() => toggleMember(member.id)}
             >
               {/* Content */}
-              <div className="p-6 lg:p-8 h-full flex flex-col">
-                <div className="flex flex-col lg:flex-row gap-6 flex-1">
+              <div className="p-4 sm:p-5 md:p-6 lg:p-8 h-full flex flex-col">
+                <div className="flex flex-col lg:flex-row gap-4 sm:gap-5 md:gap-6 flex-1">
                   {/* Image */}
                   <div
-                    className={`relative flex-shrink-0 overflow-hidden transition-all duration-700 ${
+                    className={`relative flex-shrink-0 overflow-hidden transition-all duration-700 mx-auto sm:mx-0 ${
                       expandedMember === member.id
-                        ? "w-full lg:w-40 h-56 lg:h-40"
-                        : "w-full lg:w-32 h-48 lg:h-32"
+                        ? "w-full sm:w-48 md:w-56 lg:w-40 h-48 sm:h-56 md:h-64 lg:h-40"
+                        : "w-full sm:w-40 md:w-44 lg:w-32 h-40 sm:h-44 md:h-48 lg:h-32"
                     }`}
                   >
                     <Image
                       src={member.image}
                       alt={member.name}
                       fill
-                      className="object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
+                      className="object-cover rounded-xl sm:rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
                     {/* Role Badge */}
                   </div>
 
                   {/* Text Content */}
-                  <div className="flex-1 space-y-4 flex flex-col">
+                  <div className="flex-1 space-y-3 sm:space-y-4 flex flex-col">
                     <div>
-                      <h3 className="text-xl lg:text-2xl font-light text-white mb-2">
+                      <h3 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-light text-white mb-1 sm:mb-2">
                         {member.name}
                       </h3>
-                      <p className="text-sm text-white/80 font-light leading-relaxed">
+                      <p className="text-xs sm:text-sm text-white/80 font-light leading-relaxed">
                         {member.role}
                       </p>
                     </div>
+
+                    {/* Description - Always visible on mobile */}
+                    <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed lg:hidden">
+                      {member.description}
+                    </p>
 
                     {/* Expanded Content */}
                     <div
@@ -226,23 +231,29 @@ export default function TeamSection() {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <div className="pt-4 space-y-4 border-t border-white/10">
+                      <div className="pt-3 sm:pt-4 space-y-3 sm:space-y-4 border-t border-white/10">
+                        {/* Description in expanded view for desktop */}
+                        <div className="hidden lg:block">
+                          <p className="text-sm text-white/70 font-light leading-relaxed">
+                            {member.description}
+                          </p>
+                        </div>
                         {member.credentials && (
                           <div>
-                            <p className="text-xs text-white/60 font-light uppercase tracking-wider mb-2">
+                            <p className="text-xs text-white/60 font-light uppercase tracking-wider mb-1 sm:mb-2">
                               Formación Académica
                             </p>
-                            <p className="text-sm text-white/70 font-light leading-relaxed">
+                            <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
                               {member.credentials}
                             </p>
                           </div>
                         )}
                         {member.experience && (
                           <div>
-                            <p className="text-xs text-white/60 font-light uppercase tracking-wider mb-2">
+                            <p className="text-xs text-white/60 font-light uppercase tracking-wider mb-1 sm:mb-2">
                               Experiencia
                             </p>
-                            <p className="text-sm text-white/70 font-light leading-relaxed">
+                            <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
                               {member.experience}
                             </p>
                           </div>
@@ -253,14 +264,14 @@ export default function TeamSection() {
                 </div>
 
                 {/* Expand Indicator */}
-                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between group-hover:border-white/20 transition-colors">
-                  <span className="text-xs text-white/50 group-hover:text-white/70 font-light uppercase tracking-wider transition-colors">
+                <div className="mt-4 sm:mt-5 md:mt-6 pt-3 sm:pt-4 border-t border-white/10 flex items-center justify-between group-hover:border-white/20 transition-colors">
+                  <span className="text-[10px] sm:text-xs text-white/50 group-hover:text-white/70 font-light uppercase tracking-wider transition-colors">
                     {expandedMember === member.id
-                      ? "Cerrar información"
-                      : "Ver información completa"}
+                      ? "Cerrar"
+                      : "Ver más"}
                   </span>
                   <svg
-                    className={`w-5 h-5 text-white/50 group-hover:text-white/70 transition-all duration-300 ${
+                    className={`w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white/70 transition-all duration-300 ${
                       expandedMember === member.id ? "rotate-180" : ""
                     }`}
                     fill="none"
