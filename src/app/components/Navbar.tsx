@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,6 +30,7 @@ export default function Navbar() {
     { href: "#inicio", label: "Inicio" },
     { href: "#servicios", label: "Áreas de Práctica" },
     { href: "#industrias", label: "Industrias" },
+    { href: "#equipo", label: "Equipo" },
     { href: "#contacto", label: "Contacto" },
   ];
 
@@ -58,11 +60,9 @@ export default function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center space-x-2 relative z-50"
+              className="flex items-center relative z-50 text-gray-900 hover:text-gray-700 transition-colors"
             >
-              <span className="text-2xl font-light tracking-tight text-gray-900">
-                BDP
-              </span>
+              <Logo size="sm" />
             </Link>
 
             {/* Navigation Links - Desktop */}
