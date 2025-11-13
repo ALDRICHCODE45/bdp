@@ -48,13 +48,33 @@ const services = [
 
 export default function ServicesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const nextService = () => {
-    setCurrentIndex((prev) => (prev + 1) % services.length);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % services.length);
+      setTimeout(() => setIsTransitioning(false), 50);
+    }, 300);
   };
 
   const prevService = () => {
-    setCurrentIndex((prev) => (prev - 1 + services.length) % services.length);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev - 1 + services.length) % services.length);
+      setTimeout(() => setIsTransitioning(false), 50);
+    }, 300);
+  };
+
+  const goToService = (index: number) => {
+    if (isTransitioning || index === currentIndex) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex(index);
+      setTimeout(() => setIsTransitioning(false), 50);
+    }, 300);
   };
 
   const currentService = services[currentIndex];
@@ -66,15 +86,21 @@ export default function ServicesSection() {
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 w-full h-full">
-        <Image
-          key={currentService.id}
-          src={currentService.bgImage}
-          alt={currentService.title}
-          fill
-          className="object-cover transition-opacity duration-700 ease-in-out"
-          priority={currentIndex === 0}
-          quality={90}
-        />
+        <div
+          key={`bg-${currentService.id}`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            isTransitioning ? "opacity-0" : "opacity-100"
+          }`}
+        >
+          <Image
+            src={currentService.bgImage}
+            alt={currentService.title}
+            fill
+            className="object-cover"
+            priority={currentIndex === 0}
+            quality={90}
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/96 via-gray-900/92 to-gray-900/85" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_transparent_0%,_rgba(0,0,0,0.4)_70%)]" />
       </div>
@@ -96,7 +122,13 @@ export default function ServicesSection() {
           {/* Left Column - Content */}
           <div className="space-y-8 text-white">
             {/* Pagination */}
-            <div className="flex items-center space-x-4">
+            <div
+              className={`flex items-center space-x-4 transition-all duration-500 ease-out ${
+                isTransitioning
+                  ? "opacity-0 translate-y-4"
+                  : "opacity-100 translate-y-0"
+              }`}
+            >
               <span className="text-sm font-light tracking-wider">
                 {String(currentIndex + 1).padStart(2, "0")} /{" "}
                 {String(services.length).padStart(2, "0")}
@@ -104,19 +136,37 @@ export default function ServicesSection() {
             </div>
 
             {/* Section Label */}
-            <div>
+            <div
+              className={`transition-all duration-500 ease-out delay-75 ${
+                isTransitioning
+                  ? "opacity-0 translate-y-4"
+                  : "opacity-100 translate-y-0"
+              }`}
+            >
               <p className="text-xs font-light tracking-[0.3em] uppercase text-white/70 mb-4">
                 Áreas de Práctica
               </p>
             </div>
 
             {/* Service Title */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight">
+            <h2
+              className={`text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight transition-all duration-700 ease-out delay-100 ${
+                isTransitioning
+                  ? "opacity-0 translate-y-8"
+                  : "opacity-100 translate-y-0"
+              }`}
+            >
               {currentService.title}
             </h2>
 
             {/* Description */}
-            <p className="text-base md:text-lg text-white/90 font-light leading-relaxed max-w-2xl">
+            <p
+              className={`text-base md:text-lg text-white/90 font-light leading-relaxed max-w-2xl transition-all duration-700 ease-out delay-150 ${
+                isTransitioning
+                  ? "opacity-0 translate-y-8"
+                  : "opacity-100 translate-y-0"
+              }`}
+            >
               {currentService.description}
             </p>
 
@@ -159,15 +209,21 @@ export default function ServicesSection() {
             </div>
 
             {/* Service Indicators */}
-            <div className="flex items-center space-x-2 pt-4">
+            <div
+              className={`flex items-center space-x-2 pt-4 transition-all duration-500 ease-out delay-300 ${
+                isTransitioning
+                  ? "opacity-0 translate-y-4"
+                  : "opacity-100 translate-y-0"
+              }`}
+            >
               {services.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`h-1 transition-all duration-300 ${
+                  onClick={() => goToService(index)}
+                  className={`h-1 transition-all duration-500 ease-out ${
                     index === currentIndex
                       ? "w-8 bg-white"
-                      : "w-1 bg-white/30 hover:bg-white/50"
+                      : "w-1 bg-white/30 hover:bg-white/50 hover:w-2"
                   }`}
                   aria-label={`Ir al servicio ${index + 1}`}
                 />
@@ -177,13 +233,19 @@ export default function ServicesSection() {
 
           {/* Right Column - Image */}
           <div className="relative hidden lg:block">
-            <div className="relative h-[600px] lg:h-[700px] overflow-hidden rounded-3xl">
+            <div
+              className={`relative h-[600px] lg:h-[700px] overflow-hidden rounded-3xl transition-all duration-1000 ease-out delay-200 ${
+                isTransitioning
+                  ? "opacity-0 scale-95 translate-x-8"
+                  : "opacity-100 scale-100 translate-x-0"
+              }`}
+            >
               <Image
                 key={currentService.id}
                 src={currentService.image}
                 alt={currentService.title}
                 fill
-                className="object-cover transition-opacity duration-700 ease-in-out"
+                className="object-cover"
                 quality={90}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent" />
