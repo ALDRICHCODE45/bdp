@@ -157,17 +157,7 @@ export default function NewFooter() {
               {t("copyright", { year: new Date().getFullYear() })}
             </div>
             <div className="flex space-x-8">
-              <Link
-                href="/aviso-privacidad"
-                className="text-xs text-gray-500 font-light hover:text-white transition-colors uppercase tracking-wider"
-              >
-                {t("avisoPrivacidad")}
-              </Link>
-              <div className="flex space-x-4">
-                <span className="text-xs text-gray-500 font-light">
-                  {t("idiomas")}
-                </span>
-              </div>
+              <div className="flex space-x-4"></div>
             </div>
           </div>
         </div>
