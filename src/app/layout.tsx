@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "BDP | Litigio y Consultoría Multidisciplinaria",
   description:
     "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público, particularmente en las ramas constitucional, administrativa, regulatoria y electoral.",
+  icons: {
+    icon: "/icono.png",
+  },
 };
 
 export default function RootLayout({

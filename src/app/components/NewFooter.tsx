@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import Logo from "./Logo";
 
 export default function NewFooter() {
@@ -143,14 +142,6 @@ export default function NewFooter() {
                   className="hover:text-white transition-colors"
                 >
                   Contacto
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="hover:text-white transition-colors"
-                >
-                  Todos los Servicios
                 </Link>
               </li>
             </ul>
