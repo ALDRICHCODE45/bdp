@@ -79,8 +79,11 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
+      {/* Subtle blurred gradient effects */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Image */}
           <div className="relative">
@@ -94,9 +97,9 @@ export default function WhyChooseUs() {
               <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
             </div>
             {/* Overlay Card */}
-            <div className="absolute bottom-8 left-8 right-8 bg-white p-8 shadow-lg">
-              <p className="text-4xl font-light text-gray-900 mb-2">Primera</p>
-              <p className="text-sm text-gray-600 font-light">
+            <div className="absolute bottom-8 left-8 right-8 bg-white/95 p-8 shadow-xl border border-white/10">
+              <p className="text-4xl font-light text-slate-900 mb-2">Primera</p>
+              <p className="text-sm text-slate-700 font-light">
                 Firma boutique en México en integrar litigio, derecho regulatorio y consultoría en políticas públicas
               </p>
             </div>
@@ -104,15 +107,15 @@ export default function WhyChooseUs() {
 
           {/* Right Column - Content */}
           <div>
-            <p className="text-sm text-gray-500 font-light tracking-[0.3em] uppercase mb-4">
+            <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase mb-4">
               Por Qué Elegirnos
             </p>
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
               La mejor <span className="font-normal">elección</span>
               <br />
               para tu caso
             </h2>
-            <p className="text-base text-gray-600 font-light leading-relaxed mb-12">
+            <p className="text-base text-white/80 font-light leading-relaxed mb-12">
               BDP cuenta con un equipo de profesionales legales con amplia experiencia en la práctica de Derecho Público y disciplinas relacionadas. Contamos con alianzas estratégicas con Firmas de Abogados nacionales y extranjeras, y colaboramos activamente con organizaciones de la sociedad civil en litigios estratégicos y proyectos pro-bono.
             </p>
 
@@ -120,14 +123,14 @@ export default function WhyChooseUs() {
             <div className="space-y-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center border border-gray-200 text-gray-900">
+                  <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center border border-white/10 text-white bg-white/3 hover:bg-white/5 transition-colors">
                     {feature.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-light text-gray-900 mb-2">
+                    <h3 className="text-lg font-light text-white mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-gray-600 font-light leading-relaxed">
+                    <p className="text-sm text-white/70 font-light leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

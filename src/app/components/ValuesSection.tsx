@@ -25,7 +25,11 @@ const values = [
 
 export default function ValuesSection() {
   return (
-    <section className="relative py-24 bg-gray-900 text-white overflow-hidden">
+    <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
+      {/* Subtle blurred gradient effects */}
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
+      
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full opacity-20">
         <video
@@ -61,7 +65,7 @@ export default function ValuesSection() {
           {values.map((value, index) => (
             <div
               key={index}
-              className="group p-8 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300 border-l-2 border-white/20 hover:border-white"
+              className="group p-8 bg-white/3 hover:bg-white/5 transition-all duration-300 border-l-2 border-white/10 hover:border-white/20"
             >
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-white/30 group-hover:border-white transition-colors">
