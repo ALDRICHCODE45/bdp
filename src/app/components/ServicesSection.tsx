@@ -1,52 +1,52 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const services = [
-  {
-    id: 1,
-    title: "Litigio en Derecho Público",
-    description:
-      "BDP cuenta con una extensa experiencia en procedimientos de juicios de amparo, acciones de inconstitucionalidad y controversias constitucionales ante el Poder Judicial Federal, con una presencia particularmente fuerte ante la Suprema Corte de Justicia de la Nación. Nuestra Firma representa tanto a particulares —nacionales y extranjeros— como a autoridades públicas legítimas. A través de nuestras estrategias y argumentos de litigio constitucional, hemos logrado interpretaciones legales innovadoras y la expansión de derechos.",
-    image:
-      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
-    bgImage:
-      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80",
-  },
-  {
-    id: 2,
-    title: "Derecho Regulatorio y Compliance",
-    description:
-      "Desarrollamos estrategias integrales para la prevención, gestión y remediación de riesgos regulatorios, integrando perspectivas de derecho público y corporativo. BDP ha desarrollado un nuevo enfoque en la práctica de la integridad y el buen gobierno corporativo, ofreciendo soluciones de due diligence preventivas y resilientes en áreas como anticorrupción, antilavado de dinero, fiscal, ambiental y agrario.",
-    image:
-      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80",
-    bgImage:
-      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80",
-  },
-  {
-    id: 3,
-    title: "Derecho de la Energía y Sostenibilidad",
-    description:
-      "Área central de la firma que ofrece asesoría, consultoría y litigio de alta especialización regulatoria y técnica, cubriendo todos los eslabones del sector energético, desde la exploración hasta la distribución minorista. BDP ha desarrollado el concepto de Federalismo Energético para maximizar la utilización del potencial energético de México, promoviendo modelos de coinversión y proyectos estratégicos.",
-    image:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=80",
-    bgImage:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80",
-  },
-  {
-    id: 4,
-    title: "Contratación Pública y Proyectos Estratégicos",
-    description:
-      "Trayectoria comprobada en procesos de contratación pública y somos pioneros en el desarrollo e implementación de proyectos bajo el modelo de asociación público-privada (APP) en México. Los abogados de BDP han brindado asesoría a empresas y gobiernos locales en todas las fases del proceso, desde el diseño del proyecto y la evaluación de riesgos hasta licitación, concesión, adjudicación, financiamiento y bursatilización.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
-    bgImage:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80",
-  },
-];
-
 export default function ServicesSection() {
+  const t = useTranslations("services");
+  const tCommon = useTranslations("common");
+
+  const services = [
+    {
+      id: 1,
+      title: t("service1.title"),
+      description: t("service1.description"),
+      image:
+        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
+      bgImage:
+        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80",
+    },
+    {
+      id: 2,
+      title: t("service2.title"),
+      description: t("service2.description"),
+      image:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80",
+      bgImage:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80",
+    },
+    {
+      id: 3,
+      title: t("service3.title"),
+      description: t("service3.description"),
+      image:
+        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=80",
+      bgImage:
+        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80",
+    },
+    {
+      id: 4,
+      title: t("service4.title"),
+      description: t("service4.description"),
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
+      bgImage:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80",
+    },
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -144,7 +144,7 @@ export default function ServicesSection() {
               }`}
             >
               <p className="text-xs font-light tracking-[0.3em] uppercase text-white/70 mb-4">
-                Áreas de Práctica
+                {t("sectionLabel")}
               </p>
             </div>
 
@@ -175,7 +175,7 @@ export default function ServicesSection() {
               <button
                 onClick={prevService}
                 className="w-12 h-12 rounded-full border border-white/30 hover:border-white/60 hover:bg-white/10 transition-all duration-300 flex items-center justify-center group"
-                aria-label="Servicio anterior"
+                aria-label={tCommon("servicioAnterior")}
               >
                 <svg
                   className="w-5 h-5 text-white group-hover:scale-110 transition-transform"
@@ -192,7 +192,7 @@ export default function ServicesSection() {
               <button
                 onClick={nextService}
                 className="w-12 h-12 rounded-full border border-white/30 hover:border-white/60 hover:bg-white/10 transition-all duration-300 flex items-center justify-center group"
-                aria-label="Siguiente servicio"
+                aria-label={tCommon("siguienteServicio")}
               >
                 <svg
                   className="w-5 h-5 text-white group-hover:scale-110 transition-transform"
@@ -225,7 +225,7 @@ export default function ServicesSection() {
                       ? "w-8 bg-white"
                       : "w-1 bg-white/30 hover:bg-white/50 hover:w-2"
                   }`}
-                  aria-label={`Ir al servicio ${index + 1}`}
+                  aria-label={`${tCommon("irAlServicio")} ${index + 1}`}
                 />
               ))}
             </div>

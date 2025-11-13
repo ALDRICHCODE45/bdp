@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function HeroSection() {
+  const t = useTranslations("hero");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -51,9 +54,12 @@ export default function HeroSection() {
             }`}
             style={{ transitionDelay: "200ms", transitionDuration: "1300ms" }}
           >
-            Soluciones Inteligentes para
-            <br />
-            Resultados Seguros
+            {t("title").split("\n").map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < t("title").split("\n").length - 1 && <br />}
+              </span>
+            ))}
           </h1>
 
           {/* Subtitle */}
@@ -65,7 +71,7 @@ export default function HeroSection() {
             }`}
             style={{ transitionDelay: "400ms", transitionDuration: "1300ms" }}
           >
-            Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público, particularmente en las ramas constitucional, administrativa, regulatoria y electoral. Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes.
+            {t("subtitle")}
           </p>
 
           {/* CTA Buttons */}
@@ -77,18 +83,18 @@ export default function HeroSection() {
             }`}
             style={{ transitionDelay: "600ms", transitionDuration: "1300ms" }}
           >
-            <a
+            <Link
               href="#servicios"
               className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-gray-900 text-sm font-normal rounded-lg hover:bg-gray-100 transition-colors shadow-lg text-center"
             >
-              Descubre nuestros servicios
-            </a>
-            <a
+              {t("cta1")}
+            </Link>
+            <Link
               href="#contacto"
               className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white/30 text-white text-sm font-normal rounded-lg hover:bg-white/10 hover:border-white/50 transition-colors text-center"
             >
-              Agenda una consulta
-            </a>
+              {t("cta2")}
+            </Link>
           </div>
         </div>
       </div>

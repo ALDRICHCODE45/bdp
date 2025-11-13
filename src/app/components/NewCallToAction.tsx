@@ -1,8 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 export default function NewCallToAction() {
+  const t = useTranslations("callToAction");
   const { ref, isIntersecting } = useIntersectionObserver();
 
   return (
@@ -23,29 +26,34 @@ export default function NewCallToAction() {
           style={{ transitionDuration: "1600ms" }}
         >
           <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase">
-            ¿Necesitas Asesoría Legal?
+            {t("label")}
           </p>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight">
-            Solucionamos tu <span className="font-normal">problema</span>
+            {t("title").split(" ").map((word, i) => (
+              <span key={i}>
+                {i === 2 ? <span className="font-normal">{word}</span> : word}
+                {i < t("title").split(" ").length - 1 && " "}
+              </span>
+            ))}
           </h2>
 
           <p className="max-w-2xl mx-auto text-base md:text-lg text-white/80 font-light leading-relaxed">
-            Contáctanos hoy para una consulta inicial. Nuestro equipo de profesionales legales con amplia experiencia en Derecho Público está listo para analizar tu caso y ofrecerte soluciones integrales orientadas a la resolución de problemas.
+            {t("description")}
           </p>
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
+            <Link
               href="#contacto"
               className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 text-sm font-light uppercase tracking-wider hover:bg-white/90 transition-colors"
             >
-              Contáctanos
-            </a>
+              {t("cta1")}
+            </Link>
             <a
               href="tel:+525555255593"
               className="w-full sm:w-auto px-8 py-4 border border-white/30 text-white text-sm font-light uppercase tracking-wider hover:bg-white/10 hover:border-white/50 transition-colors"
             >
-              Llámanos: 55-55255593
+              {t("cta2")}
             </a>
           </div>
 
@@ -73,7 +81,7 @@ export default function NewCallToAction() {
                 </svg>
               </div>
               <h3 className="text-base font-light text-white uppercase tracking-wider">
-                Email
+                {t("email")}
               </h3>
               <a
                 href="mailto:info@bdp.com.mx"
@@ -98,7 +106,7 @@ export default function NewCallToAction() {
                 </svg>
               </div>
               <h3 className="text-base font-light text-white uppercase tracking-wider">
-                Teléfono
+                {t("telefono")}
               </h3>
               <a
                 href="tel:+525555255593"

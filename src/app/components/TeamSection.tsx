@@ -1,105 +1,92 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const teamMembers = [
+export default function TeamSection() {
+  const t = useTranslations("team");
+  
+  const teamMembers = [
   {
     id: 1,
-    name: "Roberto Gil Zuarth",
-    role: "Socio Fundador",
-    description:
-      "Lidera las prácticas de derecho constitucional, derecho administrativo y consultoría en políticas públicas.",
-    credentials:
-      "Licenciatura en Derecho con honores del ITAM. Maestría en Derecho Constitucional de la Universidad Carlos III de Madrid, España.",
-    experience:
-      "Jefe de Asesores del Secretario de la Función Pública, Consejero General y Representante del PAN ante el INE, Subsecretario de Gobernación, Secretario Particular del Expresidente Felipe de Jesús Calderón Hinojosa, Senador de la República, Presidente de la Comisión de Justicia y de la Mesa Directiva del Senado.",
+    name: t("members.roberto.name"),
+    role: t("members.roberto.role"),
+    description: t("members.roberto.description"),
+    credentials: t("members.roberto.credentials"),
+    experience: t("members.roberto.experience"),
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
   },
   {
     id: 2,
-    name: "Carlos A. Lezama Fernández del Campo",
-    role: "Socio Fundador",
-    description:
-      "Lidera la práctica de litigio y regulatoria. Asesora a clientes en disputas y acciones judiciales y administrativas.",
-    credentials:
-      "Licenciatura en Derecho de la Universidad Panamericana (2004). Especializaciones en Derecho Procesal y Derecho Administrativo. Estudios especializados en Proyectos de Infraestructura en la John F. Kennedy School of Government, Universidad de Harvard. Master of Laws (LL.M.) de la Universidad de Fordham en Nueva York.",
-    experience:
-      "Secretario Técnico de la Mesa Directiva del Senado de la República (LXII Legislatura), Subdirector General Jurídico del Comité Nacional del PAN, Director Jurídico de Bienes Nacionales en la Secretaría de la Función Pública.",
+    name: t("members.carlos.name"),
+    role: t("members.carlos.role"),
+    description: t("members.carlos.description"),
+    credentials: t("members.carlos.credentials"),
+    experience: t("members.carlos.experience"),
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
   },
   {
     id: 3,
-    name: "Manuel MacFarland",
-    role: "Socio",
-    description:
-      "Socio en el departamento de litigio, especializado en derecho procesal constitucional.",
-    credentials:
-      "Egresado de la Escuela Libre de Derecho (ELD). Maestría en derecho procesal constitucional de la Universidad Panamericana.",
-    experience:
-      "Carrera en el servicio público de más de 19 años. Director General de Procedimientos de Protección contra Actos Administrativos en la Procuraduría Fiscal de la Federación, Jefe de la Unidad de Supervisión y Verificación en la ex-Comisión Federal de Telecomunicaciones, Subprocurador Fiscal Federal de Protección de Procedimientos, Director Jurídico del IMSS, Subconsejero Jurídico de Legislación y Estudios Normativos en la Consejería Jurídica de la Presidencia.",
+    name: t("members.manuel.name"),
+    role: t("members.manuel.role"),
+    description: t("members.manuel.description"),
+    credentials: t("members.manuel.credentials"),
+    experience: t("members.manuel.experience"),
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
   },
   {
     id: 4,
-    name: "Gonzalo José Bolio Benitez",
-    role: "Abogado/Consultor",
-    description:
-      "Miembro de BDP, especializado en litigio y consultoría legal en áreas de derecho administrativo, constitucional, corporativo y empresarial.",
+    name: t("members.gonzalo.name"),
+    role: t("members.gonzalo.role"),
+    description: t("members.gonzalo.description"),
     image:
       "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80",
   },
   {
     id: 5,
-    name: "Alonso Zepeda Celis",
-    role: "Abogado/Consultor",
-    description:
-      "Abogado egresado con honores de la Universidad Panamericana, especializado en litigio constitucional, administrativo y electoral.",
+    name: t("members.alonso.name"),
+    role: t("members.alonso.role"),
+    description: t("members.alonso.description"),
     image:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
   },
   {
     id: 6,
-    name: "Paulina Reynoso Ventosa",
-    role: "Abogada/Consultora",
-    description:
-      "Actualmente se enfoca en litigio electoral y consultoría legal general en BDP.",
+    name: t("members.paulina.name"),
+    role: t("members.paulina.role"),
+    description: t("members.paulina.description"),
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
   },
   {
     id: 7,
-    name: "José Antonio Montes",
-    role: "Asociado Principal - Práctica de Energía",
-    description:
-      "Profesional con amplia experiencia en el sector energético, especializado en regulación de hidrocarburos y energías renovables.",
+    name: t("members.jose.name"),
+    role: t("members.jose.role"),
+    description: t("members.jose.description"),
     image:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
   },
   {
     id: 8,
-    name: "Aldo Luis Ángel Hernández Olmos",
-    role: "Abogado/Consultor",
-    description:
-      "Licenciatura en Derecho de la Universidad Iberoamericana en León. Especialización en el sistema adversarial de la Escuela Libre de Derecho (ELD). Desde 2025, es miembro de BDP Litigio y Consultoría, donde litiga en derecho penal.",
+    name: t("members.aldo.name"),
+    role: t("members.aldo.role"),
+    description: t("members.aldo.description"),
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
   },
   {
     id: 9,
-    name: "Iliana Sotomayor",
-    role: "Abogada/Consultora",
-    description:
-      "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+    name: t("members.iliana.name"),
+    role: t("members.iliana.role"),
+    description: t("members.iliana.description"),
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
   },
-];
-
-export default function TeamSection() {
+  ];
   const [expandedMember, setExpandedMember] = useState<number | null>(null);
 
   const toggleMember = (id: number) => {
@@ -144,15 +131,18 @@ export default function TeamSection() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <p className="text-xs font-light tracking-[0.2em] sm:tracking-[0.3em] uppercase text-white/70 mb-3 sm:mb-4">
-            Nuestro Equipo
+            {t("label")}
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 sm:mb-6 px-2">
-            Profesionales <span className="font-normal">Expertos</span>
+            {t("title").split(" ").map((word, i) => (
+              <span key={i}>
+                {i === 1 ? <span className="font-normal">{word}</span> : word}
+                {i < t("title").split(" ").length - 1 && " "}
+              </span>
+            ))}
           </h2>
           <p className="max-w-3xl mx-auto text-sm sm:text-base text-white/80 font-light leading-relaxed px-4 sm:px-0">
-            Un equipo multidisciplinario de profesionales legales con amplia
-            experiencia en la práctica de Derecho Público y disciplinas
-            relacionadas.
+            {t("description")}
           </p>
         </div>
 
@@ -227,7 +217,7 @@ export default function TeamSection() {
                         {member.credentials && (
                           <div>
                             <p className="text-xs text-white/60 font-light uppercase tracking-wider mb-1 sm:mb-2">
-                              Formación Académica
+                              {t("formacionAcademica")}
                             </p>
                             <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
                               {member.credentials}
@@ -237,7 +227,7 @@ export default function TeamSection() {
                         {member.experience && (
                           <div>
                             <p className="text-xs text-white/60 font-light uppercase tracking-wider mb-1 sm:mb-2">
-                              Experiencia
+                              {t("experiencia")}
                             </p>
                             <p className="text-xs sm:text-sm text-white/70 font-light leading-relaxed">
                               {member.experience}
@@ -253,8 +243,8 @@ export default function TeamSection() {
                 <div className="mt-4 sm:mt-5 md:mt-6 pt-3 sm:pt-4 border-t border-white/10 flex items-center justify-between group-hover:border-white/20 transition-colors">
                   <span className="text-[10px] sm:text-xs text-white/50 group-hover:text-white/70 font-light uppercase tracking-wider transition-colors">
                     {expandedMember === member.id
-                      ? "Cerrar"
-                      : "Ver más"}
+                      ? t("cerrar")
+                      : t("verMas")}
                   </span>
                   <svg
                     className={`w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white/70 transition-all duration-300 ${

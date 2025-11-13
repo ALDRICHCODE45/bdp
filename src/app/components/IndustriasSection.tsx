@@ -1,19 +1,23 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-
-const industries = [
-  "Energía",
-  "Infraestructura",
-  "Gobierno y Sector Público",
-  "Finanzas",
-  "Minería",
-  "Agroindustria",
-  "Inmobiliario",
-];
+import ProjectCard, { projectIcons } from "./ProjectCard";
 
 export default function IndustriasSection() {
+  const t = useTranslations("industries");
   const { ref, isIntersecting } = useIntersectionObserver();
+  
+  // Definir industries directamente desde las traducciones
+  const industries: string[] = [
+    t("industries.0") || "Energía",
+    t("industries.1") || "Infraestructura",
+    t("industries.2") || "Gobierno y Sector Público",
+    t("industries.3") || "Finanzas",
+    t("industries.4") || "Minería",
+    t("industries.5") || "Agroindustria",
+    t("industries.6") || "Inmobiliario",
+  ].filter(Boolean) as string[];
 
   return (
     <section
@@ -35,13 +39,18 @@ export default function IndustriasSection() {
           style={{ transitionDuration: "1600ms" }}
         >
           <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase mb-4">
-            Industrias
+            {t("label")}
           </p>
           <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
-            Experiencia <span className="font-normal">Multisectorial</span>
+            {t("title").split(" ").map((word, i) => (
+              <span key={i}>
+                {i === 1 ? <span className="font-normal">{word}</span> : word}
+                {i < t("title").split(" ").length - 1 && " "}
+              </span>
+            ))}
           </h2>
           <p className="max-w-3xl mx-auto text-base text-white/80 font-light leading-relaxed">
-            Ofrecemos servicios especializados a sectores estratégicos, aplicando programas de cumplimiento integrales y asesoría legal altamente especializada.
+            {t("description")}
           </p>
         </div>
 
@@ -77,53 +86,99 @@ export default function IndustriasSection() {
         </div>
 
         {/* Projects Section */}
-        <div
-          className={`mt-24 transition-all ease-out delay-300 ${
-            isIntersecting
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-12"
-          }`}
-          style={{ transitionDuration: "1600ms" }}
-        >
-          <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-light text-white mb-4">
-              Proyectos Clave Liderados
+        <div className="mt-32 md:mt-40">
+          <div
+            className={`text-center mb-16 md:mb-20 transition-all ease-out ${
+              isIntersecting
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-12"
+            }`}
+            style={{ transitionDuration: "1600ms", transitionDelay: "200ms" }}
+          >
+            <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase mb-4">
+              {t("projects.label")}
+            </p>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-6">
+              {t("projects.title").split(" ").map((word, i) => (
+                <span key={i}>
+                  {word}
+                  {i < t("projects.title").split(" ").length - 1 && " "}
+                </span>
+              ))}
             </h3>
-            <p className="max-w-3xl mx-auto text-base text-white/80 font-light leading-relaxed">
-              Los socios y asociados de BDP han liderado proyectos clave que han impactado significativamente el marco jurídico y regulatorio de México.
+            <p className="max-w-3xl mx-auto text-base md:text-lg text-white/80 font-light leading-relaxed">
+              {t("projects.description")}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 bg-white/3 border border-white/8 hover:bg-white/5 transition-colors">
-              <p className="text-sm text-white/90 font-light">
-                La regulación del cannabis en México
-              </p>
-            </div>
-            <div className="p-6 bg-white/3 border border-white/8 hover:bg-white/5 transition-colors">
-              <p className="text-sm text-white/90 font-light">
-                El modelo para el federalismo energético sostenible
-              </p>
-            </div>
-            <div className="p-6 bg-white/3 border border-white/8 hover:bg-white/5 transition-colors">
-              <p className="text-sm text-white/90 font-light">
-                Desarrollo de inversión público-privada en infraestructura
-              </p>
-            </div>
-            <div className="p-6 bg-white/3 border border-white/8 hover:bg-white/5 transition-colors">
-              <p className="text-sm text-white/90 font-light">
-                La transición al nuevo sistema de justicia penal
-              </p>
-            </div>
-            <div className="p-6 bg-white/3 border border-white/8 hover:bg-white/5 transition-colors">
-              <p className="text-sm text-white/90 font-light">
-                La recuperación de activos públicos
-              </p>
-            </div>
-            <div className="p-6 bg-white/3 border border-white/8 hover:bg-white/5 transition-colors">
-              <p className="text-sm text-white/90 font-light">
-                El programa para el control de importaciones de armas
-              </p>
-            </div>
+          
+          {/* Projects Grid - Asymmetric Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+            <ProjectCard
+              number={1}
+              title={t("projects.project1.title")}
+              category={t("projects.project1.category")}
+              year={t("projects.project1.year")}
+              description={t("projects.project1.description")}
+              icon={<projectIcons.project1 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
+              index={0}
+              isVisible={isIntersecting}
+              size="medium"
+            />
+            <ProjectCard
+              number={2}
+              title={t("projects.project2.title")}
+              category={t("projects.project2.category")}
+              year={t("projects.project2.year")}
+              description={t("projects.project2.description")}
+              icon={<projectIcons.project2 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
+              index={1}
+              isVisible={isIntersecting}
+              size="medium"
+            />
+            <ProjectCard
+              number={3}
+              title={t("projects.project3.title")}
+              category={t("projects.project3.category")}
+              year={t("projects.project3.year")}
+              description={t("projects.project3.description")}
+              icon={<projectIcons.project3 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
+              index={2}
+              isVisible={isIntersecting}
+              size="large"
+            />
+            <ProjectCard
+              number={4}
+              title={t("projects.project4.title")}
+              category={t("projects.project4.category")}
+              year={t("projects.project4.year")}
+              description={t("projects.project4.description")}
+              icon={<projectIcons.project4 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
+              index={3}
+              isVisible={isIntersecting}
+              size="medium"
+            />
+            <ProjectCard
+              number={5}
+              title={t("projects.project5.title")}
+              category={t("projects.project5.category")}
+              year={t("projects.project5.year")}
+              description={t("projects.project5.description")}
+              icon={<projectIcons.project5 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
+              index={4}
+              isVisible={isIntersecting}
+              size="medium"
+            />
+            <ProjectCard
+              number={6}
+              title={t("projects.project6.title")}
+              category={t("projects.project6.category")}
+              year={t("projects.project6.year")}
+              description={t("projects.project6.description")}
+              icon={<projectIcons.project6 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
+              index={5}
+              isVisible={isIntersecting}
+              size="medium"
+            />
           </div>
         </div>
       </div>

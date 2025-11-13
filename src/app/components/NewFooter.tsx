@@ -1,9 +1,11 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Logo from "./Logo";
 
 export default function NewFooter() {
+  const t = useTranslations("footer");
   return (
     <footer id="contacto" className="bg-gray-900 text-white">
       {/* Prominent Address Section */}
@@ -26,16 +28,17 @@ export default function NewFooter() {
             </div>
             <div>
               <h3 className="text-2xl md:text-3xl font-light text-white mb-4">
-                Visítanos
+                {t("visitanos")}
               </h3>
               <p className="text-lg md:text-xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
-                Prado Sur 245
-                <br />
-                Lomas - Virreyes, Lomas de Chapultepec
-                <br />
-                Miguel Hidalgo, 11000
-                <br />
-                Ciudad de México, CDMX
+                {t("address")
+                  .split("\n")
+                  .map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      {i < t("address").split("\n").length - 1 && <br />}
+                    </span>
+                  ))}
               </p>
             </div>
             <div className="pt-4">
@@ -45,7 +48,7 @@ export default function NewFooter() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-white text-gray-900 text-sm font-light hover:bg-gray-100 transition-colors rounded-lg"
               >
-                Ver en Google Maps
+                {t("verEnGoogleMaps")}
                 <svg
                   className="w-4 h-4 ml-2"
                   fill="none"
@@ -72,21 +75,18 @@ export default function NewFooter() {
               <Logo size="sm" variant="black" />
             </div>
             <p className="text-sm text-gray-400 font-light leading-relaxed">
-              Firma especializada en litigio y consultoría multidisciplinaria en
-              diversas áreas del Derecho Público. Nuestro enfoque está orientado
-              a la resolución de problemas, siempre buscando ofrecer valor
-              añadido a nuestros clientes.
+              {t("description")}
             </p>
           </div>
 
           {/* Contact Details */}
           <div>
             <h3 className="text-sm font-light tracking-[0.2em] uppercase mb-6">
-              Contacto
+              {t("contacto")}
             </h3>
             <div className="space-y-4 text-sm text-gray-400 font-light">
               <div>
-                <p className="text-white mb-1">Correo Electrónico</p>
+                <p className="text-white mb-1">{t("correoElectronico")}</p>
                 <a
                   href="mailto:info@bdp.com.mx"
                   className="hover:text-white transition-colors"
@@ -95,7 +95,7 @@ export default function NewFooter() {
                 </a>
               </div>
               <div>
-                <p className="text-white mb-1">Teléfono</p>
+                <p className="text-white mb-1">{t("telefono")}</p>
                 <a
                   href="tel:+525555255593"
                   className="hover:text-white transition-colors"
@@ -109,7 +109,7 @@ export default function NewFooter() {
           {/* Quick Links */}
           <div>
             <h3 className="text-sm font-light tracking-[0.2em] uppercase mb-6">
-              Enlaces Rápidos
+              {t("enlacesRapidos")}
             </h3>
             <ul className="space-y-3 text-sm text-gray-400 font-light">
               <li>
@@ -117,7 +117,7 @@ export default function NewFooter() {
                   href="#inicio"
                   className="hover:text-white transition-colors"
                 >
-                  Inicio
+                  {t("inicio")}
                 </Link>
               </li>
               <li>
@@ -125,7 +125,7 @@ export default function NewFooter() {
                   href="#servicios"
                   className="hover:text-white transition-colors"
                 >
-                  Áreas de Práctica
+                  {t("areasPractica")}
                 </Link>
               </li>
               <li>
@@ -133,7 +133,7 @@ export default function NewFooter() {
                   href="#industrias"
                   className="hover:text-white transition-colors"
                 >
-                  Industrias
+                  {t("industrias")}
                 </Link>
               </li>
               <li>
@@ -141,7 +141,7 @@ export default function NewFooter() {
                   href="#contacto"
                   className="hover:text-white transition-colors"
                 >
-                  Contacto
+                  {t("contactoLink")}
                 </Link>
               </li>
             </ul>
@@ -154,18 +154,18 @@ export default function NewFooter() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-xs text-gray-500 font-light">
-              © BDP / {new Date().getFullYear()}
+              {t("copyright", { year: new Date().getFullYear() })}
             </div>
             <div className="flex space-x-8">
               <Link
                 href="/aviso-privacidad"
                 className="text-xs text-gray-500 font-light hover:text-white transition-colors uppercase tracking-wider"
               >
-                Aviso de Privacidad
+                {t("avisoPrivacidad")}
               </Link>
               <div className="flex space-x-4">
                 <span className="text-xs text-gray-500 font-light">
-                  ESP / ENG / ZH
+                  {t("idiomas")}
                 </span>
               </div>
             </div>

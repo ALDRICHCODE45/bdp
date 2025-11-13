@@ -1,0 +1,270 @@
+{
+  "common": {
+    "inicio": "Inicio",
+    "servicios": "Áreas de Práctica",
+    "industrias": "Industrias",
+    "equipo": "Equipo",
+    "contacto": "Contacto",
+    "contactanos": "Contáctanos",
+    "verMas": "Ver más",
+    "cerrar": "Cerrar",
+    "conocerMas": "Conocer más",
+    "servicioAnterior": "Servicio anterior",
+    "siguienteServicio": "Siguiente servicio",
+    "irAlServicio": "Ir al servicio"
+  },
+  "navbar": {
+    "inicio": "Inicio",
+    "areasPractica": "Áreas de Práctica",
+    "industrias": "Industrias",
+    "equipo": "Equipo",
+    "contacto": "Contacto",
+    "contactanos": "Contáctanos"
+  },
+  "hero": {
+    "title": "Soluciones Inteligentes para\nResultados Seguros",
+    "subtitle": "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público, particularmente en las ramas constitucional, administrativa, regulatoria y electoral. Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes.",
+    "cta1": "Descubre nuestros servicios",
+    "cta2": "Agenda una consulta"
+  },
+  "services": {
+    "sectionLabel": "Áreas de Práctica",
+    "service1": {
+      "title": "Litigio en Derecho Público",
+      "description": "BDP cuenta con una extensa experiencia en procedimientos de juicios de amparo, acciones de inconstitucionalidad y controversias constitucionales ante el Poder Judicial Federal, con una presencia particularmente fuerte ante la Suprema Corte de Justicia de la Nación. Nuestra Firma representa tanto a particulares —nacionales y extranjeros— como a autoridades públicas legítimas. A través de nuestras estrategias y argumentos de litigio constitucional, hemos logrado interpretaciones legales innovadoras y la expansión de derechos."
+    },
+    "service2": {
+      "title": "Derecho Regulatorio y Compliance",
+      "description": "Desarrollamos estrategias integrales para la prevención, gestión y remediación de riesgos regulatorios, integrando perspectivas de derecho público y corporativo. BDP ha desarrollado un nuevo enfoque en la práctica de la integridad y el buen gobierno corporativo, ofreciendo soluciones de due diligence preventivas y resilientes en áreas como anticorrupción, antilavado de dinero, fiscal, ambiental y agrario."
+    },
+    "service3": {
+      "title": "Derecho de la Energía y Sostenibilidad",
+      "description": "Área central de la firma que ofrece asesoría, consultoría y litigio de alta especialización regulatoria y técnica, cubriendo todos los eslabones del sector energético, desde la exploración hasta la distribución minorista. BDP ha desarrollado el concepto de Federalismo Energético para maximizar la utilización del potencial energético de México, promoviendo modelos de coinversión y proyectos estratégicos."
+    },
+    "service4": {
+      "title": "Contratación Pública y Proyectos Estratégicos",
+      "description": "Trayectoria comprobada en procesos de contratación pública y somos pioneros en el desarrollo e implementación de proyectos bajo el modelo de asociación público-privada (APP) en México. Los abogados de BDP han brindado asesoría a empresas y gobiernos locales en todas las fases del proceso, desde el diseño del proyecto y la evaluación de riesgos hasta licitación, concesión, adjudicación, financiamiento y bursatilización."
+    }
+  },
+  "whyChooseUs": {
+    "label": "Por Qué Elegirnos",
+    "title": "La mejor elección\npara tu caso",
+    "description": "BDP cuenta con un equipo de profesionales legales con amplia experiencia en la práctica de Derecho Público y disciplinas relacionadas. Contamos con alianzas estratégicas con Firmas de Abogados nacionales y extranjeras, y colaboramos activamente con organizaciones de la sociedad civil en litigios estratégicos y proyectos pro-bono.",
+    "feature1": {
+      "title": "Reconocimiento en Litigio Estratégico",
+      "description": "El equipo de BDP ha sido reconocido entre las Firmas líderes en litigio estratégico, posicionándonos como un referente en el campo del derecho público."
+    },
+    "feature2": {
+      "title": "Proyectos Clave Liderados",
+      "description": "Hemos liderado proyectos clave como la regulación del cannabis, el federalismo energético sostenible, y el desarrollo de inversión público-privada en infraestructura."
+    },
+    "feature3": {
+      "title": "Enfoque Multidisciplinario",
+      "description": "La naturaleza de nuestros litigios requiere habilidades sólidas en diseño de estrategias integrales, políticas públicas aplicadas, gestión de crisis y riesgo reputacional."
+    },
+    "feature4": {
+      "title": "Enfoque en Resolución de Problemas",
+      "description": "Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes a través de soluciones integrales y personalizadas."
+    },
+    "overlay": {
+      "first": "Primera",
+      "description": "Firma boutique en México en integrar litigio, derecho regulatorio y consultoría en políticas públicas"
+    }
+  },
+  "industries": {
+    "label": "Industrias",
+    "title": "Experiencia Multisectorial",
+    "description": "Ofrecemos servicios especializados a sectores estratégicos, aplicando programas de cumplimiento integrales y asesoría legal altamente especializada.",
+    "industries": [
+      "Energía",
+      "Infraestructura",
+      "Gobierno y Sector Público",
+      "Finanzas",
+      "Minería",
+      "Agroindustria",
+      "Inmobiliario"
+    ],
+    "projects": {
+      "label": "Proyectos Clave Liderados",
+      "title": "Proyectos Estratégicos",
+      "description": "Los socios y asociados de BDP han liderado proyectos clave que han impactado significativamente el marco jurídico y regulatorio de México.",
+      "project1": {
+        "title": "La regulación del cannabis en México",
+        "category": "Regulatorio",
+        "year": "2017-2021",
+        "description": "Proyecto estratégico que estableció el marco legal para la regulación del cannabis en México, transformando el panorama jurídico y regulatorio del país."
+      },
+      "project2": {
+        "title": "El modelo para el federalismo energético sostenible",
+        "category": "Energía",
+        "year": "2018-2023",
+        "description": "Desarrollo de un modelo innovador para maximizar el aprovechamiento del potencial energético de México mediante el federalismo energético."
+      },
+      "project3": {
+        "title": "Desarrollo de inversión público-privada en infraestructura",
+        "category": "Infraestructura",
+        "year": "2015-2024",
+        "description": "Pioneros en el desarrollo e implementación de proyectos bajo el modelo de asociación público-privada (APP) en México."
+      },
+      "project4": {
+        "title": "La transición al nuevo sistema de justicia penal",
+        "category": "Justicia",
+        "year": "2014-2016",
+        "description": "Liderazgo en la transición al nuevo sistema de justicia penal y la autonomía de la Fiscalía General de la República."
+      },
+      "project5": {
+        "title": "La recuperación de activos públicos",
+        "category": "Anti-Corrupción",
+        "year": "2019-2022",
+        "description": "Estrategias legales y regulatorias para la recuperación de activos públicos y el combate a la corrupción."
+      },
+      "project6": {
+        "title": "El programa para el control de importaciones de armas",
+        "category": "Seguridad",
+        "year": "2020-2023",
+        "description": "Desarrollo de políticas públicas y marcos regulatorios para el control de importaciones de armas en México."
+      }
+    }
+  },
+  "values": {
+    "label": "Nuestra Cultura",
+    "title": "Nuestros Valores",
+    "description": "Los principios fundamentales que guían nuestra práctica profesional y definen nuestro compromiso con la excelencia, la integridad y la innovación en el derecho público.",
+    "value1": {
+      "title": "Calidad Profesional",
+      "description": "Para asegurar la más alta calidad profesional y optimizar las soluciones ofrecidas a nuestros clientes, hemos establecido alianzas estratégicas con Firmas de Abogados nacionales y extranjeras."
+    },
+    "value2": {
+      "title": "Integridad y Compliance",
+      "description": "Hemos desarrollado un nuevo enfoque en la práctica de la integridad y el buen gobierno corporativo, ofreciendo soluciones de due diligence preventivas y resilientes."
+    },
+    "value3": {
+      "title": "Disciplinas Innovadoras",
+      "description": "BDP innova mediante técnicas esenciales para el desarrollo humano sostenible, como el federalismo y el municipalismo, aplicados a áreas como el Derecho Energético, Ambiental, del Agua y Agrario."
+    },
+    "value4": {
+      "title": "Valor Añadido",
+      "description": "Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes a través de soluciones integrales y personalizadas."
+    }
+  },
+  "team": {
+    "label": "Nuestro Equipo",
+    "title": "Profesionales Expertos",
+    "description": "Un equipo multidisciplinario de profesionales legales con amplia experiencia en la práctica de Derecho Público y disciplinas relacionadas.",
+    "formacionAcademica": "Formación Académica",
+    "experiencia": "Experiencia",
+    "verMas": "Ver más",
+    "cerrar": "Cerrar",
+    "members": {
+      "roberto": {
+        "name": "Roberto Gil Zuarth",
+        "role": "Socio Fundador",
+        "description": "Lidera las prácticas de derecho constitucional, derecho administrativo y consultoría en políticas públicas.",
+        "credentials": "Licenciatura en Derecho con honores del ITAM. Maestría en Derecho Constitucional de la Universidad Carlos III de Madrid, España.",
+        "experience": "Jefe de Asesores del Secretario de la Función Pública, Consejero General y Representante del PAN ante el INE, Subsecretario de Gobernación, Secretario Particular del Expresidente Felipe de Jesús Calderón Hinojosa, Senador de la República, Presidente de la Comisión de Justicia y de la Mesa Directiva del Senado."
+      },
+      "carlos": {
+        "name": "Carlos A. Lezama Fernández del Campo",
+        "role": "Socio Fundador",
+        "description": "Lidera la práctica de litigio y regulatoria. Asesora a clientes en disputas y acciones judiciales y administrativas.",
+        "credentials": "Licenciatura en Derecho de la Universidad Panamericana (2004). Especializaciones en Derecho Procesal y Derecho Administrativo. Estudios especializados en Proyectos de Infraestructura en la John F. Kennedy School of Government, Universidad de Harvard. Master of Laws (LL.M.) de la Universidad de Fordham en Nueva York.",
+        "experience": "Secretario Técnico de la Mesa Directiva del Senado de la República (LXII Legislatura), Subdirector General Jurídico del Comité Nacional del PAN, Director Jurídico de Bienes Nacionales en la Secretaría de la Función Pública."
+      },
+      "manuel": {
+        "name": "Manuel MacFarland",
+        "role": "Socio",
+        "description": "Socio en el departamento de litigio, especializado en derecho procesal constitucional.",
+        "credentials": "Egresado de la Escuela Libre de Derecho (ELD). Maestría en derecho procesal constitucional de la Universidad Panamericana.",
+        "experience": "Carrera en el servicio público de más de 19 años. Director General de Procedimientos de Protección contra Actos Administrativos en la Procuraduría Fiscal de la Federación, Jefe de la Unidad de Supervisión y Verificación en la ex-Comisión Federal de Telecomunicaciones, Subprocurador Fiscal Federal de Protección de Procedimientos, Director Jurídico del IMSS, Subconsejero Jurídico de Legislación y Estudios Normativos en la Consejería Jurídica de la Presidencia."
+      },
+      "gonzalo": {
+        "name": "Gonzalo José Bolio Benitez",
+        "role": "Abogado/Consultor",
+        "description": "Miembro de BDP, especializado en litigio y consultoría legal en áreas de derecho administrativo, constitucional, corporativo y empresarial."
+      },
+      "alonso": {
+        "name": "Alonso Zepeda Celis",
+        "role": "Abogado/Consultor",
+        "description": "Abogado egresado con honores de la Universidad Panamericana, especializado en litigio constitucional, administrativo y electoral."
+      },
+      "paulina": {
+        "name": "Paulina Reynoso Ventosa",
+        "role": "Abogada/Consultora",
+        "description": "Actualmente se enfoca en litigio electoral y consultoría legal general en BDP."
+      },
+      "jose": {
+        "name": "José Antonio Montes",
+        "role": "Asociado Principal - Práctica de Energía",
+        "description": "Profesional con amplia experiencia en el sector energético, especializado en regulación de hidrocarburos y energías renovables."
+      },
+      "aldo": {
+        "name": "Aldo Luis Ángel Hernández Olmos",
+        "role": "Abogado/Consultor",
+        "description": "Licenciatura en Derecho de la Universidad Iberoamericana en León. Especialización en el sistema adversarial de la Escuela Libre de Derecho (ELD). Desde 2025, es miembro de BDP Litigio y Consultoría, donde litiga en derecho penal."
+      },
+      "iliana": {
+        "name": "Iliana Sotomayor",
+        "role": "Abogada/Consultora",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos."
+      }
+    }
+  },
+  "callToAction": {
+    "label": "¿Necesitas Asesoría Legal?",
+    "title": "Solucionamos tu problema",
+    "description": "Contáctanos hoy para una consulta inicial. Nuestro equipo de profesionales legales con amplia experiencia en Derecho Público está listo para analizar tu caso y ofrecerte soluciones integrales orientadas a la resolución de problemas.",
+    "cta1": "Contáctanos",
+    "cta2": "Llámanos: 55-55255593",
+    "email": "Email",
+    "telefono": "Teléfono"
+  },
+  "footer": {
+    "visitanos": "Visítanos",
+    "address": "Prado Sur 245\nLomas - Virreyes, Lomas de Chapultepec\nMiguel Hidalgo, 11000\nCiudad de México, CDMX",
+    "verEnGoogleMaps": "Ver en Google Maps",
+    "description": "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público. Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes.",
+    "contacto": "Contacto",
+    "correoElectronico": "Correo Electrónico",
+    "telefono": "Teléfono",
+    "enlacesRapidos": "Enlaces Rápidos",
+    "inicio": "Inicio",
+    "areasPractica": "Áreas de Práctica",
+    "industrias": "Industrias",
+    "contactoLink": "Contacto",
+    "copyright": "© BDP / {year}",
+    "avisoPrivacidad": "Aviso de Privacidad",
+    "idiomas": "ESP / ENG / ZH"
+  },
+  "metadata": {
+    "title": "BDP | Litigio y Consultoría Multidisciplinaria",
+    "description": "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público, particularmente en las ramas constitucional, administrativa, regulatoria y electoral.",
+    "keywords": [
+      "abogados Ciudad de México",
+      "despacho jurídico CDMX",
+      "litigio constitucional México",
+      "derecho administrativo",
+      "derecho regulatorio",
+      "derecho electoral",
+      "abogados energía México",
+      "compliance México",
+      "anticorrupción",
+      "consultoría legal",
+      "BDP abogados",
+      "Lomas de Chapultepec",
+      "Suprema Corte México",
+      "juicio de amparo",
+      "derecho público",
+      "abogados especialistas México",
+      "asociaciones público-privadas",
+      "federalismo energético",
+      "derecho inmobiliario",
+      "políticas públicas"
+    ],
+    "ogTitle": "BDP | Despacho de Abogados - Soluciones Inteligentes para Resultados Seguros",
+    "ogDescription": "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público. Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes.",
+    "ogImageAlt": "BDP Abogados - Despacho Jurídico en Ciudad de México",
+    "twitterTitle": "BDP | Despacho de Abogados en CDMX",
+    "twitterDescription": "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público, particularmente en las ramas constitucional, administrativa, regulatoria y electoral."
+  }
+}
+

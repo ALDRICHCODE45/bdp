@@ -1,32 +1,30 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
-const values = [
-  {
-    title: "Calidad Profesional",
-    description:
-      "Para asegurar la más alta calidad profesional y optimizar las soluciones ofrecidas a nuestros clientes, hemos establecido alianzas estratégicas con Firmas de Abogados nacionales y extranjeras.",
-  },
-  {
-    title: "Integridad y Compliance",
-    description:
-      "Hemos desarrollado un nuevo enfoque en la práctica de la integridad y el buen gobierno corporativo, ofreciendo soluciones de due diligence preventivas y resilientes.",
-  },
-  {
-    title: "Disciplinas Innovadoras",
-    description:
-      "BDP innova mediante técnicas esenciales para el desarrollo humano sostenible, como el federalismo y el municipalismo, aplicados a áreas como el Derecho Energético, Ambiental, del Agua y Agrario.",
-  },
-  {
-    title: "Valor Añadido",
-    description:
-      "Nuestro enfoque está orientado a la resolución de problemas, siempre buscando ofrecer valor añadido a nuestros clientes a través de soluciones integrales y personalizadas.",
-  },
-];
-
 export default function ValuesSection() {
+  const t = useTranslations("values");
   const { ref, isIntersecting } = useIntersectionObserver();
+  
+  const values = [
+    {
+      title: t("value1.title"),
+      description: t("value1.description"),
+    },
+    {
+      title: t("value2.title"),
+      description: t("value2.description"),
+    },
+    {
+      title: t("value3.title"),
+      description: t("value3.description"),
+    },
+    {
+      title: t("value4.title"),
+      description: t("value4.description"),
+    },
+  ];
 
   return (
     <section
@@ -64,13 +62,18 @@ export default function ValuesSection() {
           style={{ transitionDuration: "1600ms" }}
         >
           <p className="text-sm text-gray-400 font-light tracking-[0.3em] uppercase mb-4">
-            Nuestra Cultura
+            {t("label")}
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-6">
-            Nuestros <span className="font-normal">Valores</span>
+            {t("title").split(" ").map((word, i) => (
+              <span key={i}>
+                {i === 1 ? <span className="font-normal">{word}</span> : word}
+                {i < t("title").split(" ").length - 1 && " "}
+              </span>
+            ))}
           </h2>
           <p className="max-w-3xl mx-auto text-base text-gray-300 font-light leading-relaxed">
-            Los principios fundamentales que guían nuestra práctica profesional y definen nuestro compromiso con la excelencia, la integridad y la innovación en el derecho público.
+            {t("description")}
           </p>
         </div>
 

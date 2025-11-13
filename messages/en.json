@@ -1,0 +1,270 @@
+{
+  "common": {
+    "inicio": "Home",
+    "servicios": "Practice Areas",
+    "industrias": "Industries",
+    "equipo": "Team",
+    "contacto": "Contact",
+    "contactanos": "Contact Us",
+    "verMas": "See more",
+    "cerrar": "Close",
+    "conocerMas": "Learn more",
+    "servicioAnterior": "Previous service",
+    "siguienteServicio": "Next service",
+    "irAlServicio": "Go to service"
+  },
+  "navbar": {
+    "inicio": "Home",
+    "areasPractica": "Practice Areas",
+    "industrias": "Industries",
+    "equipo": "Team",
+    "contacto": "Contact",
+    "contactanos": "Contact Us"
+  },
+  "hero": {
+    "title": "Smart Solutions for\nSecure Results",
+    "subtitle": "Firm specialized in litigation and multidisciplinary consulting in various areas of Public Law, particularly in constitutional, administrative, regulatory, and electoral branches. Our approach is oriented towards problem-solving, always seeking to offer added value to our clients.",
+    "cta1": "Discover our services",
+    "cta2": "Schedule a consultation"
+  },
+  "services": {
+    "sectionLabel": "Practice Areas",
+    "service1": {
+      "title": "Public Law Litigation",
+      "description": "BDP has extensive experience in amparo proceedings, unconstitutionality actions, and constitutional controversies before the Federal Judiciary, with a particularly strong presence before the Supreme Court of Justice of the Nation. Our Firm represents both individuals—national and foreign—and legitimate public authorities. Through our constitutional litigation strategies and arguments, we have achieved innovative legal interpretations and the expansion of rights."
+    },
+    "service2": {
+      "title": "Regulatory Law and Compliance",
+      "description": "We develop comprehensive strategies for the prevention, management, and remediation of regulatory risks, integrating public and corporate law perspectives. BDP has developed a new approach to the practice of integrity and good corporate governance, offering preventive and resilient due diligence solutions in areas such as anti-corruption, anti-money laundering, tax, environmental, and agrarian law."
+    },
+    "service3": {
+      "title": "Energy Law and Sustainability",
+      "description": "Core area of the firm that offers highly specialized regulatory and technical advisory, consulting, and litigation services, covering all links in the energy sector, from exploration to retail distribution. BDP has developed the concept of Energy Federalism to maximize the utilization of Mexico's energy potential, promoting co-investment models and strategic projects."
+    },
+    "service4": {
+      "title": "Public Procurement and Strategic Projects",
+      "description": "Proven track record in public procurement processes and we are pioneers in the development and implementation of projects under the public-private partnership (PPP) model in Mexico. BDP lawyers have provided advisory services to companies and local governments in all phases of the process, from project design and risk assessment to bidding, concession, award, financing, and securitization."
+    }
+  },
+  "whyChooseUs": {
+    "label": "Why Choose Us",
+    "title": "The best choice\nfor your case",
+    "description": "BDP has a team of legal professionals with extensive experience in the practice of Public Law and related disciplines. We have strategic alliances with national and foreign law firms, and we actively collaborate with various civil society organizations in strategic litigation and pro-bono projects.",
+    "feature1": {
+      "title": "Recognition in Strategic Litigation",
+      "description": "BDP's team has been recognized among the leading firms in strategic litigation, positioning us as a reference in the field of public law."
+    },
+    "feature2": {
+      "title": "Key Projects Led",
+      "description": "We have led key projects such as cannabis regulation, sustainable energy federalism, and the development of public-private investment in infrastructure."
+    },
+    "feature3": {
+      "title": "Multidisciplinary Approach",
+      "description": "The nature of our litigation requires solid skills in designing comprehensive strategies, applied public policies, crisis management, and reputational risk."
+    },
+    "feature4": {
+      "title": "Problem-Solving Focus",
+      "description": "Our approach is oriented towards problem-solving, always seeking to offer added value to our clients through comprehensive and personalized solutions."
+    },
+    "overlay": {
+      "first": "First",
+      "description": "Boutique firm in Mexico to integrate litigation, regulatory law, and public policy consulting"
+    }
+  },
+  "industries": {
+    "label": "Industries",
+    "title": "Multi-Sector Experience",
+    "description": "We offer specialized services to strategic sectors, applying comprehensive compliance programs and highly specialized legal advisory.",
+    "industries": [
+      "Energy",
+      "Infrastructure",
+      "Government and Public Sector",
+      "Finance",
+      "Mining",
+      "Agribusiness",
+      "Real Estate"
+    ],
+    "projects": {
+      "label": "Key Projects Led",
+      "title": "Strategic Projects",
+      "description": "BDP partners and associates have led key projects that have significantly impacted Mexico's legal and regulatory framework.",
+      "project1": {
+        "title": "Cannabis regulation in Mexico",
+        "category": "Regulatory",
+        "year": "2017-2021",
+        "description": "Strategic project that established the legal framework for cannabis regulation in Mexico, transforming the country's legal and regulatory landscape."
+      },
+      "project2": {
+        "title": "The model for sustainable energy federalism",
+        "category": "Energy",
+        "year": "2018-2023",
+        "description": "Development of an innovative model to maximize the utilization of Mexico's energy potential through energy federalism."
+      },
+      "project3": {
+        "title": "Development of public-private investment in infrastructure",
+        "category": "Infrastructure",
+        "year": "2015-2024",
+        "description": "Pioneers in the development and implementation of projects under the public-private partnership (PPP) model in Mexico."
+      },
+      "project4": {
+        "title": "The transition to the new criminal justice system",
+        "category": "Justice",
+        "year": "2014-2016",
+        "description": "Leadership in the transition to the new criminal justice system and the autonomy of the Attorney General's Office."
+      },
+      "project5": {
+        "title": "The recovery of public assets",
+        "category": "Anti-Corruption",
+        "year": "2019-2022",
+        "description": "Legal and regulatory strategies for the recovery of public assets and the fight against corruption."
+      },
+      "project6": {
+        "title": "The program for controlling arms imports",
+        "category": "Security",
+        "year": "2020-2023",
+        "description": "Development of public policies and regulatory frameworks for controlling arms imports in Mexico."
+      }
+    }
+  },
+  "values": {
+    "label": "Our Culture",
+    "title": "Our Values",
+    "description": "The fundamental principles that guide our professional practice and define our commitment to excellence, integrity, and innovation in public law.",
+    "value1": {
+      "title": "Professional Quality",
+      "description": "To ensure the highest professional quality and optimize the solutions offered to our clients, we have established strategic alliances with national and foreign law firms."
+    },
+    "value2": {
+      "title": "Integrity and Compliance",
+      "description": "We have developed a new approach to the practice of integrity and good corporate governance, offering preventive and resilient due diligence solutions."
+    },
+    "value3": {
+      "title": "Innovative Disciplines",
+      "description": "BDP innovates through essential techniques for sustainable human development, such as federalism and municipalism, applied to areas such as Energy Law, Environmental Law, Water Law, and Agrarian Law."
+    },
+    "value4": {
+      "title": "Added Value",
+      "description": "Our approach is oriented towards problem-solving, always seeking to offer added value to our clients through comprehensive and personalized solutions."
+    }
+  },
+  "team": {
+    "label": "Our Team",
+    "title": "Expert Professionals",
+    "description": "A multidisciplinary team of legal professionals with extensive experience in the practice of Public Law and related disciplines.",
+    "formacionAcademica": "Academic Background",
+    "experiencia": "Experience",
+    "verMas": "See more",
+    "cerrar": "Close",
+    "members": {
+      "roberto": {
+        "name": "Roberto Gil Zuarth",
+        "role": "Founding Partner",
+        "description": "Leads the practices of constitutional law, administrative law, and public policy consulting.",
+        "credentials": "Law Degree with honors from ITAM. Master's in Constitutional Law from Carlos III University of Madrid, Spain.",
+        "experience": "Chief of Staff to the Secretary of Public Administration, General Councilor and Representative of the National Action Party (PAN) before the Federal Electoral Institute (INE), Undersecretary of the Interior, Private Secretary to former President Felipe de Jesús Calderón Hinojosa, and Senator of the Republic. Also served as President of the Justice Commission and the Senate Board of Directors."
+      },
+      "carlos": {
+        "name": "Carlos A. Lezama Fernández del Campo",
+        "role": "Founding Partner",
+        "description": "Leads the litigation and regulatory practice. Advises clients on disputes and judicial and administrative actions.",
+        "credentials": "Law Degree from Panamerican University (2004). Specializations in Procedural Law and Administrative Law. Specialized studies in Infrastructure Projects at the John F. Kennedy School of Government, Harvard University. Master of Laws (LL.M.) from Fordham University in New York.",
+        "experience": "Technical Secretary of the Senate Board of Directors of the Republic (LXII Legislature), Deputy General Legal Director of the National PAN Committee, Legal Director of National Assets at the Secretariat of Public Administration."
+      },
+      "manuel": {
+        "name": "Manuel MacFarland",
+        "role": "Partner",
+        "description": "Partner in the litigation department, specialized in constitutional procedural law.",
+        "credentials": "Graduate of the Free School of Law (ELD). Master's in constitutional procedural law from Panamerican University.",
+        "experience": "Distinguished career in public service of more than 19 years, having held several high-level positions, including: General Director of Protection Procedures against Administrative Acts at the Federal Tax Attorney's Office, Head of the Supervision and Verification Unit at the former Federal Telecommunications Commission, Federal Tax Attorney for Protection Procedures, Legal Director of the Mexican Social Security Institute (IMSS), and Deputy Legal Counselor for Legislation and Normative Studies at the Legal Counsel of the Presidency."
+      },
+      "gonzalo": {
+        "name": "Gonzalo José Bolio Benitez",
+        "role": "Attorney/Consultant",
+        "description": "Member of BDP, specialized in litigation and legal consulting in areas of administrative, constitutional, corporate, and business law."
+      },
+      "alonso": {
+        "name": "Alonso Zepeda Celis",
+        "role": "Attorney/Consultant",
+        "description": "Attorney graduated with honors from Panamerican University, specialized in constitutional, administrative, and electoral litigation."
+      },
+      "paulina": {
+        "name": "Paulina Reynoso Ventosa",
+        "role": "Attorney/Consultant",
+        "description": "Currently focuses on electoral litigation and general legal consulting at BDP."
+      },
+      "jose": {
+        "name": "José Antonio Montes",
+        "role": "Principal Associate - Energy Practice",
+        "description": "Professional with extensive experience in the energy sector, specialized in hydrocarbon and renewable energy regulation."
+      },
+      "aldo": {
+        "name": "Aldo Luis Ángel Hernández Olmos",
+        "role": "Attorney/Consultant",
+        "description": "Law Degree from Iberoamerican University in León. Specialization in the adversarial system from the Free School of Law (ELD). Since 2025, member of BDP Litigation and Consulting, where he practices criminal law."
+      },
+      "iliana": {
+        "name": "Iliana Sotomayor",
+        "role": "Attorney/Consultant",
+        "description": "Focuses on legal consulting and advisory services in the infrastructure field. Her work includes participation in the preparation of unsolicited proposals under the Public-Private Partnerships Law and the legal restructuring of energy projects."
+      }
+    }
+  },
+  "callToAction": {
+    "label": "Need Legal Advice?",
+    "title": "We solve your problem",
+    "description": "Contact us today for an initial consultation. Our team of legal professionals with extensive experience in Public Law is ready to analyze your case and offer you comprehensive solutions oriented towards problem-solving.",
+    "cta1": "Contact Us",
+    "cta2": "Call us: 55-55255593",
+    "email": "Email",
+    "telefono": "Phone"
+  },
+  "footer": {
+    "visitanos": "Visit Us",
+    "address": "Prado Sur 245\nLomas - Virreyes, Lomas de Chapultepec\nMiguel Hidalgo, 11000\nMexico City, CDMX",
+    "verEnGoogleMaps": "View on Google Maps",
+    "description": "Firm specialized in litigation and multidisciplinary consulting in various areas of Public Law. Our approach is oriented towards problem-solving, always seeking to offer added value to our clients.",
+    "contacto": "Contact",
+    "correoElectronico": "Email",
+    "telefono": "Phone",
+    "enlacesRapidos": "Quick Links",
+    "inicio": "Home",
+    "areasPractica": "Practice Areas",
+    "industrias": "Industries",
+    "contactoLink": "Contact",
+    "copyright": "© BDP / {year}",
+    "avisoPrivacidad": "Privacy Notice",
+    "idiomas": "ESP / ENG / ZH"
+  },
+  "metadata": {
+    "title": "BDP | Multidisciplinary Litigation and Consulting",
+    "description": "Firm specialized in litigation and multidisciplinary consulting in various areas of Public Law, particularly in constitutional, administrative, regulatory, and electoral branches.",
+    "keywords": [
+      "lawyers Mexico City",
+      "legal firm CDMX",
+      "constitutional litigation Mexico",
+      "administrative law",
+      "regulatory law",
+      "electoral law",
+      "energy lawyers Mexico",
+      "compliance Mexico",
+      "anti-corruption",
+      "legal consulting",
+      "BDP lawyers",
+      "Lomas de Chapultepec",
+      "Supreme Court Mexico",
+      "amparo proceedings",
+      "public law",
+      "specialist lawyers Mexico",
+      "public-private partnerships",
+      "energy federalism",
+      "real estate law",
+      "public policies"
+    ],
+    "ogTitle": "BDP | Law Firm - Smart Solutions for Secure Results",
+    "ogDescription": "Firm specialized in litigation and multidisciplinary consulting in various areas of Public Law. Our approach is oriented towards problem-solving, always seeking to offer added value to our clients.",
+    "ogImageAlt": "BDP Lawyers - Legal Firm in Mexico City",
+    "twitterTitle": "BDP | Law Firm in CDMX",
+    "twitterDescription": "Firm specialized in litigation and multidisciplinary consulting in various areas of Public Law, particularly in constitutional, administrative, regulatory, and electoral branches."
+  }
+}
+
