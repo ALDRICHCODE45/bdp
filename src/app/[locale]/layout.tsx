@@ -8,6 +8,7 @@ import { hasLocale } from 'next-intl';
 import type { AbstractIntlMessages } from 'next-intl';
 import "../globals.css";
 import Navbar from "../components/Navbar";
+import ChatBubble from "../components/ChatBubble";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -102,6 +103,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}
+          <ChatBubble />
         </NextIntlClientProvider>
       </body>
     </html>
