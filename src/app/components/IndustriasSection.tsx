@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import ProjectCard, { projectIcons } from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 
 export default function IndustriasSection() {
   const t = useTranslations("industries");
@@ -23,11 +23,12 @@ export default function IndustriasSection() {
     <section
       ref={ref}
       id="industrias"
-      className="relative py-24 bg-slate-900 text-white overflow-hidden"
+      className="relative py-24 text-white overflow-hidden"
     >
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900" />
       {/* Subtle blurred gradient effects */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-500/4 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-indigo-500/4 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-white/3 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-white/4 rounded-full blur-3xl" />
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div
@@ -36,7 +37,7 @@ export default function IndustriasSection() {
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-12"
           }`}
-          style={{ transitionDuration: "1600ms" }}
+          style={{ transitionDuration: "1400ms" }}
         >
           <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase mb-4">
             {t("label")}
@@ -59,14 +60,14 @@ export default function IndustriasSection() {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className={`group relative h-40 bg-white/3 hover:bg-white/5 transition-all duration-300 flex items-center justify-center p-6 border border-white/8 hover:border-white/15 cursor-pointer overflow-hidden ${
+              className={`group relative h-40 bg-white/4 hover:bg-white/6 transition-all duration-500 flex items-center justify-center p-6 border border-white/10 hover:border-white/20 cursor-pointer overflow-hidden ${
                 isIntersecting
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
               style={{
-                transitionDelay: `${200 + index * 50}ms`,
-                transitionDuration: "1200ms",
+                transitionDelay: `${200 + index * 60}ms`,
+                transitionDuration: "1100ms",
               }}
             >
               {/* Background Pattern */}
@@ -93,7 +94,7 @@ export default function IndustriasSection() {
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-12"
             }`}
-            style={{ transitionDuration: "1600ms", transitionDelay: "200ms" }}
+            style={{ transitionDuration: "1400ms", transitionDelay: "200ms" }}
           >
             <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase mb-4">
               {t("projects.label")}
@@ -119,7 +120,6 @@ export default function IndustriasSection() {
               category={t("projects.project1.category")}
               year={t("projects.project1.year")}
               description={t("projects.project1.description")}
-              icon={<projectIcons.project1 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
               index={0}
               isVisible={isIntersecting}
               size="medium"
@@ -130,7 +130,6 @@ export default function IndustriasSection() {
               category={t("projects.project2.category")}
               year={t("projects.project2.year")}
               description={t("projects.project2.description")}
-              icon={<projectIcons.project2 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
               index={1}
               isVisible={isIntersecting}
               size="medium"
@@ -141,7 +140,6 @@ export default function IndustriasSection() {
               category={t("projects.project3.category")}
               year={t("projects.project3.year")}
               description={t("projects.project3.description")}
-              icon={<projectIcons.project3 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
               index={2}
               isVisible={isIntersecting}
               size="large"
@@ -152,7 +150,6 @@ export default function IndustriasSection() {
               category={t("projects.project4.category")}
               year={t("projects.project4.year")}
               description={t("projects.project4.description")}
-              icon={<projectIcons.project4 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
               index={3}
               isVisible={isIntersecting}
               size="medium"
@@ -163,7 +160,6 @@ export default function IndustriasSection() {
               category={t("projects.project5.category")}
               year={t("projects.project5.year")}
               description={t("projects.project5.description")}
-              icon={<projectIcons.project5 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
               index={4}
               isVisible={isIntersecting}
               size="medium"
@@ -174,7 +170,6 @@ export default function IndustriasSection() {
               category={t("projects.project6.category")}
               year={t("projects.project6.year")}
               description={t("projects.project6.description")}
-              icon={<projectIcons.project6 className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />}
               index={5}
               isVisible={isIntersecting}
               size="medium"

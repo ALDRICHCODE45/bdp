@@ -2,7 +2,6 @@
 
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { Scale, Zap, Building2, Gavel, Shield, Lock } from "lucide-react";
 
 interface ProjectCardProps {
   number: number;
@@ -10,7 +9,6 @@ interface ProjectCardProps {
   category: string;
   year: string;
   description: string;
-  icon: React.ReactNode;
   index: number;
   isVisible: boolean;
   size?: "small" | "medium" | "large";
@@ -22,7 +20,6 @@ export default function ProjectCard({
   category,
   year,
   description,
-  icon,
   index,
   isVisible,
   size = "medium",
@@ -103,27 +100,10 @@ export default function ProjectCard({
             </span>
           </div>
 
-          {/* Icon */}
-          <div className="relative mb-6 md:mb-8">
-            <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 flex items-center justify-center border border-white/20 rounded-xl bg-white/5 group-hover:bg-white/10 group-hover:border-white/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
-              <div className="text-white/70 group-hover:text-white transition-colors duration-500">
-                {icon}
-              </div>
-            </div>
-          </div>
-
-          {/* Category Badge */}
-          <div className="mb-4 md:mb-6">
-            <span className="inline-block px-3 py-1 text-xs font-light tracking-wider uppercase text-white/60 border border-white/10 rounded-full bg-white/5 group-hover:bg-white/10 group-hover:border-white/20 group-hover:text-white/80 transition-all duration-500">
-              {category}
-            </span>
-          </div>
-
-          {/* Year */}
-          <div className="mb-3 md:mb-4">
-            <span className="text-xs font-light text-white/50 group-hover:text-white/70 transition-colors duration-500">
-              {year}
-            </span>
+          {/* Category / Year */}
+          <div className="mb-6 md:mb-8 flex items-center justify-between text-white/70 text-xs md:text-sm font-light tracking-wide">
+            <span className="uppercase">{category}</span>
+            <span className="text-white/60">{year}</span>
           </div>
 
           {/* Title */}
@@ -150,27 +130,17 @@ export default function ProjectCard({
 
           {/* Hover Indicator */}
           <div className="mt-auto pt-4 md:pt-6">
-            <div className="flex items-center text-xs font-light text-white/40 group-hover:text-white/70 transition-colors duration-500">
+            <div className="flex items-center text-xs font-light text-white/50 group-hover:text-white/70 transition-colors duration-500">
               <span className="mr-2">{t("verMas")}</span>
-              <svg
-                className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-500"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M9 5l7 7-7 7" />
-              </svg>
+              <span className="inline-block w-8 h-px bg-white/30 group-hover:bg-white/60 transition-all duration-500 group-hover:w-12" />
             </div>
           </div>
 
           {/* Animated Border */}
-          <div className="absolute inset-0 rounded-2xl border-2 border-white/0 group-hover:border-white/20 transition-all duration-500 pointer-events-none" />
+          <div className="absolute inset-0 rounded-2xl border border-white/0 group-hover:border-white/20 transition-all duration-500 pointer-events-none" />
           
           {/* Bottom Accent Line */}
-          <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-700 ease-out" />
+          <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-white group-hover:w-full transition-all duration-700 ease-out" />
         </div>
 
         {/* Subtle Gradient Overlay */}
@@ -179,14 +149,4 @@ export default function ProjectCard({
     </div>
   );
 }
-
-// Icon mapping for projects
-export const projectIcons = {
-  project1: Scale,
-  project2: Zap,
-  project3: Building2,
-  project4: Gavel,
-  project5: Shield,
-  project6: Lock,
-};
 

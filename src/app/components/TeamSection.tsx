@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import { Briefcase, Award, Users, Zap, Building2, Gavel } from "lucide-react";
-
 // Helper function to get initials from name
 const getInitials = (name: string): string => {
   const parts = name.split(" ");
@@ -12,43 +10,6 @@ const getInitials = (name: string): string => {
     return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
   }
   return name.substring(0, 2).toUpperCase();
-};
-
-// Helper function to get gradient colors based on index
-const getGradientColors = (index: number): string => {
-  const gradients = [
-    "from-blue-500/20 via-indigo-500/20 to-purple-500/20",
-    "from-indigo-500/20 via-purple-500/20 to-pink-500/20",
-    "from-purple-500/20 via-pink-500/20 to-red-500/20",
-    "from-pink-500/20 via-red-500/20 to-orange-500/20",
-    "from-orange-500/20 via-yellow-500/20 to-green-500/20",
-    "from-green-500/20 via-teal-500/20 to-cyan-500/20",
-    "from-cyan-500/20 via-blue-500/20 to-indigo-500/20",
-    "from-indigo-500/20 via-blue-500/20 to-purple-500/20",
-    "from-purple-500/20 via-indigo-500/20 to-blue-500/20",
-  ];
-  return gradients[index % gradients.length];
-};
-
-// Helper function to get icon based on role
-const getRoleIcon = (role: string): React.ReactNode => {
-  const roleLower = role.toLowerCase();
-  if (roleLower.includes("socio fundador") || roleLower.includes("founding partner")) {
-    return <Award className="w-5 h-5 md:w-6 md:h-6" />;
-  }
-  if (roleLower.includes("socio") || roleLower.includes("partner")) {
-    return <Briefcase className="w-5 h-5 md:w-6 md:h-6" />;
-  }
-  if (roleLower.includes("energía") || roleLower.includes("energy")) {
-    return <Zap className="w-5 h-5 md:w-6 md:h-6" />;
-  }
-  if (roleLower.includes("infraestructura") || roleLower.includes("infrastructure")) {
-    return <Building2 className="w-5 h-5 md:w-6 md:h-6" />;
-  }
-  if (roleLower.includes("litigio") || roleLower.includes("litigation")) {
-    return <Gavel className="w-5 h-5 md:w-6 md:h-6" />;
-  }
-  return <Users className="w-5 h-5 md:w-6 md:h-6" />;
 };
 
 export default function TeamSection() {
@@ -128,22 +89,28 @@ export default function TeamSection() {
     <section
       ref={ref}
       id="equipo"
-      className="relative py-24 bg-slate-900 text-white overflow-hidden"
+      className="relative py-24 bg-slate-950 text-white overflow-hidden"
     >
-      {/* Subtle blurred gradient effects */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/4 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-indigo-500/4 rounded-full blur-3xl" />
-      
-      {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Subtle gradients + texture */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-white/4 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
         <div
-          className="w-full h-full"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: "50px 50px",
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.6) 0.5px, transparent 0.5px)`,
+            backgroundSize: "28px 28px",
           }}
         />
+        {/* Slim photographic accent */}
+        <div className="absolute inset-y-10 right-6 w-[14px] rounded-full overflow-hidden opacity-25">
+          <img
+            src="/gallery/jardin3.jpeg"
+            alt={t("title")}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 backdrop-blur-[6px] bg-slate-950/50" />
+        </div>
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12">
@@ -154,7 +121,7 @@ export default function TeamSection() {
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-12"
           }`}
-          style={{ transitionDuration: "1600ms" }}
+          style={{ transitionDuration: "1400ms" }}
         >
           <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase mb-4">
             {t("label")}
@@ -176,16 +143,14 @@ export default function TeamSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {teamMembers.map((member, index) => {
             const initials = getInitials(member.name);
-            const gradient = getGradientColors(index);
-            const roleIcon = getRoleIcon(member.role);
             const isExpanded = expandedMember === member.id;
 
             return (
               <div
                 key={member.id}
-                className={`group relative bg-white/3 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all duration-700 overflow-hidden cursor-pointer rounded-2xl ${
+                className={`group relative bg-white/4 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/6 transition-all duration-700 overflow-hidden cursor-pointer rounded-2xl ${
                   isExpanded
-                    ? "lg:col-span-2 lg:row-span-2 border-white/30 bg-white/5"
+                    ? "lg:col-span-2 lg:row-span-2 border-white/30 bg-white/8"
                     : ""
                 } ${
                   isIntersecting
@@ -204,32 +169,14 @@ export default function TeamSection() {
                     {/* Avatar with Initials */}
                     <div className="flex-shrink-0 flex items-start justify-center lg:justify-start">
                       <div
-                        className={`relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-xl md:rounded-2xl flex items-center justify-center transition-all duration-700 group-hover:scale-105 group-hover:rotate-1 ${
-                          isExpanded ? "" : ""
+                        className={`relative w-20 h-20 md:w-24 md:h-24 lg:w-26 lg:h-26 rounded-full flex items-center justify-center transition-all duration-700 group-hover:scale-105 ${
+                          isExpanded ? "shadow-[0_0_0_1px_rgba(255,255,255,0.2)]" : ""
                         }`}
                       >
-                        {/* Gradient Background */}
-                        <div
-                          className={`absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-br ${gradient} opacity-50 group-hover:opacity-70 transition-opacity duration-500`}
-                        />
-                        
-                        {/* Border */}
-                        <div className="absolute inset-0 rounded-xl md:rounded-2xl border border-white/20 group-hover:border-white/30 transition-colors duration-500" />
-                        
-                        {/* Glassmorphism Effect */}
-                        <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-white/5 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        
-                        {/* Initials */}
+                        <div className="absolute inset-0 rounded-full bg-white/10 backdrop-blur-sm border border-white/20" />
                         <span className="relative z-10 text-xl md:text-2xl lg:text-3xl font-light text-white">
                           {initials}
                         </span>
-
-                        {/* Role Icon Badge */}
-                        <div className="absolute -bottom-1 -right-1 w-7 h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center group-hover:bg-white/15 group-hover:border-white/30 transition-all duration-500 group-hover:scale-110">
-                          <div className="text-white/60 group-hover:text-white/90 transition-colors duration-500">
-                            {roleIcon}
-                          </div>
-                        </div>
                       </div>
                     </div>
 
@@ -260,7 +207,7 @@ export default function TeamSection() {
                         <div className="pt-4 space-y-4 border-t border-white/10">
                           {/* Description in expanded view for desktop */}
                           <div className="hidden lg:block">
-                            <p className="text-sm md:text-base text-white/70 font-light leading-relaxed">
+                            <p className="text-sm md:text-base text-white/75 font-light leading-relaxed">
                               {member.description}
                             </p>
                           </div>
@@ -269,7 +216,7 @@ export default function TeamSection() {
                               <p className="text-xs text-white/60 font-light uppercase tracking-wider mb-2">
                                 {t("formacionAcademica")}
                               </p>
-                              <p className="text-sm md:text-base text-white/70 font-light leading-relaxed">
+                              <p className="text-sm md:text-base text-white/75 font-light leading-relaxed">
                                 {member.credentials}
                               </p>
                             </div>
@@ -279,7 +226,7 @@ export default function TeamSection() {
                               <p className="text-xs text-white/60 font-light uppercase tracking-wider mb-2">
                                 {t("experiencia")}
                               </p>
-                              <p className="text-sm md:text-base text-white/70 font-light leading-relaxed">
+                              <p className="text-sm md:text-base text-white/75 font-light leading-relaxed">
                                 {member.experience}
                               </p>
                             </div>
@@ -311,7 +258,7 @@ export default function TeamSection() {
                 </div>
 
                 {/* Hover Effect Line */}
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-white/70 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
                 
                 {/* Spotlight Effect on Hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">

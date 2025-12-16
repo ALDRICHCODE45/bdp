@@ -29,26 +29,20 @@ export default function ValuesSection() {
   return (
     <section
       ref={ref}
-      className="relative py-24 bg-slate-900 text-white overflow-hidden"
+      className="relative py-24 bg-slate-950 text-white overflow-hidden"
     >
-      {/* Subtle blurred gradient effects */}
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
-      
-      {/* Background Video */}
-      <div className="absolute inset-0 w-full h-full opacity-20">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source
-            src="https://cdn.pixabay.com/video/2022/11/28/141163-777038894_large.mp4"
-            type="video/mp4"
+      {/* Background Image with overlay/blur */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0">
+          <img
+            src="/gallery/jardin3.jpeg"
+            alt={t("title")}
+            className="w-full h-full object-cover"
           />
-        </video>
+        </div>
+        <div className="absolute inset-0 bg-slate-950/70" />
+        <div className="absolute inset-0 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/65 to-slate-950/85" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">

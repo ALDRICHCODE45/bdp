@@ -13,37 +13,29 @@ export default function ServicesSection() {
       id: 1,
       title: t("service1.title"),
       description: t("service1.description"),
-      image:
-        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
-      bgImage:
-        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80",
+      image: "/gallery/edificio.jpeg",
+      bgImage: "/gallery/edificio.jpeg",
     },
     {
       id: 2,
       title: t("service2.title"),
       description: t("service2.description"),
-      image:
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80",
-      bgImage:
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80",
+      image: "/gallery/jardin.jpeg",
+      bgImage: "/gallery/jardin.jpeg",
     },
     {
       id: 3,
       title: t("service3.title"),
       description: t("service3.description"),
-      image:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=80",
-      bgImage:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80",
+      image: "/gallery/comedor.jpeg",
+      bgImage: "/gallery/comedor.jpeg",
     },
     {
       id: 4,
       title: t("service4.title"),
       description: t("service4.description"),
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
-      bgImage:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80",
+      image: "/gallery/comedor2.jpeg",
+      bgImage: "/gallery/comedor2.jpeg",
     },
   ];
 

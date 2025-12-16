@@ -11,11 +11,12 @@ export default function NewCallToAction() {
   return (
     <section
       ref={ref}
-      className="relative py-24 bg-slate-900 text-white overflow-hidden"
+      className="relative py-24 text-white overflow-hidden"
     >
-      {/* Subtle blurred gradient effects */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
+      {/* Gradient bridge to suavizar transición */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.06),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.05),transparent_40%)]" />
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center">
         <div
           className={`space-y-8 transition-all ease-out ${
