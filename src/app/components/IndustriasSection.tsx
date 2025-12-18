@@ -1,13 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import ProjectCard from "./ProjectCard";
 
 export default function IndustriasSection() {
   const t = useTranslations("industries");
   const { ref, isIntersecting } = useIntersectionObserver();
-  
+
   // Definir industries directamente desde las traducciones
   const industries: string[] = [
     t("industries.0") || "Energía",
@@ -25,10 +25,26 @@ export default function IndustriasSection() {
       id="industrias"
       className="relative py-24 text-white overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900" />
+      {/* Background Map Image */}
+      <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0">
+          <Image
+            src="/gallery/mapa.jpeg"
+            alt="Mapa de México"
+            fill
+            className="object-cover"
+            quality={85}
+            priority={false}
+          />
+        </div>
+        {/* Dark overlay with gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/82 via-slate-950/78 to-slate-900/82" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(0,0,0,0.2)_100%)]" />
+      </div>
+
       {/* Subtle blurred gradient effects */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-white/3 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-white/4 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-white/3 rounded-full blur-3xl opacity-30" />
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-white/4 rounded-full blur-3xl opacity-30" />
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div
@@ -43,12 +59,14 @@ export default function IndustriasSection() {
             {t("label")}
           </p>
           <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
-            {t("title").split(" ").map((word, i) => (
-              <span key={i}>
-                {i === 1 ? <span className="font-normal">{word}</span> : word}
-                {i < t("title").split(" ").length - 1 && " "}
-              </span>
-            ))}
+            {t("title")
+              .split(" ")
+              .map((word, i) => (
+                <span key={i}>
+                  {i === 1 ? <span className="font-normal">{word}</span> : word}
+                  {i < t("title").split(" ").length - 1 && " "}
+                </span>
+              ))}
           </h2>
           <p className="max-w-3xl mx-auto text-base text-white/80 font-light leading-relaxed">
             {t("description")}
@@ -74,7 +92,7 @@ export default function IndustriasSection() {
               <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent" />
               </div>
-              
+
               {/* Content */}
               <h3 className="relative z-10 text-center text-sm md:text-base font-light text-white transition-colors">
                 {industry}
@@ -85,99 +103,7 @@ export default function IndustriasSection() {
             </div>
           ))}
         </div>
-
-        {/* Projects Section */}
-        <div className="mt-32 md:mt-40">
-          <div
-            className={`text-center mb-16 md:mb-20 transition-all ease-out ${
-              isIntersecting
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-12"
-            }`}
-            style={{ transitionDuration: "1400ms", transitionDelay: "200ms" }}
-          >
-            <p className="text-sm text-white/70 font-light tracking-[0.3em] uppercase mb-4">
-              {t("projects.label")}
-            </p>
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-6">
-              {t("projects.title").split(" ").map((word, i) => (
-                <span key={i}>
-                  {word}
-                  {i < t("projects.title").split(" ").length - 1 && " "}
-                </span>
-              ))}
-            </h3>
-            <p className="max-w-3xl mx-auto text-base md:text-lg text-white/80 font-light leading-relaxed">
-              {t("projects.description")}
-            </p>
-          </div>
-          
-          {/* Projects Grid - Asymmetric Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-            <ProjectCard
-              number={1}
-              title={t("projects.project1.title")}
-              category={t("projects.project1.category")}
-              year={t("projects.project1.year")}
-              description={t("projects.project1.description")}
-              index={0}
-              isVisible={isIntersecting}
-              size="medium"
-            />
-            <ProjectCard
-              number={2}
-              title={t("projects.project2.title")}
-              category={t("projects.project2.category")}
-              year={t("projects.project2.year")}
-              description={t("projects.project2.description")}
-              index={1}
-              isVisible={isIntersecting}
-              size="medium"
-            />
-            <ProjectCard
-              number={3}
-              title={t("projects.project3.title")}
-              category={t("projects.project3.category")}
-              year={t("projects.project3.year")}
-              description={t("projects.project3.description")}
-              index={2}
-              isVisible={isIntersecting}
-              size="large"
-            />
-            <ProjectCard
-              number={4}
-              title={t("projects.project4.title")}
-              category={t("projects.project4.category")}
-              year={t("projects.project4.year")}
-              description={t("projects.project4.description")}
-              index={3}
-              isVisible={isIntersecting}
-              size="medium"
-            />
-            <ProjectCard
-              number={5}
-              title={t("projects.project5.title")}
-              category={t("projects.project5.category")}
-              year={t("projects.project5.year")}
-              description={t("projects.project5.description")}
-              index={4}
-              isVisible={isIntersecting}
-              size="medium"
-            />
-            <ProjectCard
-              number={6}
-              title={t("projects.project6.title")}
-              category={t("projects.project6.category")}
-              year={t("projects.project6.year")}
-              description={t("projects.project6.description")}
-              index={5}
-              isVisible={isIntersecting}
-              size="medium"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
 }
-

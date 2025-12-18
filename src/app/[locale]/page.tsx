@@ -2,6 +2,7 @@ import HeroSection from "../components/HeroSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import ServicesSection from "../components/ServicesSection";
 import IndustriasSection from "../components/IndustriasSection";
+import ProjectsSection from "../components/ProjectsSection";
 import ValuesSection from "../components/ValuesSection";
 import TeamSection from "../components/TeamSection";
 import NewCallToAction from "../components/NewCallToAction";
@@ -14,6 +15,7 @@ export default function Home() {
       <WhyChooseUs />
       <ServicesSection />
       <IndustriasSection />
+      <ProjectsSection />
       <ValuesSection />
       <TeamSection />
       <NewCallToAction />

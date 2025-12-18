@@ -6,7 +6,7 @@ import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 export default function WhyChooseUs() {
   const t = useTranslations("whyChooseUs");
-
+  
   const highlights = [
     t("feature1.title"),
     t("feature2.title"),
@@ -22,17 +22,17 @@ export default function WhyChooseUs() {
       className="relative isolate overflow-hidden bg-slate-950 text-white"
     >
       <div className="absolute inset-0">
-        <Image
+              <Image
           src="/gallery/jardin2.jpeg"
           alt={t("overlay.description")}
-          fill
+                fill
           priority
-          className="object-cover"
-        />
+                className="object-cover"
+              />
         <div className="absolute inset-0 bg-slate-950/60" />
         <div className="absolute inset-0 backdrop-blur-sm" />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/60 to-slate-950/85" />
-      </div>
+            </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 py-24 md:py-28">
         <div
@@ -47,27 +47,27 @@ export default function WhyChooseUs() {
 
           <h2 className="text-4xl md:text-5xl font-light leading-tight text-white">
             {t("title")}
-          </h2>
+            </h2>
 
           <p className="text-base md:text-lg text-white/80 font-light leading-relaxed">
-            {t("description")}
-          </p>
+              {t("description")}
+            </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {highlights.map((item, index) => (
-              <div
-                key={index}
+                <div
+                  key={index}
                 className={`rounded-2xl border border-white/8 bg-white/5 backdrop-blur-sm p-6 flex items-start space-x-3 transition-all duration-800 ease-out ${
                   isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
+                  }`}
                 style={{ transitionDelay: `${200 + index * 120}ms` }}
-              >
+                >
                 <span className="mt-1 text-sm text-white/50">•</span>
                 <div className="text-white/90 text-sm md:text-base font-light leading-relaxed">
                   {item}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
 
           <div className="pt-4">

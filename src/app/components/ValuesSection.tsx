@@ -37,7 +37,7 @@ export default function ValuesSection() {
           <img
             src="/gallery/jardin3.jpeg"
             alt={t("title")}
-            className="w-full h-full object-cover"
+          className="w-full h-full object-cover"
           />
         </div>
         <div className="absolute inset-0 bg-slate-950/70" />
