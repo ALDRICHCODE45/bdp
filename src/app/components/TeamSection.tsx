@@ -14,7 +14,7 @@ const getInitials = (name: string): string => {
 
 // Helper function to format name to show only first name and first last name
 const formatShortName = (name: string): string => {
-  const parts = name.split(" ").filter(part => part.length > 0);
+  const parts = name.split(" ").filter((part) => part.length > 0);
   if (parts.length >= 2) {
     return `${parts[0]} ${parts[1]}`;
   }
@@ -24,7 +24,7 @@ const formatShortName = (name: string): string => {
 export default function TeamSection() {
   const t = useTranslations("team");
   const { ref, isIntersecting } = useIntersectionObserver();
-  
+
   const teamMembers = [
     {
       id: 1,
@@ -114,7 +114,7 @@ export default function TeamSection() {
         {/* Slim photographic accent */}
         <div className="absolute inset-y-10 right-6 w-[14px] rounded-full overflow-hidden opacity-25">
           <img
-            src="/gallery/jardin3.jpeg"
+            src="/gallery2/jardín3.webp"
             alt={t("title")}
             className="w-full h-full object-cover"
           />
@@ -136,12 +136,14 @@ export default function TeamSection() {
             {t("label")}
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6">
-            {t("title").split(" ").map((word, i) => (
-              <span key={i}>
-                {i === 1 ? <span className="font-normal">{word}</span> : word}
-                {i < t("title").split(" ").length - 1 && " "}
-              </span>
-            ))}
+            {t("title")
+              .split(" ")
+              .map((word, i) => (
+                <span key={i}>
+                  {i === 1 ? <span className="font-normal">{word}</span> : word}
+                  {i < t("title").split(" ").length - 1 && " "}
+                </span>
+              ))}
           </h2>
           <p className="max-w-3xl mx-auto text-base text-white/80 font-light leading-relaxed">
             {t("description")}
@@ -179,7 +181,9 @@ export default function TeamSection() {
                     <div className="flex-shrink-0 flex items-start justify-center lg:justify-start">
                       <div
                         className={`relative w-20 h-20 md:w-24 md:h-24 lg:w-26 lg:h-26 rounded-full flex items-center justify-center transition-all duration-700 group-hover:scale-105 ${
-                          isExpanded ? "shadow-[0_0_0_1px_rgba(255,255,255,0.2)]" : ""
+                          isExpanded
+                            ? "shadow-[0_0_0_1px_rgba(255,255,255,0.2)]"
+                            : ""
                         }`}
                       >
                         <div className="absolute inset-0 rounded-full bg-white/10 backdrop-blur-sm border border-white/20" />
@@ -268,7 +272,7 @@ export default function TeamSection() {
 
                 {/* Hover Effect Line */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-white/70 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
-                
+
                 {/* Spotlight Effect on Hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent rounded-2xl" />

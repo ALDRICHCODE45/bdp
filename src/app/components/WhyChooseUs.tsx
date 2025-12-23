@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
     >
       <div className="absolute inset-0">
         <Image
-          src="/gallery/jardin2.jpeg"
+          src="/gallery2/jardín.webp"
           alt={t("overlay.description")}
           fill
           priority
