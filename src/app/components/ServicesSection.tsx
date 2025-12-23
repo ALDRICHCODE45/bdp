@@ -90,11 +90,12 @@ export default function ServicesSection() {
             fill
             className="object-cover"
             priority={currentIndex === 0}
-            quality={90}
+            quality={100}
+            sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/96 via-gray-900/92 to-gray-900/85" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_transparent_0%,_rgba(0,0,0,0.4)_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 via-gray-900/65 to-gray-900/60 lg:from-gray-900/96 lg:via-gray-900/92 lg:to-gray-900/85" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_transparent_0%,_rgba(0,0,0,0.2)_70%)] lg:bg-[radial-gradient(ellipse_at_left,_transparent_0%,_rgba(0,0,0,0.4)_70%)]" />
       </div>
 
       {/* Subtle Grid Pattern */}
@@ -238,7 +239,8 @@ export default function ServicesSection() {
                 alt={currentService.title}
                 fill
                 className="object-cover"
-                quality={90}
+                quality={100}
+                sizes="(max-width: 1024px) 0vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent" />
             </div>

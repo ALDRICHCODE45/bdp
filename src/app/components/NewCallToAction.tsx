@@ -11,13 +11,13 @@ export default function NewCallToAction() {
   return (
     <section
       ref={ref}
-      className="relative py-24 text-white overflow-hidden"
+      className="relative py-24 text-white overflow-hidden border-0 [&>*]:border-0"
     >
       {/* Gradient bridge to suavizar transición */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.06),transparent_35%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.05),transparent_40%)]" />
-      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center border-0">
         <div
           className={`space-y-8 transition-all ease-out ${
             isIntersecting
@@ -31,12 +31,14 @@ export default function NewCallToAction() {
           </p>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight">
-            {t("title").split(" ").map((word, i) => (
-              <span key={i}>
-                {i === 2 ? <span className="font-normal">{word}</span> : word}
-                {i < t("title").split(" ").length - 1 && " "}
-              </span>
-            ))}
+            {t("title")
+              .split(" ")
+              .map((word, i) => (
+                <span key={i}>
+                  {i === 2 ? <span className="font-normal">{word}</span> : word}
+                  {i < t("title").split(" ").length - 1 && " "}
+                </span>
+              ))}
           </h2>
 
           <p className="max-w-2xl mx-auto text-base md:text-lg text-white/80 font-light leading-relaxed">

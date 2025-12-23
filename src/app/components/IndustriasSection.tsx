@@ -33,13 +33,14 @@ export default function IndustriasSection() {
             alt="Mapa de México"
             fill
             className="object-cover"
-            quality={85}
+            quality={100}
+            sizes="100vw"
             priority={false}
           />
         </div>
         {/* Dark overlay with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/82 via-slate-950/78 to-slate-900/82" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(0,0,0,0.2)_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/55 to-slate-900/60" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(0,0,0,0.1)_100%)]" />
       </div>
 
       {/* Subtle blurred gradient effects */}

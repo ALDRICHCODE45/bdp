@@ -35,11 +35,12 @@ export default function ProjectsSection() {
           >
             <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden rounded-2xl">
               <Image
-                src="/gallery/balcon.jpeg"
+                src="/gallery/salajuntas.jpeg"
                 alt="Balcón"
                 fill
                 className="object-cover"
-                quality={90}
+                quality={100}
+                sizes="(max-width: 1024px) 100vw, 1200px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
             </div>

@@ -9,7 +9,7 @@ export default function NewFooter() {
   return (
     <footer id="contacto" className="bg-gray-900 text-white">
       {/* Prominent Address Section */}
-      <div className="border-b border-gray-800">
+      <div>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
           <div className="text-center space-y-6">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-4">

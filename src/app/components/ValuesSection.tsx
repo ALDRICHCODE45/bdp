@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
@@ -34,10 +35,13 @@ export default function ValuesSection() {
       {/* Background Image with overlay/blur */}
       <div className="absolute inset-0">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/gallery/jardin3.jpeg"
             alt={t("title")}
-          className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            quality={100}
+            sizes="100vw"
           />
         </div>
         <div className="absolute inset-0 bg-slate-950/70" />

@@ -12,6 +12,15 @@ const getInitials = (name: string): string => {
   return name.substring(0, 2).toUpperCase();
 };
 
+// Helper function to format name to show only first name and first last name
+const formatShortName = (name: string): string => {
+  const parts = name.split(" ").filter(part => part.length > 0);
+  if (parts.length >= 2) {
+    return `${parts[0]} ${parts[1]}`;
+  }
+  return name;
+};
+
 export default function TeamSection() {
   const t = useTranslations("team");
   const { ref, isIntersecting } = useIntersectionObserver();
@@ -184,7 +193,7 @@ export default function TeamSection() {
                     <div className="flex-1 space-y-3 md:space-y-4 flex flex-col">
                       <div>
                         <h3 className="text-lg md:text-xl lg:text-2xl font-light text-white mb-1 md:mb-2">
-                          {member.name}
+                          {formatShortName(member.name)}
                         </h3>
                         <p className="text-xs md:text-sm text-white/70 font-light leading-relaxed uppercase tracking-wider">
                           {member.role}
