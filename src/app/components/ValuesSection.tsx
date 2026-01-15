@@ -7,7 +7,7 @@ import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 export default function ValuesSection() {
   const t = useTranslations("values");
   const { ref, isIntersecting } = useIntersectionObserver();
-  
+
   const values = [
     {
       title: t("value1.title"),
@@ -36,7 +36,7 @@ export default function ValuesSection() {
       <div className="absolute inset-0">
         <div className="absolute inset-0">
           <Image
-            src="/gallery/jardin3.jpeg"
+            src="/gallery2/jardín3.webp"
             alt={t("title")}
             fill
             className="object-cover"
@@ -63,12 +63,14 @@ export default function ValuesSection() {
             {t("label")}
           </p>
           <h2 className="text-4xl md:text-5xl font-light mb-6">
-            {t("title").split(" ").map((word, i) => (
-              <span key={i}>
-                {i === 1 ? <span className="font-normal">{word}</span> : word}
-                {i < t("title").split(" ").length - 1 && " "}
-              </span>
-            ))}
+            {t("title")
+              .split(" ")
+              .map((word, i) => (
+                <span key={i}>
+                  {i === 1 ? <span className="font-normal">{word}</span> : word}
+                  {i < t("title").split(" ").length - 1 && " "}
+                </span>
+              ))}
           </h2>
           <p className="max-w-3xl mx-auto text-base text-gray-300 font-light leading-relaxed">
             {t("description")}
@@ -110,4 +112,3 @@ export default function ValuesSection() {
     </section>
   );
 }
-

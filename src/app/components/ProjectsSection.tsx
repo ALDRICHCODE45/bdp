@@ -35,7 +35,7 @@ export default function ProjectsSection() {
           >
             <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden rounded-2xl">
               <Image
-                src="/gallery/salajuntas.jpeg"
+                src="/gallery2/salajuntas.webp"
                 alt="Balcón"
                 fill
                 className="object-cover"

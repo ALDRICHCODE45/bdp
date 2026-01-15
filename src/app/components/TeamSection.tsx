@@ -45,7 +45,6 @@ function MemberModal({
   onClose: () => void;
   t: (key: string) => string;
 }) {
-  // Handle escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -67,22 +66,16 @@ function MemberModal({
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 transition-opacity duration-300 ${
-        isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-      }`}
+      className={`fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
       onClick={onClose}
     >
-      {/* Backdrop */}
       <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-sm" />
-
-      {/* Modal Content */}
       <div
-        className={`relative w-full max-w-2xl bg-slate-900 border border-white/10 rounded-2xl overflow-hidden transform transition-all duration-500 ${
-          isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
-        }`}
+        className={`relative w-full max-w-2xl bg-slate-900 border border-white/10 rounded-2xl overflow-hidden transform transition-all duration-500 ${isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
+          }`}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close button */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors"
@@ -101,7 +94,6 @@ function MemberModal({
         </button>
 
         <div className="p-6 md:p-8">
-          {/* Header with image/initials and name */}
           <div className="flex items-start gap-6 mb-6">
             {hasImage ? (
               <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden flex-shrink-0">
@@ -119,7 +111,6 @@ function MemberModal({
                 </span>
               </div>
             )}
-
             <div className="flex-1 min-w-0 pt-2">
               <h3 className="text-xl md:text-2xl font-light text-white mb-2">
                 {member.name}
@@ -129,13 +120,10 @@ function MemberModal({
               </p>
             </div>
           </div>
-
-          {/* Content */}
           <div className="space-y-6">
             <p className="text-white/80 font-light leading-relaxed">
               {member.description}
             </p>
-
             {member.credentials && (
               <div>
                 <p className="text-xs text-white/50 font-light uppercase tracking-wider mb-2">
@@ -146,7 +134,6 @@ function MemberModal({
                 </p>
               </div>
             )}
-
             {member.experience && (
               <div>
                 <p className="text-xs text-white/50 font-light uppercase tracking-wider mb-2">
@@ -273,24 +260,14 @@ export default function TeamSection() {
       className="relative py-24 md:py-32 bg-slate-950 text-white"
     >
       <div className="w-full max-w-6xl mx-auto px-6 lg:px-12">
-        {/* Header */}
         <div className="border-t border-white/10 pt-6">
           <span
-            className={`inline-block text-xs text-white/50 uppercase tracking-widest mb-12 md:mb-16 -mt-3 bg-slate-950 pr-4 transition-all duration-1000 ${
-              isIntersecting
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
-            }`}
+            className={`inline-block text-xs text-white/50 uppercase tracking-widest mb-12 md:mb-16 -mt-3 bg-slate-950 pr-4 transition-all duration-1000 ${isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
             {t("label")}
           </span>
-
           <div
-            className={`grid md:grid-cols-2 gap-6 md:gap-12 mb-16 md:mb-24 transition-all duration-1000 delay-100 ${
-              isIntersecting
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
-            }`}
+            className={`grid md:grid-cols-2 gap-6 md:gap-12 mb-16 md:mb-24 transition-all duration-1000 delay-100 ${isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white">
               {t("title")}
@@ -301,27 +278,17 @@ export default function TeamSection() {
           </div>
         </div>
 
-        {/* Team Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 md:gap-y-16">
           {teamMembers.map((member, index) => {
             const hasImage = member.image && member.image.length > 0;
             const initials = getInitials(member.name);
-            const hasDetails = member.credentials || member.experience;
-
             return (
               <div
                 key={member.id}
-                className={`group cursor-pointer transition-all duration-700 ${
-                  isIntersecting
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8"
-                }`}
-                style={{
-                  transitionDelay: `${200 + index * 80}ms`,
-                }}
+                className={`group cursor-pointer transition-all duration-700 ${isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                style={{ transitionDelay: `${200 + index * 80}ms` }}
                 onClick={() => openModal(member)}
               >
-                {/* Image or Initials */}
                 <div className="relative aspect-[4/5] mb-4 overflow-hidden rounded-lg bg-white/5">
                   {hasImage ? (
                     <Image
@@ -337,16 +304,12 @@ export default function TeamSection() {
                       </span>
                     </div>
                   )}
-
-                  {/* Hover overlay with "Ver más" */}
                   <div className="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                     <span className="text-sm text-white/90 uppercase tracking-wider transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       {t("verMas")}
                     </span>
                   </div>
                 </div>
-
-                {/* Name and Index */}
                 <div className="flex items-start justify-between gap-4 px-1">
                   <div className="flex-1 min-w-0 overflow-hidden">
                     <h3 className="text-base font-medium text-white truncate transition-all duration-500 group-hover:tracking-wide">
@@ -367,8 +330,6 @@ export default function TeamSection() {
           })}
         </div>
       </div>
-
-      {/* Modal */}
       <MemberModal
         member={selectedMember}
         isOpen={isModalOpen}

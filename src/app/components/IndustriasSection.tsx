@@ -29,7 +29,7 @@ export default function IndustriasSection() {
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0">
           <Image
-            src="/gallery/mapa.jpeg"
+            src="/gallery2/mapa.webp"
             alt="Mapa de México"
             fill
             className="object-cover"
