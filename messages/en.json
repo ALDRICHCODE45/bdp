@@ -161,51 +161,72 @@
         "role": "Founding Partner",
         "description": "Leads the practices of constitutional law, administrative law, and public policy consulting.",
         "credentials": "Law Degree with honors from ITAM. Master's in Constitutional Law from Carlos III University of Madrid, Spain.",
-        "experience": "Chief of Staff to the Secretary of Public Administration, General Councilor and Representative of the National Action Party (PAN) before the Federal Electoral Institute (INE), Undersecretary of the Interior, Private Secretary to former President Felipe de Jesús Calderón Hinojosa, and Senator of the Republic. Also served as President of the Justice Commission and the Senate Board of Directors."
+        "experience": "Chief of Staff to the Secretary of Public Administration, General Councilor and Representative of the National Action Party (PAN) before the Federal Electoral Institute (INE), Undersecretary of the Interior, Private Secretary to former President Felipe de Jesús Calderón Hinojosa, and Senator of the Republic. Also served as President of the Justice Commission and the Senate Board of Directors.",
+        "image": ""
       },
       "carlos": {
         "name": "Carlos A. Lezama Fernández del Campo",
         "role": "Founding Partner",
         "description": "Leads the litigation and regulatory practice. Advises clients on disputes and judicial and administrative actions.",
         "credentials": "Law Degree from Panamerican University (2004). Specializations in Procedural Law and Administrative Law. Specialized studies in Infrastructure Projects at the John F. Kennedy School of Government, Harvard University. Master of Laws (LL.M.) from Fordham University in New York.",
-        "experience": "Technical Secretary of the Senate Board of Directors of the Republic (LXII Legislature), Deputy General Legal Director of the National PAN Committee, Legal Director of National Assets at the Secretariat of Public Administration."
+        "experience": "Technical Secretary of the Senate Board of Directors of the Republic (LXII Legislature), Deputy General Legal Director of the National PAN Committee, Legal Director of National Assets at the Secretariat of Public Administration.",
+        "image": ""
       },
       "manuel": {
         "name": "Manuel MacFarland",
         "role": "Partner",
         "description": "Partner in the litigation department, specialized in constitutional procedural law.",
         "credentials": "Graduate of the Free School of Law (ELD). Master's in constitutional procedural law from Panamerican University.",
-        "experience": "Distinguished career in public service of more than 19 years, having held several high-level positions, including: General Director of Protection Procedures against Administrative Acts at the Federal Tax Attorney's Office, Head of the Supervision and Verification Unit at the former Federal Telecommunications Commission, Federal Tax Attorney for Protection Procedures, Legal Director of the Mexican Social Security Institute (IMSS), and Deputy Legal Counselor for Legislation and Normative Studies at the Legal Counsel of the Presidency."
+        "experience": "Distinguished career in public service of more than 19 years, having held several high-level positions, including: General Director of Protection Procedures against Administrative Acts at the Federal Tax Attorney's Office, Head of the Supervision and Verification Unit at the former Federal Telecommunications Commission, Federal Tax Attorney for Protection Procedures, Legal Director of the Mexican Social Security Institute (IMSS), and Deputy Legal Counselor for Legislation and Normative Studies at the Legal Counsel of the Presidency.",
+        "image": ""
       },
       "gonzalo": {
         "name": "Gonzalo José Bolio Benitez",
         "role": "Attorney/Consultant",
-        "description": "Member of BDP, specialized in litigation and legal consulting in areas of administrative, constitutional, corporate, and business law."
+        "description": "Member of BDP, specialized in litigation and legal consulting in areas of administrative, constitutional, corporate, and business law.",
+        "image": ""
       },
       "alonso": {
         "name": "Alonso Zepeda Celis",
         "role": "Attorney/Consultant",
-        "description": "Attorney graduated with honors from Panamerican University, specialized in constitutional, administrative, and electoral litigation."
+        "description": "Attorney graduated with honors from Panamerican University, specialized in constitutional, administrative, and electoral litigation.",
+        "image": "/colaboradores/alonso_zepeda.webp"
       },
       "paulina": {
         "name": "Paulina Reynoso Ventosa",
         "role": "Attorney/Consultant",
-        "description": "Currently focuses on electoral litigation and general legal consulting at BDP."
+        "description": "Currently focuses on electoral litigation and general legal consulting at BDP.",
+        "image": "/colaboradores/paulina_reynoso_ventosa.webp"
       },
       "jose": {
         "name": "José Antonio Montes",
         "role": "Principal Associate - Energy Practice",
-        "description": "Professional with extensive experience in the energy sector, specialized in hydrocarbon and renewable energy regulation."
+        "description": "Professional with extensive experience in the energy sector, specialized in hydrocarbon and renewable energy regulation.",
+        "image": "/colaboradores/antonio_montes.webp"
       },
       "aldo": {
         "name": "Aldo Luis Ángel Hernández Olmos",
         "role": "Attorney/Consultant",
-        "description": "Law Degree from Iberoamerican University in León. Specialization in the adversarial system from the Free School of Law (ELD). Since 2025, member of BDP Litigation and Consulting, where he practices criminal law."
+        "description": "Law Degree from Iberoamerican University in León. Specialization in the adversarial system from the Free School of Law (ELD). Since 2025, member of BDP Litigation and Consulting, where he practices criminal law.",
+        "image": "/colaboradores/Aldo_hernandez_olmos.webp"
       },
       "iliana": {
         "name": "Iliana Sotomayor",
         "role": "Attorney/Consultant",
-        "description": "Focuses on legal consulting and advisory services in the infrastructure field. Her work includes participation in the preparation of unsolicited proposals under the Public-Private Partnerships Law and the legal restructuring of energy projects."
+        "description": "Focuses on legal consulting and advisory services in the infrastructure field. Her work includes participation in the preparation of unsolicited proposals under the Public-Private Partnerships Law and the legal restructuring of energy projects.",
+        "image": ""
+      },
+      "ricardo": {
+        "name": "Ricardo Siqueiros",
+        "role": "Attorney/Consultant",
+        "description": "Focuses on legal consulting and advisory services in the infrastructure field. His work includes participation in the preparation of unsolicited proposals under the Public-Private Partnerships Law and the legal restructuring of energy projects.",
+        "image": "/colaboradores/ricardo_siqueiros.webp"
+      },
+      "liliana": {
+        "name": "Liliana Gallardo",
+        "role": "Attorney/Consultant",
+        "description": "Focuses on legal consulting and advisory services in the infrastructure field. Her work includes participation in the preparation of unsolicited proposals under the Public-Private Partnerships Law and the legal restructuring of energy projects.",
+        "image": "/colaboradores/liliana_gallardo.webp"
       }
     }
   },

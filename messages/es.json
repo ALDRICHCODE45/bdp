@@ -161,51 +161,72 @@
         "role": "Socio Fundador",
         "description": "Lidera las prácticas de derecho constitucional, derecho administrativo y consultoría en políticas públicas.",
         "credentials": "Licenciatura en Derecho con honores del ITAM. Maestría en Derecho Constitucional de la Universidad Carlos III de Madrid, España.",
-        "experience": "Jefe de Asesores del Secretario de la Función Pública, Consejero General y Representante del PAN ante el INE, Subsecretario de Gobernación, Secretario Particular del Expresidente Felipe de Jesús Calderón Hinojosa, Senador de la República, Presidente de la Comisión de Justicia y de la Mesa Directiva del Senado."
+        "experience": "Jefe de Asesores del Secretario de la Función Pública, Consejero General y Representante del PAN ante el INE, Subsecretario de Gobernación, Secretario Particular del Expresidente Felipe de Jesús Calderón Hinojosa, Senador de la República, Presidente de la Comisión de Justicia y de la Mesa Directiva del Senado.",
+        "image": ""
       },
       "carlos": {
-        "name": "Carlos A. Lezama Fernández del Campo",
+        "name": "Carlos Lezama Fernández del Campo",
         "role": "Socio Fundador",
         "description": "Lidera la práctica de litigio y regulatoria. Asesora a clientes en disputas y acciones judiciales y administrativas.",
         "credentials": "Licenciatura en Derecho de la Universidad Panamericana (2004). Especializaciones en Derecho Procesal y Derecho Administrativo. Estudios especializados en Proyectos de Infraestructura en la John F. Kennedy School of Government, Universidad de Harvard. Master of Laws (LL.M.) de la Universidad de Fordham en Nueva York.",
-        "experience": "Secretario Técnico de la Mesa Directiva del Senado de la República (LXII Legislatura), Subdirector General Jurídico del Comité Nacional del PAN, Director Jurídico de Bienes Nacionales en la Secretaría de la Función Pública."
+        "experience": "Secretario Técnico de la Mesa Directiva del Senado de la República (LXII Legislatura), Subdirector General Jurídico del Comité Nacional del PAN, Director Jurídico de Bienes Nacionales en la Secretaría de la Función Pública.",
+        "image": ""
       },
       "manuel": {
         "name": "Manuel MacFarland",
         "role": "Socio",
         "description": "Socio en el departamento de litigio, especializado en derecho procesal constitucional.",
         "credentials": "Egresado de la Escuela Libre de Derecho (ELD). Maestría en derecho procesal constitucional de la Universidad Panamericana.",
-        "experience": "Carrera en el servicio público de más de 19 años. Director General de Procedimientos de Protección contra Actos Administrativos en la Procuraduría Fiscal de la Federación, Jefe de la Unidad de Supervisión y Verificación en la ex-Comisión Federal de Telecomunicaciones, Subprocurador Fiscal Federal de Protección de Procedimientos, Director Jurídico del IMSS, Subconsejero Jurídico de Legislación y Estudios Normativos en la Consejería Jurídica de la Presidencia."
+        "experience": "Carrera en el servicio público de más de 19 años. Director General de Procedimientos de Protección contra Actos Administrativos en la Procuraduría Fiscal de la Federación, Jefe de la Unidad de Supervisión y Verificación en la ex-Comisión Federal de Telecomunicaciones, Subprocurador Fiscal Federal de Protección de Procedimientos, Director Jurídico del IMSS, Subconsejero Jurídico de Legislación y Estudios Normativos en la Consejería Jurídica de la Presidencia.",
+        "image": ""
       },
       "gonzalo": {
-        "name": "Gonzalo José Bolio Benitez",
+        "name": "Gonzalo Bolio José Benitez",
         "role": "Abogado/Consultor",
-        "description": "Miembro de BDP, especializado en litigio y consultoría legal en áreas de derecho administrativo, constitucional, corporativo y empresarial."
+        "description": "Miembro de BDP, especializado en litigio y consultoría legal en áreas de derecho administrativo, constitucional, corporativo y empresarial.",
+        "image": ""
       },
       "alonso": {
         "name": "Alonso Zepeda Celis",
         "role": "Abogado/Consultor",
-        "description": "Abogado egresado con honores de la Universidad Panamericana, especializado en litigio constitucional, administrativo y electoral."
+        "description": "Abogado egresado con honores de la Universidad Panamericana, especializado en litigio constitucional, administrativo y electoral.",
+        "image": "/colaboradores/alonso_zepeda.webp"
       },
       "paulina": {
         "name": "Paulina Reynoso Ventosa",
         "role": "Abogada/Consultora",
-        "description": "Actualmente se enfoca en litigio electoral y consultoría legal general en BDP."
+        "description": "Actualmente se enfoca en litigio electoral y consultoría legal general en BDP.",
+        "image": "/colaboradores/paulina_reynoso_ventosa.webp"
       },
       "jose": {
-        "name": "José Antonio Montes",
+        "name": "Antonio Montes",
         "role": "Asociado Principal - Práctica de Energía",
-        "description": "Profesional con amplia experiencia en el sector energético, especializado en regulación de hidrocarburos y energías renovables."
+        "description": "Profesional con amplia experiencia en el sector energético, especializado en regulación de hidrocarburos y energías renovables.",
+        "image": "/colaboradores/antonio_montes.webp"
       },
       "aldo": {
-        "name": "Aldo Luis Ángel Hernández Olmos",
+        "name": "Aldo Hernández Luis Ángel Olmos",
         "role": "Abogado/Consultor",
-        "description": "Licenciatura en Derecho de la Universidad Iberoamericana en León. Especialización en el sistema adversarial de la Escuela Libre de Derecho (ELD). Desde 2025, es miembro de BDP Litigio y Consultoría, donde litiga en derecho penal."
+        "description": "Licenciatura en Derecho de la Universidad Iberoamericana en León. Especialización en el sistema adversarial de la Escuela Libre de Derecho (ELD). Desde 2025, es miembro de BDP Litigio y Consultoría, donde litiga en derecho penal.",
+        "image": "/colaboradores/Aldo_hernandez_olmos.webp"
       },
       "iliana": {
         "name": "Iliana Sotomayor",
         "role": "Abogada/Consultora",
-        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos."
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": ""
+      },
+      "ricardo": {
+        "name": "Ricardo Siqueiros",
+        "role": "Abogado/Consultor",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": "/colaboradores/ricardo_siqueiros.webp"
+      },
+      "liliana": {
+        "name": "Liliana Gallardo",
+        "role": "Abogada/Consultora",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": "/colaboradores/liliana_gallardo.webp"
       }
     }
   },
@@ -267,4 +288,3 @@
     "twitterDescription": "Firma especializada en litigio y consultoría multidisciplinaria en diversas áreas del Derecho Público, particularmente en las ramas constitucional, administrativa, regulatoria y electoral."
   }
 }
-
