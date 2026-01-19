@@ -204,23 +204,23 @@
         "description": "Licenciatura en Derecho de la Universidad Iberoamericana en León. Especialización en el sistema adversarial de la Escuela Libre de Derecho (ELD). Desde 2025, es miembro de BDP Litigio y Consultoría, donde litiga en derecho penal.",
         "image": "/colaboradores/Aldo_hernandez_olmos.webp"
       },
-      "iliana": {
-        "name": "Iliana Sotomayor",
-        "role": "Abogada/Consultora",
-        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
-        "image": ""
-      },
-      "miguel": {
-        "name": "Miguel M. Carmona",
-        "role": "Attorney/Consultant",
-        "description": "Focuses on legal consulting and advisory services in the infrastructure field. His work includes participation in the preparation of unsolicited proposals under the Public-Private Partnerships Law and the legal restructuring of energy projects.",
-        "image": ""
-      },
       "ricardo": {
         "name": "Ricardo Siqueiros",
         "role": "Abogado/Consultor",
         "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
         "image": "/colaboradores/ricardo_siqueiros.webp"
+      }
+      "miguel": {
+        "name": "Miguel M. Carmona",
+        "role": "Abogado/Consultor",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": ""
+      },
+      "liliana": {
+        "name": "Liliana Gallardo",
+        "role": "Abogado/Consultor",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": "/colaboradores/liliana_gallardo.webp"
       }
     }
   },
