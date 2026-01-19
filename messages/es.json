@@ -180,12 +180,6 @@
         "experience": "Carrera en el servicio público de más de 19 años. Director General de Procedimientos de Protección contra Actos Administrativos en la Procuraduría Fiscal de la Federación, Jefe de la Unidad de Supervisión y Verificación en la ex-Comisión Federal de Telecomunicaciones, Subprocurador Fiscal Federal de Protección de Procedimientos, Director Jurídico del IMSS, Subconsejero Jurídico de Legislación y Estudios Normativos en la Consejería Jurídica de la Presidencia.",
         "image": ""
       },
-      "gonzalo": {
-        "name": "Gonzalo Bolio José Benitez",
-        "role": "Abogado/Consultor",
-        "description": "Miembro de BDP, especializado en litigio y consultoría legal en áreas de derecho administrativo, constitucional, corporativo y empresarial.",
-        "image": ""
-      },
       "alonso": {
         "name": "Alonso Zepeda Celis",
         "role": "Abogado/Consultor",
@@ -216,17 +210,17 @@
         "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
         "image": ""
       },
+      "miguel": {
+        "name": "Miguel M. Carmona",
+        "role": "Attorney/Consultant",
+        "description": "Focuses on legal consulting and advisory services in the infrastructure field. His work includes participation in the preparation of unsolicited proposals under the Public-Private Partnerships Law and the legal restructuring of energy projects.",
+        "image": ""
+      },
       "ricardo": {
         "name": "Ricardo Siqueiros",
         "role": "Abogado/Consultor",
         "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
         "image": "/colaboradores/ricardo_siqueiros.webp"
-      },
-      "liliana": {
-        "name": "Liliana Gallardo",
-        "role": "Abogada/Consultora",
-        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
-        "image": "/colaboradores/liliana_gallardo.webp"
       }
     }
   },

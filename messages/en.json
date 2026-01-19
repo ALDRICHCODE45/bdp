@@ -180,12 +180,6 @@
         "experience": "Distinguished career in public service of more than 19 years, having held several high-level positions, including: General Director of Protection Procedures against Administrative Acts at the Federal Tax Attorney's Office, Head of the Supervision and Verification Unit at the former Federal Telecommunications Commission, Federal Tax Attorney for Protection Procedures, Legal Director of the Mexican Social Security Institute (IMSS), and Deputy Legal Counselor for Legislation and Normative Studies at the Legal Counsel of the Presidency.",
         "image": ""
       },
-      "gonzalo": {
-        "name": "Gonzalo José Bolio Benitez",
-        "role": "Attorney/Consultant",
-        "description": "Member of BDP, specialized in litigation and legal consulting in areas of administrative, constitutional, corporate, and business law.",
-        "image": ""
-      },
       "alonso": {
         "name": "Alonso Zepeda Celis",
         "role": "Attorney/Consultant",
@@ -210,17 +204,17 @@
         "description": "Law Degree from Iberoamerican University in León. Specialization in the adversarial system from the Free School of Law (ELD). Since 2025, member of BDP Litigation and Consulting, where he practices criminal law.",
         "image": "/colaboradores/Aldo_hernandez_olmos.webp"
       },
-      "iliana": {
-        "name": "Iliana Sotomayor",
-        "role": "Attorney/Consultant",
-        "description": "Focuses on legal consulting and advisory services in the infrastructure field. Her work includes participation in the preparation of unsolicited proposals under the Public-Private Partnerships Law and the legal restructuring of energy projects.",
-        "image": ""
-      },
       "ricardo": {
         "name": "Ricardo Siqueiros",
         "role": "Attorney/Consultant",
         "description": "Focuses on legal consulting and advisory services in the infrastructure field. His work includes participation in the preparation of unsolicited proposals under the Public-Private Partnerships Law and the legal restructuring of energy projects.",
         "image": "/colaboradores/ricardo_siqueiros.webp"
+      },
+      "miguel": {
+        "name": "Miguel M. Carmona",
+        "role": "Attorney/Consultant",
+        "description": "Focuses on legal consulting and advisory services in the infrastructure field. His work includes participation in the preparation of unsolicited proposals under the Public-Private Partnerships Law and the legal restructuring of energy projects.",
+        "image": ""
       },
       "liliana": {
         "name": "Liliana Gallardo",
@@ -288,4 +282,3 @@
     "twitterDescription": "Firm specialized in litigation and multidisciplinary consulting in various areas of Public Law, particularly in constitutional, administrative, regulatory, and electoral branches."
   }
 }
-
