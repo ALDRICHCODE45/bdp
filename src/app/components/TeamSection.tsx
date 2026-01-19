@@ -222,17 +222,17 @@ export default function TeamSection() {
     },
     {
       id: 9,
-      name: t("members.liliana.name"),
-      role: t("members.liliana.role"),
-      description: t("members.liliana.description"),
-      image: t("members.liliana.image"),
-    },
-    {
-      id: 9,
       name: t("members.miguel.name"),
       role: t("members.miguel.role"),
       description: t("members.miguel.description"),
       image: t("members.miguel.image"),
+    },
+    {
+      id: 10,
+      name: t("members.liliana.name"),
+      role: t("members.liliana.role"),
+      description: t("members.liliana.description"),
+      image: t("members.liliana.image"),
     },
   ];
 
