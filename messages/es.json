@@ -210,17 +210,29 @@
         "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
         "image": "/colaboradores/ricardo_siqueiros.webp"
       },
-      "miguel": {
-        "name": "Miguel M. Carmona",
-        "role": "Abogado/Consultor",
-        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
-        "image": ""
-      },
       "liliana": {
         "name": "Liliana Gallardo",
         "role": "Abogado/Consultor",
         "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
         "image": "/colaboradores/liliana_gallardo.webp"
+      },
+      "santiago": {
+        "name": "Santiago Ramos",
+        "role": "Abogado/Consultor",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": ""
+      },
+      "fernanda": {
+        "name": "Fernanda Chavez",
+        "role": "Abogado/Consultor",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": ""
+      },
+      "miguel": {
+        "name": "Miguel M. Carmona",
+        "role": "Abogado/Consultor",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": ""
       }
     }
   },
