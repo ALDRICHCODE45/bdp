@@ -30,83 +30,89 @@ export default function ValuesSection() {
   return (
     <section
       ref={ref}
-      className="relative py-24 bg-slate-950 text-white overflow-hidden"
+      className="relative py-24 md:py-32 bg-slate-900 text-white"
     >
-      {/* Background Image with overlay/blur */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0">
-          <Image
-            src="/gallery2/jardín3.webp"
-            alt={t("title")}
-            fill
-            className="object-cover"
-            quality={100}
-            sizes="100vw"
-          />
-        </div>
-        <div className="absolute inset-0 bg-slate-950/70" />
-        <div className="absolute inset-0 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/65 to-slate-950/85" />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Header */}
-        <div
-          className={`text-center mb-20 transition-all ease-out ${
-            isIntersecting
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-12"
-          }`}
-          style={{ transitionDuration: "1600ms" }}
-        >
-          <p className="text-sm text-gray-400 font-light tracking-[0.3em] uppercase mb-4">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+        {/* Border divider with label */}
+        <div className="border-t border-white/10 pt-6">
+          <span
+            className={`inline-block text-xs text-white/50 uppercase tracking-widest mb-12 md:mb-16 -mt-3 bg-slate-900 pr-4 transition-all duration-1000 ${
+              isIntersecting
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-4"
+            }`}
+          >
             {t("label")}
-          </p>
-          <h2 className="text-4xl md:text-5xl font-light mb-6">
-            {t("title")
-              .split(" ")
-              .map((word, i) => (
-                <span key={i}>
-                  {i === 1 ? <span className="font-normal">{word}</span> : word}
-                  {i < t("title").split(" ").length - 1 && " "}
-                </span>
-              ))}
-          </h2>
-          <p className="max-w-3xl mx-auto text-base text-gray-300 font-light leading-relaxed">
-            {t("description")}
-          </p>
+          </span>
+
+          {/* Header grid */}
+          <div
+            className={`grid md:grid-cols-2 gap-6 md:gap-12 mb-16 md:mb-24 transition-all duration-1000 delay-100 ${
+              isIntersecting
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white">
+              {t("title")}
+            </h2>
+            <p className="text-base text-white/60 font-light leading-relaxed self-end">
+              {t("description")}
+            </p>
+          </div>
         </div>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-16 md:mb-24">
           {values.map((value, index) => (
             <div
               key={index}
-              className={`group p-8 bg-white/3 hover:bg-white/5 transition-all duration-300 border-l-2 border-white/10 hover:border-white/20 ${
+              className={`group space-y-4 transition-all duration-700 ${
                 isIntersecting
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
-              style={{
-                transitionDelay: `${200 + index * 100}ms`,
-                transitionDuration: "1200ms",
-              }}
+              style={{ transitionDelay: `${200 + index * 80}ms` }}
             >
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-white/30 group-hover:border-white transition-colors">
-                  <span className="text-2xl font-light">{index + 1}</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-light mb-4 group-hover:text-white transition-colors">
-                    {value.title}
-                  </h3>
-                  <p className="text-sm text-gray-400 font-light leading-relaxed group-hover:text-gray-300 transition-colors">
-                    {value.description}
-                  </p>
-                </div>
+              {/* Number */}
+              <span className="text-xs text-white/40 font-light">
+                _{String(index + 1).padStart(2, "0")}
+              </span>
+
+              {/* Title */}
+              <h3 className="text-xl md:text-2xl font-light text-white group-hover:text-white/90 transition-colors">
+                {value.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-sm text-white/60 font-light leading-relaxed">
+                {value.description}
+              </p>
+
+              {/* Subtle divider */}
+              <div className="pt-4">
+                <div className="h-px w-12 bg-white/10 group-hover:w-24 group-hover:bg-white/20 transition-all duration-500" />
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Accent Image */}
+        <div
+          className={`relative aspect-[21/9] overflow-hidden rounded-lg transition-all duration-1000 delay-500 ${
+            isIntersecting
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
+          <Image
+            src="/newimages/cuadro.webp"
+            alt={t("title")}
+            fill
+            className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+            quality={100}
+            sizes="100vw"
+          />
         </div>
       </div>
     </section>
