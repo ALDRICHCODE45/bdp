@@ -222,17 +222,31 @@ export default function TeamSection() {
     },
     {
       id: 9,
+      name: t("members.liliana.name"),
+      role: t("members.liliana.role"),
+      description: t("members.liliana.description"),
+      image: t("members.liliana.image"),
+    },
+    {
+      id: 10,
+      name: t("members.fernanda.name"),
+      role: t("members.fernanda.role"),
+      description: t("members.fernanda.description"),
+      image: t("members.fernanda.image"),
+    },
+    {
+      id: 11,
       name: t("members.miguel.name"),
       role: t("members.miguel.role"),
       description: t("members.miguel.description"),
       image: t("members.miguel.image"),
     },
     {
-      id: 10,
-      name: t("members.liliana.name"),
-      role: t("members.liliana.role"),
-      description: t("members.liliana.description"),
-      image: t("members.liliana.image"),
+      id: 12,
+      name: t("members.santiago.name"),
+      role: t("members.santiago.role"),
+      description: t("members.santiago.description"),
+      image: t("members.santiago.image"),
     },
   ];
 

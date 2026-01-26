@@ -184,43 +184,55 @@
         "name": "Alonso Zepeda Celis",
         "role": "Abogado/Consultor",
         "description": "Abogado egresado con honores de la Universidad Panamericana, especializado en litigio constitucional, administrativo y electoral.",
-        "image": "/colaboradores/alonso_zepeda.webp"
+        "image": "/col/alonso_zepeda.webp"
       },
       "paulina": {
         "name": "Paulina Reynoso Ventosa",
         "role": "Abogada/Consultora",
         "description": "Actualmente se enfoca en litigio electoral y consultoría legal general en BDP.",
-        "image": "/colaboradores/paulina_reynoso_ventosa.webp"
+        "image": "/col/paulina_reynoso_ventosa.webp"
       },
       "jose": {
         "name": "Antonio Montes",
         "role": "Asociado Principal - Práctica de Energía",
         "description": "Profesional con amplia experiencia en el sector energético, especializado en regulación de hidrocarburos y energías renovables.",
-        "image": "/colaboradores/antonio_montes.webp"
+        "image": "/col/antonio_montes.webp"
       },
       "aldo": {
         "name": "Aldo Hernández Luis Ángel Olmos",
         "role": "Abogado/Consultor",
         "description": "Licenciatura en Derecho de la Universidad Iberoamericana en León. Especialización en el sistema adversarial de la Escuela Libre de Derecho (ELD). Desde 2025, es miembro de BDP Litigio y Consultoría, donde litiga en derecho penal.",
-        "image": "/colaboradores/Aldo_hernandez_olmos.webp"
+        "image": "/col/Aldo_hernandez_olmos.webp"
       },
       "ricardo": {
         "name": "Ricardo Siqueiros",
         "role": "Abogado/Consultor",
         "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
-        "image": "/colaboradores/ricardo_siqueiros.webp"
+        "image": "/col/ricardo_siqueiros.webp"
+      },
+      "liliana": {
+        "name": "Liliana Gallardo",
+        "role": "Abogado/Consultor",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": "/col/liliana_gallardo.webp"
+      },
+      "santiago": {
+        "name": "Santiago Ramos",
+        "role": "Abogado/Consultor",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": ""
+      },
+      "fernanda": {
+        "name": "Fernanda Chavez",
+        "role": "Abogado/Consultor",
+        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
+        "image": "/col/fernanda.webp"
       },
       "miguel": {
         "name": "Miguel M. Carmona",
         "role": "Abogado/Consultor",
         "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
         "image": ""
-      },
-      "liliana": {
-        "name": "Liliana Gallardo",
-        "role": "Abogado/Consultor",
-        "description": "Se enfoca en consultoría legal y servicios de asesoría en el campo de la infraestructura. Su trabajo incluye participación en la preparación de propuestas no solicitadas bajo la Ley de Asociaciones Público-Privadas y la reestructuración legal de proyectos energéticos.",
-        "image": "/colaboradores/liliana_gallardo.webp"
       }
     }
   },
