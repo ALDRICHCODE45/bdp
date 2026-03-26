@@ -2,13 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import NewFooter from "../../components/NewFooter";
 
 export default function CompliancePage() {
   const t = useTranslations("compliance");
+  const locale = useLocale();
+  const pdfUrl =
+    locale === "en"
+      ? "/docs/BDP_DataInt_Compliance_FTO_Mexico_2025_EN.pdf"
+      : "/docs/BDP_DataInt_Compliance_FTO_Mexico_2025.pdf";
 
   const organizations: string[] = t.raw("context.organizations");
   const materialSupportItems: string[] = t.raw("context.materialSupportItems");
@@ -105,7 +110,7 @@ export default function CompliancePage() {
               style={{ transitionDelay: "600ms", transitionDuration: "1400ms" }}
             >
               <a
-                href="/docs/BDP_DataInt_Compliance_FTO_Mexico_2025.pdf"
+                href={pdfUrl}
                 download
                 className="inline-flex items-center px-8 py-4 bg-white text-slate-900 text-sm font-light uppercase tracking-wider hover:bg-white/90 transition-colors"
               >
@@ -539,7 +544,7 @@ export default function CompliancePage() {
 
             <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="/docs/BDP_DataInt_Compliance_FTO_Mexico_2025.pdf"
+                href={pdfUrl}
                 download
                 className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 text-sm font-light uppercase tracking-wider hover:bg-white/90 transition-colors"
               >
