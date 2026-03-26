@@ -105,7 +105,7 @@ export default function CompliancePage() {
               style={{ transitionDelay: "600ms", transitionDuration: "1400ms" }}
             >
               <a
-                href="/docs/Nuevo_servicio.pdf"
+                href="/docs/BDP_DataInt_Compliance_FTO_Mexico_2025.pdf"
                 download
                 className="inline-flex items-center px-8 py-4 bg-white text-slate-900 text-sm font-light uppercase tracking-wider hover:bg-white/90 transition-colors"
               >
@@ -539,7 +539,7 @@ export default function CompliancePage() {
 
             <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="/docs/Nuevo_servicio.pdf"
+                href="/docs/BDP_DataInt_Compliance_FTO_Mexico_2025.pdf"
                 download
                 className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 text-sm font-light uppercase tracking-wider hover:bg-white/90 transition-colors"
               >
