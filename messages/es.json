@@ -19,6 +19,7 @@
     "industrias": "Industrias",
     "equipo": "Equipo",
     "contacto": "Contacto",
+    "compliance": "Compliance",
     "contactanos": "Contáctanos"
   },
   "hero": {
@@ -261,6 +262,96 @@
     "copyright": "© BDP / {year}",
     "avisoPrivacidad": "Aviso de Privacidad",
     "idiomas": "ESP / ENG / ZH"
+  },
+  "compliance": {
+    "hero": {
+      "label": "Compliance & Seguridad",
+      "title": "Designación de Cárteles como Terroristas",
+      "subtitle": "Retos de Seguridad y Cumplimiento Corporativo en México",
+      "cta": "Descargar Documento Completo",
+      "partnershipLabel": "Una alianza estratégica de",
+      "backHome": "Volver al Inicio"
+    },
+    "context": {
+      "label": "Contexto",
+      "title": "Cárteles Designados como Organizaciones Terroristas Extranjeras",
+      "description": "El 20 de febrero de 2025, el Departamento de Estado de los Estados Unidos designó oficialmente a seis organizaciones mexicanas como Organizaciones Terroristas Extranjeras (FTO) y Terroristas Globales Especialmente Designados (SDGT) bajo la Orden Ejecutiva 14157.",
+      "organizationsTitle": "Organizaciones Designadas",
+      "organizations": [
+        "Cártel de Sinaloa",
+        "Cártel de Jalisco Nueva Generación (CJNG)",
+        "Cártel del Noreste (CDN)",
+        "Cártel del Golfo",
+        "Guerreros Unidos",
+        "La Nueva Familia Michoacana"
+      ],
+      "materialSupportTitle": "\"Apoyo Material\" y Sus Implicaciones",
+      "materialSupportDescription": "Bajo 18 U.S.C. § 2339B, es un delito federal proporcionar \"apoyo material o recursos\" a una organización terrorista extranjera designada. La definición de \"apoyo material\" es extremadamente amplia y cubre cualquier propiedad o servicio, incluyendo:",
+      "materialSupportItems": [
+        "Servicios financieros y transacciones monetarias",
+        "Alojamiento, transporte y comunicaciones",
+        "Capacitación, asesoría de expertos y asistencia técnica",
+        "Personal, incluyendo cualquier individuo propio"
+      ],
+      "materialSupportWarning": "Las condenas por apoyo material pueden resultar en penas de hasta 20 años de prisión. Si la conducta resulta en la muerte de cualquier persona, la cadena perpetua es una posibilidad real."
+    },
+    "challenges": {
+      "label": "Retos Corporativos",
+      "title": "El Desafío del Cumplimiento Corporativo",
+      "description": "Para empresas que operan en México, estas designaciones crean riesgos legales inmediatos y sin precedentes. Incluso transacciones rutinarias como pagos de renta, peajes, servicios públicos y nóminas podrían potencialmente constituir apoyo material si alguna parte del pago beneficia a grupos designados.",
+      "casesTitle": "Precedentes de Aplicación",
+      "case1": {
+        "name": "Chiquita Brands International",
+        "amount": "$27M + $38.3M",
+        "description": "Multada y después condenada civilmente por pagos a las AUC (grupo paramilitar colombiano), considerados \"apoyo material\" al terrorismo."
+      },
+      "case2": {
+        "name": "Lafarge S.A.",
+        "amount": "$777.78M",
+        "description": "Se declaró culpable de conspiración para proporcionar apoyo material a organizaciones terroristas extranjeras, incluyendo ISIS."
+      },
+      "case3": {
+        "name": "Sanciones a México",
+        "amount": "2025",
+        "description": "Aplicación esperada contra empresas que operan en México con pagos involuntarios a entidades vinculadas a cárteles."
+      },
+      "keyMessage": "Estos precedentes demuestran que las autoridades estadounidenses aplican agresivamente las leyes de apoyo material. Las empresas deben establecer marcos de cumplimiento sólidos antes de enfrentar escrutinio."
+    },
+    "solution": {
+      "label": "Nuestro Enfoque",
+      "title": "Enfoque Integral de Cumplimiento",
+      "description": "BDP y DataInt combinan expertise legal y tecnológico para ofrecer soluciones completas frente a los nuevos retos de seguridad y cumplimiento en México.",
+      "bdpTitle": "BDP — Soluciones Corporativas y Legales",
+      "bdpSubtitle": "Cumplimiento Legal & Regulatorio",
+      "bdpItems": [
+        "Auditorías de cumplimiento bajo la nueva designación FTO",
+        "Evaluación de riesgos de cadena de suministro y proveedores",
+        "Desarrollo de políticas internas de cumplimiento anti-terrorismo",
+        "Asesoría en debida diligencia y programas Know Your Counterpart (KYC)",
+        "Representación legal ante autoridades estadounidenses y mexicanas",
+        "Capacitación corporativa en prevención de apoyo material"
+      ],
+      "dataintTitle": "DataInt — Inteligencia Avanzada",
+      "dataintSubtitle": "Tecnología & Análisis de Datos",
+      "dataintItems": [
+        "Evaluación de riesgos de seguridad con inteligencia de fuentes abiertas (OSINT)",
+        "Monitoreo continuo de amenazas vinculadas a organizaciones designadas",
+        "Análisis de redes y detección de vínculos corporativos con entidades sancionadas",
+        "Verificación de antecedentes con bases de datos internacionales",
+        "Evaluaciones de riesgo geoespacial para operaciones en zonas de alto riesgo",
+        "Reportes de inteligencia corporativa para toma de decisiones"
+      ]
+    },
+    "cta": {
+      "label": "¿Listo para Actuar?",
+      "title": "Protege tu empresa ante los nuevos retos de cumplimiento",
+      "description": "Descarga el documento completo y contacta a nuestro equipo para una evaluación inicial de riesgos.",
+      "downloadPdf": "Descargar Documento PDF",
+      "contactBdp": "Contactar BDP",
+      "contactDataint": "Contactar DataInt",
+      "emailLabel": "Correo",
+      "phoneLabel": "Teléfono"
+    }
   },
   "metadata": {
     "title": "BDP | Litigio y Consultoría Multidisciplinaria",

@@ -19,6 +19,7 @@
     "industrias": "Industries",
     "equipo": "Team",
     "contacto": "Contact",
+    "compliance": "Compliance",
     "contactanos": "Contact Us"
   },
   "hero": {
@@ -261,6 +262,96 @@
     "copyright": "© BDP / {year}",
     "avisoPrivacidad": "Privacy Notice",
     "idiomas": "ESP / ENG / ZH"
+  },
+  "compliance": {
+    "hero": {
+      "label": "Compliance & Security",
+      "title": "Terrorist Designations of Cartels",
+      "subtitle": "Security and Compliance Challenges in Mexico",
+      "cta": "Download Full Document",
+      "partnershipLabel": "A strategic partnership by",
+      "backHome": "Back to Home"
+    },
+    "context": {
+      "label": "Context",
+      "title": "Cartels Designated as Foreign Terrorist Organizations",
+      "description": "On February 20, 2025, the U.S. Department of State officially designated six Mexican organizations as Foreign Terrorist Organizations (FTO) and Specially Designated Global Terrorists (SDGT) under Executive Order 14157.",
+      "organizationsTitle": "Designated Organizations",
+      "organizations": [
+        "Sinaloa Cartel",
+        "Jalisco New Generation Cartel (CJNG)",
+        "Cartel del Noreste (CDN)",
+        "Gulf Cartel",
+        "Guerreros Unidos",
+        "La Nueva Familia Michoacana"
+      ],
+      "materialSupportTitle": "\"Material Support\" and Its Implications",
+      "materialSupportDescription": "Under 18 U.S.C. § 2339B, it is a federal crime to provide \"material support or resources\" to a designated foreign terrorist organization. The definition of \"material support\" is extremely broad and covers any property or service, including:",
+      "materialSupportItems": [
+        "Financial services and monetary transactions",
+        "Lodging, transportation, and communications",
+        "Training, expert advice, and technical assistance",
+        "Personnel, including any individual oneself"
+      ],
+      "materialSupportWarning": "Convictions for material support can result in sentences of up to 20 years in prison. If the conduct results in the death of any person, life imprisonment is a real possibility."
+    },
+    "challenges": {
+      "label": "Corporate Challenges",
+      "title": "The Corporate Compliance Challenge",
+      "description": "For companies operating in Mexico, these designations create immediate and unprecedented legal risks. Even routine transactions such as rent payments, tolls, utilities, and payroll could potentially constitute material support if any portion of the payment benefits designated groups.",
+      "casesTitle": "Enforcement Precedents",
+      "case1": {
+        "name": "Chiquita Brands International",
+        "amount": "$27M + $38.3M",
+        "description": "Fined and later found civilly liable for payments to the AUC (Colombian paramilitary group), deemed \"material support\" for terrorism."
+      },
+      "case2": {
+        "name": "Lafarge S.A.",
+        "amount": "$777.78M",
+        "description": "Pleaded guilty to conspiracy to provide material support to foreign terrorist organizations, including ISIS."
+      },
+      "case3": {
+        "name": "Mexico Sanctions",
+        "amount": "2025",
+        "description": "Expected enforcement against companies operating in Mexico with inadvertent payments to cartel-linked entities."
+      },
+      "keyMessage": "These precedents demonstrate that U.S. authorities aggressively enforce material support laws. Companies must establish robust compliance frameworks before facing scrutiny."
+    },
+    "solution": {
+      "label": "Our Approach",
+      "title": "Comprehensive Compliance Approach",
+      "description": "BDP and DataInt combine legal and technological expertise to deliver complete solutions for the new security and compliance challenges in Mexico.",
+      "bdpTitle": "BDP — Corporate & Legal Solutions",
+      "bdpSubtitle": "Legal & Regulatory Compliance",
+      "bdpItems": [
+        "Compliance audits under the new FTO designation",
+        "Supply chain and vendor risk assessment",
+        "Development of internal anti-terrorism compliance policies",
+        "Due diligence advisory and Know Your Counterpart (KYC) programs",
+        "Legal representation before U.S. and Mexican authorities",
+        "Corporate training on material support prevention"
+      ],
+      "dataintTitle": "DataInt — Advanced Intelligence",
+      "dataintSubtitle": "Technology & Data Analytics",
+      "dataintItems": [
+        "Security risk assessment with open-source intelligence (OSINT)",
+        "Continuous threat monitoring linked to designated organizations",
+        "Network analysis and detection of corporate links to sanctioned entities",
+        "Background verification with international databases",
+        "Geospatial risk assessments for operations in high-risk zones",
+        "Corporate intelligence reports for decision-making"
+      ]
+    },
+    "cta": {
+      "label": "Ready to Act?",
+      "title": "Protect your company from new compliance challenges",
+      "description": "Download the full document and contact our team for an initial risk assessment.",
+      "downloadPdf": "Download PDF Document",
+      "contactBdp": "Contact BDP",
+      "contactDataint": "Contact DataInt",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone"
+    }
   },
   "metadata": {
     "title": "BDP | Multidisciplinary Litigation and Consulting",

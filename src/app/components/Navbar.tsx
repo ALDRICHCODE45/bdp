@@ -14,6 +14,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,12 +25,14 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    // Navbar appears after HeroSection animation (1200ms + 200ms delay)
+    // On homepage, navbar appears after HeroSection animation (1200ms + 200ms delay)
+    // On other pages, navbar appears immediately
+    const delay = isHomePage ? 1400 : 0;
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1400);
+    }, delay);
     return () => clearTimeout(timer);
-  }, []);
+  }, [isHomePage]);
 
   const handleLanguageChange = (newLocale: string) => {
     router.replace(pathname, { locale: newLocale });
@@ -37,11 +40,12 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { href: "#inicio", label: t("inicio") },
-    { href: "#servicios", label: t("areasPractica") },
-    { href: "#industrias", label: t("industrias") },
-    { href: "#equipo", label: t("equipo") },
-    { href: "#contacto", label: t("contacto") },
+    { href: isHomePage ? "#inicio" : "/#inicio", label: t("inicio") },
+    { href: isHomePage ? "#servicios" : "/#servicios", label: t("areasPractica") },
+    { href: isHomePage ? "#industrias" : "/#industrias", label: t("industrias") },
+    { href: isHomePage ? "#equipo" : "/#equipo", label: t("equipo") },
+    { href: "/compliance" as const, label: t("compliance") },
+    { href: isHomePage ? "#contacto" : "/#contacto", label: t("contacto") },
   ];
 
   const handleLinkClick = () => {
@@ -136,7 +140,7 @@ export default function Navbar() {
                 )}
               </div>
               <Link
-                href="#contacto"
+                href={isHomePage ? "#contacto" : "/#contacto"}
                 className="px-6 py-2.5 bg-gray-900 text-white text-sm font-light hover:bg-gray-800 transition-colors"
               >
                 {t("contactanos")}
@@ -204,7 +208,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#contacto"
+            href={isHomePage ? "#contacto" : "/#contacto"}
             onClick={handleLinkClick}
             className="mt-8 px-8 py-4 bg-gray-900 text-white text-sm font-light hover:bg-gray-800 transition-colors"
             style={{
